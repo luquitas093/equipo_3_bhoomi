@@ -56,8 +56,3 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 ## Tablero de Trabajo
 
 [*Trello*](https://trello.com/b/Z1dGZLn9/proyecto-equipo-3 "Tablero de Trabajo - Equipo 3")
-
-Fuente: 
-
-
-Tablero de trabajo: https://trello.com/b/Z1dGZLn9/proyecto-equipo-3
