@@ -19,7 +19,7 @@ Nuestra página apunta principalmente a personas que busquen el cambio de la cos
 ## Integrantes del proyecto
 
 - María Laura:  Docente de educación primaria, profesional gastronómico y estudiante de programación web.
-- Micaela: 
+- Micaela: Analista en Marketing y Marketing Digital, formandome en desarollo ux/ui y programación web.
 - Lucas:
 
 ## Wireframes
@@ -49,9 +49,8 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 
 ## Our Brand
 
-### Paleta de colores: 
-### Fuente:
-### Logo:
+### Manual de Marca: 
+    https://drive.google.com/file/d/1ldp75Heem_z84a4fmYNkjh0XWbzzH1kx/view?usp=sharing
 
 ## Tablero de Trabajo
 
