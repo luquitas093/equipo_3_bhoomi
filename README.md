@@ -10,7 +10,7 @@ Según este antiguo proverbio hindi, *"La tierra no es una herencia de nuestros 
 
 ## Acerca del nombre del proyecto
 
-En el idioma hindi, la palabra ***Bhoomi*** significa *"Tierra"*. La tierra es el eje fundamental de nuestro emprendimiento. Sin tierra no hay vida. Entender que podemos cuidarnos, sin dañarla es importante para preservarla. Con ***Bhoomi¨*** buscamos el cambio el vínculo diario de las personas con el medio ambiente y marcar una diferencia, convirtiendo sus rutinas diarias de cuidado personal en un acto de conciencia y respeto hacia el equilibrio ecológico de nuestra *Tierra*.
+En el idioma hindi, la palabra ***Bhoomi*** significa *"Tierra"*. La tierra es el eje fundamental de nuestro emprendimiento. Sin tierra no hay vida. Entender que podemos cuidarnos sin dañarla, es importante para preservarla. Con ***Bhoomi*** buscamos el cambio el vínculo diario de las personas con el medio ambiente y marcar una diferencia, convirtiendo sus rutinas diarias de cuidado personal en un acto de conciencia y respeto hacia el equilibrio ecológico de nuestra *Tierra*.
 
 ## Público Objetivo
 
@@ -73,4 +73,4 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 
 ## Tablero de Trabajo
 
-[*Trello*](https://trello.com/b/Z1dGZLn9/proyecto-equipo-3 "Tablero de Trabajo - Equipo 3")
+- [*Trello*](https://trello.com/b/Z1dGZLn9/proyecto-equipo-3 "Tablero de Trabajo - Equipo 3")
