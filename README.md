@@ -2,11 +2,12 @@
 
 > "*bhoomi hamaare maata-pita kee viraasat nahin hai balki hamaare bachchon ka rn hai.*"
 
-Según este antiguo proverbio hindi, *"La tierra no es una herencia de nuestros padres sino un préstamo de nuestros hijos"*, es nuestra responsabilidad cuidar el ambiente que nos rodea, no sólo para nosotros, sino también para las generaciones que nos sucedan. Es de este sentido de responsabilidad que nace ***Bhoomi***, un espacio que busca generar conciencia en la comunidad a través del uso de productos naturales, que sean amigables para nosotros y con el medio ambiente.
+Según este antiguo proverbio hindi, *"La tierra no es una herencia de nuestros padres sino un préstamo de nuestros hijos"*, es nuestra responsabilidad cuidar el ambiente que nos rodea, no sólo para nosotros, sino también para las generaciones que nos sucedan. Es desde este sentido de responsabilidad que nace ***Bhoomi***, una propuesta que busca generar conciencia en la comunidad a través del uso de productos naturales, que sean amigables con nosotros y el medio ambiente.
 
 ## Acerca del proyecto
 
-***Bhoomi***  es un sitio web diseñado para la venta de productos de cosmética natural y accesorios de uso diario *zero waste* amigables para con nuestra salud y con el medio ambiente. Nuestra idea es que el sitio no funcione solamente como un e-commerce; es poder darle al usuario la experiencia de una plataforma que funcione como una comunidad dónde nos podremos asesorar entre todos que tipos de producto nos conviene comprar, por ejemplo, para nuestro tipo de piel o nuestro tipo de pelo y, al mismo tiempo, generar una conciencia colectiva con respecto al cuidado de nuestro medio ambiente.
+***Bhoomi***  es un sitio web diseñado para la venta de productos de cosmética natural y accesorios de uso diario *zero waste* amigables con nuestra salud y el medio ambiente. Nuestra idea es que el sitio funcione no solo como e-commerce sino como espacio que brinde al usuario la experiencia de una comunidad donde asesorarse acerca de qué productos responden más a sus necesidades.
+Brindaremos información para que la elección del producto pueda ser acorde a las necesidades de cada tipo de piel o cabello, logrando así unas primeras experiencias placenteras en el mundo *zero waste* al mismo tiempo que cultivamos la conciencia ecológica colectiva.
 
 ## Acerca del nombre del proyecto
 
@@ -21,32 +22,34 @@ Nuestro sitio web apunta principalmente a personas jóvenes que estén en la bú
 ####  :woman: María Laura Stirparo :woman:
 Docente de educación primaria, profesional gastronómico y estudiante de programación web full stack en Digital House.
 
-[:e-mail:](laustirparo@hotmail.com "Email")
+:e-mail:: laustirparo@hotmail.com
 
 #### :woman: Micaela De Mello :woman:
 Analista en Marketing y Marketing Digital, formandome en desarollo ux/ui y programación web full stack en Digital House.
 
-[:e-mail:](demellomicaela@gmail.com "Email")
+:e-mail:: demellomicaela@gmail.com
 
 #### :man: Lucas Ezequiel Nicolás Schettino :man:
 Actor egresado de la Escuela Metropolitana de Arte Drámatico y estudiante de programación full stack en Digital House.
 
-[:e-mail:](l_e_nicolas@hotmail.com "Email")
+:e-mail:: l_e_nicolas@hotmail.com
 
 ## Wireframes
 
+Wireframes realizados en la plataforma figma, aplicando el diseño *mobile first* para una correcta visualización de la web en diversos dispositivos.
+
 ### Versión mobile :iphone:
-- [Home](l_e_nicolas@hotmail.com "Home")
-- [Detalle del Producto](l_e_nicolas@hotmail.com "Detalle del Producto")
-- [Carrito de Compras](l_e_nicolas@hotmail.com "Carrito de Compras")
-- [Formulario de Registro](l_e_nicolas@hotmail.com "Formulario de Registro")
-- [Formulario de Login](l_e_nicolas@hotmail.com "Formulario de Login")
+- [Home](https://www.figma.com/file/oJvbyzHpeW3buZfZldBDdQ/Bhoomi-Mobile?node-id=0%3A3 "Home")
+- [Detalle del Producto](https://www.figma.com/file/oJvbyzHpeW3buZfZldBDdQ/Bhoomi-Mobile?node-id=1%3A200 "Detalle del Producto")
+- [Carrito de Compras](https://www.figma.com/file/oJvbyzHpeW3buZfZldBDdQ/Bhoomi-Mobile?node-id=2%3A229 "Carrito de Compras")
+- [Formulario de Registro](https://www.figma.com/file/oJvbyzHpeW3buZfZldBDdQ/Bhoomi-Mobile?node-id=2%3A514 "Formulario de Registro")
+- [Formulario de Login](https://www.figma.com/file/oJvbyzHpeW3buZfZldBDdQ/Bhoomi-Mobile?node-id=4%3A297 "Formulario de Login")
 ### Versión desktop :computer:
-- [Home](l_e_nicolas@hotmail.com "Home")
-- [Detalle del Producto](l_e_nicolas@hotmail.com "Detalle del Producto")
-- [Carrito de Compras](l_e_nicolas@hotmail.com "Carrito de Compras")
-- [Formulario de Registro](l_e_nicolas@hotmail.com "Formulario de Registro")
-- [Formulario de Login](l_e_nicolas@hotmail.com "Formulario de Login")
+- [Home](https://www.figma.com/file/jK58ZJT5vug7ZZUTmUpbvu/Bhoomi-Desktop?node-id=0%3A1 "Home")
+- [Detalle del Producto](https://www.figma.com/file/jK58ZJT5vug7ZZUTmUpbvu/Bhoomi-Desktop?node-id=11%3A77 "Detalle del Producto")
+- [Carrito de Compras](https://www.figma.com/file/jK58ZJT5vug7ZZUTmUpbvu/Bhoomi-Desktop?node-id=12%3A74 "Carrito de Compras")
+- [Formulario de Registro](https://www.figma.com/file/jK58ZJT5vug7ZZUTmUpbvu/Bhoomi-Desktop?node-id=13%3A45 "Formulario de Registro")
+- [Formulario de Login](https://www.figma.com/file/jK58ZJT5vug7ZZUTmUpbvu/Bhoomi-Desktop?node-id=13%3A238 "Formulario de Login")
 
 ## Paginas de Referencia
 
