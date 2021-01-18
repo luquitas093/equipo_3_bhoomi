@@ -11,11 +11,11 @@ Brindaremos información para que la elección del producto pueda ser acorde a l
 
 ## Acerca del nombre del proyecto
 
-En el idioma hindi, la palabra ***Bhoomi*** significa *"Tierra"*. La tierra es el eje fundamental de nuestro emprendimiento. Sin tierra no hay vida. Entender que podemos cuidarnos sin dañarla, es importante para preservarla. Con ***Bhoomi*** buscamos el cambio el vínculo diario de las personas con el medio ambiente y marcar una diferencia, convirtiendo sus rutinas diarias de cuidado personal en un acto de conciencia y respeto hacia el equilibrio ecológico de nuestra *Tierra*.
+En el idioma hindi, la palabra ***Bhoomi*** significa *"Tierra"*. La tierra es el eje fundamental de nuestro emprendimiento. Sin tierra no hay vida. Entender que podemos cuidarnos sin dañarla, es importante para preservarla. Con ***Bhoomi*** buscamos generar un cambio en el vínculo diario de las personas con el medio ambiente y marcar una diferencia, convirtiendo sus rutinas diarias de cuidado personal en un acto de conciencia y respeto hacia el equilibrio ecológico de nuestra *Tierra*.
 
 ## Público Objetivo
 
-Nuestro sitio web apunta principalmente a personas jóvenes que estén en la búsqueda de un cambio de productos de la cosmética clásicas hacia una alternativa natural, sumando, además, el plus de conciencia ecológica tratando de reducir al mínimo la generación de residuos innecesarios que afecten a nuestro medio ambiente.
+Nuestro sitio web apunta principalmente a personas jóvenes que estén en la búsqueda de un cambio de productos de la cosmética clásica apuntando hacia una alternativa natural. A esto sumamos, además, el plus de conciencia ecológica que las nuevas generaciones están buscando, tratando de reducir al mínimo la generación de residuos innecesarios que afecten a nuestro medio ambiente.
 
 ## Integrantes del proyecto
 
