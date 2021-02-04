@@ -1,0 +1,25 @@
+{
+  "name": "equipo_3_bhoomi",
+  "version": "1.0.0",
+  "description": "> \"*bhoomi hamaare maata-pita kee viraasat nahin hai balki hamaare bachchon ka rn hai.*\"",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luquitas093/equipo_3_bhoomi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luquitas093/equipo_3_bhoomi/issues"
+  },
+  "homepage": "https://github.com/luquitas093/equipo_3_bhoomi#readme"
+}
