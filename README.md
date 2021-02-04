@@ -71,7 +71,7 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 ## Our Brand
 
 - #### [Manual de Marca](https://drive.google.com/file/d/1ldp75Heem_z84a4fmYNkjh0XWbzzH1kx/view?usp=sharing "Manual de Marca")
-- #### [Paleta de Colores](https://coolors.co/f5e7d9-66a535-dddd77-35120b-7b7b7b "Paleta de Colores")
+- #### [Paleta de Colores](https://coolors.co/f5e7d9-66a535-dd721b-35120b-7b7b7b "Paleta de Colores")
 - #### [Tipografía](https://fonts.google.com/specimen/Poppins?query=pop "Fuente Poppins")
 
 ## Tablero de Trabajo
