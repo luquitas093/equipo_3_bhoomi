@@ -9,98 +9,331 @@ body {
     overflow-x: hidden;
 }
 
-.main-header {
-    background-color: #9DD274;
-    padding: 15px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
+a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* CONTENEDOR DEL MENU, EL LOGO, LA BUSQUEDA Y EL CARRITO */
+
+.main-header {
+	height: 10vh;
+	background-color: #9DD274;
+	padding: 2vw;
+    width: 100%;
+    display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	position: relative;
+}
+
+/*MENU HAMBURGUESA*/
+
+.menu-list {
+	display: block;
+	width: 12vw;
+	height: 6vh;
+	align-self: stretch;
+	text-align: center;
+	margin-left: 1vw;
+	margin-top: 1vh;
+}
+
+.icon-menu-list {
+	display: block;
+	width: 90%;
+	color: white;
+	font-size: 4.5vw;
+	padding: 0.9vh;
+	margin-left: 0.5vw;
+	margin-top: 0.4vh;
+}
+
+/*MENU OCULTO QUE APARECE AL CLIQUEAR EL MENU HAMBURGUESA*/
+
 .hidden-menu {
+	background-color: #f5e7d9;
+	opacity: 10%;
 	position: fixed;
-	height: 100vh;
+	height: 90vh;
 	width: 100vw;
-	background-color: rgba(20, 20, 20, 0);
+	right: 0vw;
+	top: 10vh;
 	overflow: hidden;
-	transform: scale(0);
-	z-index: 0;
+	visibility: hidden;
+	z-index:0;
+	opacity: 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
 }
 
 .hidden-menu-list {
 	display: flex;
 	width: 50vw;
-	background-color: rgb(100, 100, 220);
-	padding: 1rem;
-	border-radius: 0.25rem;
-	box-shadow: 0 0 0.6rem 0.2rem rgba(200, 200, 250, 0.2);
+	height: 100vh;
+	background-color: #9DD274;
 	flex-direction: column;
+	list-style: none;
 }
 
 .hidden-menu-list-close {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 3rem;
-	height: 3rem;
+	width: 5vw;
+	height: 5vh;
 	text-decoration: none;
-	background-color: rgb(50, 50, 200);
-	color: rgb(200, 200, 250);
-	border-radius: 50%;
-	font-size: 2rem;
-	align-self: start;
-	top: calc(20vh);
-	position: fixed;
+	background-color: #9DD274;
+	color: white;
+	font-size: 1rem;
+	position: absolute;
+	left: 43vw;
+	border-top: 1px solid black;
 }
 
 .hidden-menu-list-item-anchor {
+	width: 100%;
 	display: flex;
-	font-size: 3rem;
+	font-size: 0.8rem;
 	text-decoration: none;
-	color: rgb(200, 200, 200);
-	text-transform: uppercase;
-	justify-content: center;
+	color: white;
+	justify-content: flex-start;
 	align-items: center;
-	padding: 1rem 0rem;
+	padding: 1rem 0.5rem;
+	border-top: 1px solid black;
 }
 
-##search {
+.hidden-menu-list-item-user {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 50vh;
+	border-top: black solid 1px;
+	text-align: center;
+}
+
+.hidden-menu-list-item-anchor-user {
+	display: flex;
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: white;
+	padding: 1rem 0.5rem;
+}
+
+.icon-user {
+	display: flex;
+	font-size: 1rem;
+	text-decoration: none;
+	color: white;
+	padding: 1rem 0.5rem;
+}
+
+#menu:target {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.6s ease-in-out;
+}
+
+/* LOGO */
+
+.logo {
+	display:block;
+	width: 48vw;
+	height: 8vh;
+	align-self: stretch;
+	text-align: center;
+	margin-left: 3vw;
+	margin-top: -0.6vh;
+}
+
+.logo img {
+	width: 95%;
+	height: 95%;
+	margin: auto;
+}
+
+/* BUSQUEDA Y CARRITO */
+
+.search-cart {
+	width: 18vw;
+	height: 6vh;
+	align-self: stretch;
+	text-align: center;
+	margin-right: 1vw;
+	margin-top: 1vh;
+}
+
+/* BOTON BUSQUEDA */
+
+.icon-search-item {
+	display: inline-block;
+	color: white;
+	font-size: 4.5vw;
+	text-align: center;
+	margin-right: 1.8vw;
+	margin-top: 1.2vh;
+}
+
+/* BARRA DE BUSQUEDA OCULTA */
+
+#search {
 	position: fixed;
-	right: -50vw;
-	height: 5vh;
-	top: 47.5vh;
-	width: 45vw;
-	border-radius: 5vh;
+	bottom: 91.5vh;
+	right: -1.6vw;
+	height: 7.3vh;
+	width: 80%;
+	border-radius: 3vh;
 	overflow: hidden;
-	box-shadow: 0 0 0.25rem 0.15rem rgba(10, 10, 240, 0.3);
+	visibility: hidden;
+	opacity: 0;
+	box-shadow: 0 0 0.25rem 0.15rem #9DD274;
 }
 
-.field {
+.search {
 	display: flex;
 	justify-content: space-between;
 	align-items: stretch;
 	height: 100%;
 }
 
-.field-input {
+.search-input {
 	flex: 1 0 auto;
 	border: none;
 	outline: none;
 	padding: 1rem;
-	font-size: 1.25rem;
-	text-transform: uppercase;
+	font-size: 1rem;
 }
-.field-button {
+.search-button {
 	width: 5vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
-	background-color: rgb(50, 50, 250);
-	color: rgb(200, 200, 250);
-	border-radius: 50% 0 0 50%;
+	background-color: #9DD274;
+	color: white;
+	border-radius: 50%;
+	margin-right: 4vw;
+	border: 1px solid #9DD274;
+}
+
+#search:target {
+	opacity: 100%;
+	visibility: visible;
+	transition: all 0.8s ease-in-out;
+}
+
+/* BOTON CARRITO */
+
+.icon-cart-item {
+	width: 35%;
+	height: 35%;
+	display: inline-block;
+	color: white;
+	font-size: 4.5vw;
+	text-align: center;
+
+}
+
+/* SECCION CATEGORIAS */
+
+.categories {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	padding: 2vh 1vw;
+}
+
+.categories li {
+	font-size: 1rem;
+	background-color: grey;
+}
+
+.categories a {
+	color: white;
+	text-decoration: none;
+	padding: 2px;
+}
+
+/* SECCION PRODUCTOS DESTACADOS */
+
+.best-products {
+	width: 90%;
+	margin: auto;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.product-article {
+	display: block;
+	width: 48%;
+}
+
+article img {
+	width: 100%;
+}
+
+.product-description {
+	text-align: center;
+	padding: 1vh 1vw;
+}
+
+.product-name {
+	color: black;
+	font-size: 1rem;
+	padding: 0.5vh 1vw;
+	text-decoration: none;
+}
+
+.product-price {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5vh 1vw;
+}
+
+.all-products {
+	display: block;
+	width: 100%;
+	height: 5vh;
+	background-color: black;
+	text-align: center;
+	padding: 2vh 2vw;
+	margin-bottom: 2vh;
+}
+
+.all-products a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	padding: 1vh 1vw;
+	margin-top: -1.6vh;
+}
+
+/*FOOTER*/
+
+.main-footer {
+	width: 100%;
+	background-color: #9DD274;
+	padding: 1vh 1vw;
+}
+
+.certifications {
+	display: none;
+}
+
+
+
+/* VERSION TABLET */
+
+@media (min-width: 481px) {
+
+}
+
+/* VERSION DESKTOP */
+
+@media (min-width: 769px) {
+
 }
