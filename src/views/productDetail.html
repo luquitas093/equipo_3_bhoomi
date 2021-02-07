@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 
@@ -33,20 +35,59 @@
         </article>
         <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
         <div class="payment-methods">
-            <p class="pay-in-share">Pagá en 3 o 6 cuotas sin interés</p>
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png" class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png" class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="card-logo">
-            <img src="" class="credit-card">
-            <img src="" class="credit-card">
-            <img src="" class="credit-card">
-            <div><i class="fas fa-credit-card"></i></div>
-            <i class="fas fa-plus"></i>
+            <p class="info-pay-share">Pagá en 3 o 6 cuotas sin interés</p>
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                class="card-logo">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                class="card-logo">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                class="card-logo">
+            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                class="card-logo">
+            <div><i class="fas fa-credit-card" class="card-logo"></i></div>
+            <div><i class="fas fa-plus" class="card-logo"></i></div>
+        </div>
+
+        <div>
+            <!--Compartí en las redes-->
+            <p class="info-pay-share">Compartir</p>
+            <div><i class="fab fa-instagram" class="share-networks"></i></div>
+            <div><i class="fab fa-facebook" class="share-networks"></i></div>
+            <div><i class="fab fa-whatsapp" class="share-networks"></i></div>
+            <div><i class="fab fa-twitter" class="share-networks"></i></div>
+        </div>
+
+        <!--Contador de productos-->
+        <form action="">
+            <div class="product-counter">
+                <i class="fas fa-chevron-up" class="counter-arrow"></i>
+                <input type="text" name="productCounter" placeholder="1" required class="control">
+                <i class="fas fa-chevron-down" class="counter-arrow"></i>
+            </div>
+        </form>
+
+        <!--Botón agregar al carrito-->
+        <div class="button-add-cart">
+            <button type="submit">AGREGAR AL CARRITO</button>
+        </div>
+
+        <!--Medios de envío-->
+        <div class="shipping">
+            <i class="fas fa-truck"></i>
+            <p>Medios de envío</p>
+            <input type="text" name="shippingCalculator" placeholder="Tu código postal" required class="control"
+                class="postal-code">
+            <button type="submit" class="shipping-button">CALCULAR</button>
+
+
         </div>
         <!--Descripción del producto-->
         <article class="product-description">
-            <p>Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos derivados del coco (SCI),
+            <p>ACERCA DEL PRODUCTO: Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos derivados del coco (SCI),
                 manteca de cacao y aceites esenciales.
                 Su aroma es herbal. Su espuma es suave y cremosa. Para uso diario. Contiene aceite esencial de romero y
                 extracto de hortiga.
@@ -54,10 +95,84 @@
                 otorga suavidad y flexibilidad. El coco y el romero fortalecen la fibra capilar. El extracto de ortiga
                 previene la caída del cabello.</p>
         </article>
+        </div>
     </section>
 
+    <!--Galería de productos relacionados-->
+    <section class="related-products-gallery">
+    <h3 class="related-products-title">PRODUCTOS RELACIONADOS</h3>
+        <article class="related-product">
+            <img src="img/bl1.jpg" class="related-product-image">
+            <p class="related-product-name">Bálsamo labial de cacao</p>
+        </article>
+        <article class="related-product">
+            <img src="img/exf2.jpg" class="related-product-image">
+            <p class="related-product-name">Exfoliante natural limón y romero</p>
+        </article>
+        <article class="related-product">
+            <img src="img/j3.jpg" class="related-product-image">
+            <p class="related-product-name">Jabón calmante de avena y miel</p>
+        </article>
+    </section>
+
+    <!--FOOTER-->
     <footer>
-        
+        <!--Suscribite a nuestro newsletter-->
+        <div>
+            <p class="bottom-titles">Newsletter</p>
+            <input type="text" name="email-newsletter" placeholder="Dejanos tu email" required class="control"
+                class="suscribe-newsletter">
+            <i class="fas fa-at"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="far fa-smile-wink"></i>
+        </div>
+
+        <!--Barra de navegación del footer -->
+        <div class="bottom-navbar">
+            <p class="bottom-titles">Navegación</p>
+            <nav>
+                <ul class="bottom-navbar-options">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Carrito</a></li>
+                    <li><a href="#">Quiénes somos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Contactanos-->
+        <div class="Contact-us">
+            <p class="bottom-titles">Contactanos</p>
+            <nav>
+                <ul class="bottom-navbar-options">
+                    <li class="contact-ways"><i class="fab fa-whatsapp"></i><a href="#">11-1234-1234</a></li>
+                    <li class="contact-ways"><i class="fas fa-envelope"></i><a href="#">contacto@tiendabhoomi.com</a>
+                    </li>
+                    <li class="contact-ways"><i class="fas fa-store"></i><a href="#">Calle Equis 5678</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Redes sociales-->
+        <div class="social-networks">
+            <p class="bottom-titles">Redes sociales</p>
+            <nav>
+                <ul class="bottom-navbar-options">
+                    <li class="social-networks-button"><i class="fab fa-instagram"></i><a href="#"></a></li>
+                    <li class="social-networks-button"><i class="fab fa-facebook"></i><a href="#"></a></li>
+                    <li class="social-networks-button"><i class="fab fa-twitter"></i><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Certificaciones-->
+        <div class="certifications">
+            <p class="bottom-titles">Certificaciones</p>
+            <nav>
+                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
+                    class="certification-logo">
+            </nav>
+        </div>
     </footer>
 </body>
 
