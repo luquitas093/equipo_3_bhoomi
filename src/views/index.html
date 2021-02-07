@@ -76,75 +76,77 @@
         <section>
             <ul class="categories">
                 <li>
-                    <a href="/products">COMBOS</a>
-                </li>
-                <li>
-                    <a href="/products">PELO</a>
+                    <a href="/products">CUIDADO CAPILAR</a>
                 </li>
                 <li>
                     <a href="/products">ROSTRO Y CUERPO</a>
                 </li>
                 <li>
-                    <a href="/products">REGALOS</a>
+                    <a href="/products">COMBOS</a>
                 </li>
             </ul>
         </section>
 
+        <!-- BANNER (FUTURO CARROUSEL)-->
+        <figure class="banner-carrousel">
+            <img src="img/banner-galeria.gif" alt="banner-principal">
+        </figure>
+
         <!--PRODUCTOS DESTACADOS-->
         <section class="best-products">
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/bl1.jpg" alt="Balsamo labial cacao">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
+                    <a href="/products" class="product-name">BALSAMO LABIAL DE CACAO</a>
+                    <p class="product-price">$170</p>
+                </div>
+            </article>
+            <article class="product-article">
+                <img src="img/exf1.jpg" alt="Exfoliante Cafe y Azuzar">
+                <div class="product-description">
+                    <a href="/products" class="product-name">EXFOLIANTE FACIAL DE CAFÉ Y AZÚCAR</a>
+                    <p class="product-price">$320</p>
+                </div>
+            </article>
+            <article class="product-article">
+                <img src="img/j1.jpg" alt="Jabon rosa mosqueta">
+                <div class="product-description">
+                    <a href="/products" class="product-name">JABÓN CORPORAL DE ROSA MOSQUETA</a>
                     <p class="product-price">$210</p>
                 </div>
             </article>
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/ss1.jpg" alt="Shampoo solido ortiga romero">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
+                    <a href="/products" class="product-name">SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO</a>
+                    <p class="product-price">$400</p>
                 </div>
             </article>
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/bl2.jpg" alt="Balsamo labial cafe">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
+                    <a href="/products" class="product-name">BÁLSAMO LABIAL DE CAFÉ</a>
+                    <p class="product-price">$180</p>
                 </div>
             </article>
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/exf2.jpg" alt="exfoliante corporal limon romero">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
+                    <a href="/products" class="product-name">EXFOLIANTE CORPORAL DE LIMÓN Y ROMERO</a>
+                    <p class="product-price">$290</p>
                 </div>
             </article>
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/j4.jpg" alt="Jabon detox oliva y carbon ">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
+                    <a href="/products" class="product-name">JABÓN DETOX DE OLIVA Y CARBÓN</a>
+                    <p class="product-price">$230</p>
                 </div>
             </article>
             <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
+                <img src="img/ss3.jpg" alt="Shampoo solido reparador karite">
                 <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
-                </div>
-            </article>
-            <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
-                <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
-                    <p class="product-price">$210</p>
-                </div>
-            </article>
-            <article class="product-article">
-                <img src="img/j1.jpg" alt="Jabón">
-                <div class="product-description">
-                    <a href="/products" class="product-name">JABÓN EXFOLIANTE</a>
+                    <a href="/products" class="product-name">SHAMPOO SÓLIDO REPARADOR KARITÉ</a>
                     <p class="product-price">$210</p>
                 </div>
             </article>
@@ -152,6 +154,11 @@
                 <a href="/products">VER TODOS LOS PRODUCTOS</a>
             </div>
         </section>
+
+        <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
+        <figure class="banner-carrousel">
+            <img src="img/banner-bottom.gif" alt="banner-bottom">
+        </figure>
  
     </main>
 
@@ -159,24 +166,24 @@
     <footer class="main-footer">
 
         <!--Suscribite a nuestro newsletter-->
-        <section>
+        <section class="newsletter">
             <p class="bottom-titles">Newsletter</p>
-            <input type="text" name="email-newsletter" placeholder="Dejanos tu email" required class="control"
-                class="suscribe-newsletter">
-            <i class="fas fa-at"></i>
-            <i class="fas fa-envelope"></i>
-            <i class="far fa-smile-wink"></i>
-        </section>
+            <form action="#" id= "email-newsletter" autocomplete = "off" method="GET" class="form-newsletter">
+                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email" class="suscribe-newsletter" required>
+                <button type="submit" class="button-newsletter">
+                    <i class="fas fa-paper-plane"></i>
+                 </button>
+            </form>
 
         <!--Barra de navegación del footer -->
         <section class="bottom-navbar">
             <p class="bottom-titles">Navegación</p>
             <nav>
                 <ul class="bottom-navbar-options">
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/products">Productos</a></li>
-                    <li><a href="/cart">Carrito</a></li>
-                    <li><a href="/about-us">Quiénes somos</a></li>
+                    <li class="navbar-list"><a href="/">Inicio</a></li>
+                    <li class="navbar-list"><a href="/products">Productos</a></li>
+                    <li class="navbar-list"><a href="/cart">Carrito</a></li>
+                    <li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>
                 </ul>
             </nav>
         </section>
@@ -185,11 +192,10 @@
         <section class="contact-us">
             <p class="bottom-titles">Contactanos</p>
             <nav>
-                <ul class="bottom-navbar-options">
-                    <li class="contact-ways"><i class="fab fa-whatsapp"></i><a href="#">11-1234-1234</a></li>
-                    <li class="contact-ways"><i class="fas fa-envelope"></i><a href="#">contacto@tiendabhoomi.com</a>
-                    </li>
-                    <li class="contact-ways"><i class="fas fa-store"></i><a href="#">Calle Equis 5678</a></li>
+                <ul class="bottom-navbar-contact-us">
+                    <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
+                    <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
+                    <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
                 </ul>
             </nav>
         </section>
@@ -198,10 +204,12 @@
         <section class="social-networks">
             <p class="bottom-titles">Redes sociales</p>
             <nav>
-                <ul class="bottom-navbar-options">
-                    <li class="social-networks-button"><i class="fab fa-instagram"></i><a href="#"></a></li>
-                    <li class="social-networks-button"><i class="fab fa-facebook"></i><a href="#"></a></li>
-                    <li class="social-networks-button"><i class="fab fa-twitter"></i><a href="#"></a></li>
+                <ul class="bottom-navbar-networks">
+                    <div class="bottom-networks-position">
+                        <li class="social-networks-button"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/"></a></li>
+                        <li class="social-networks-button"><i class="fab fa-facebook"></i><a href="https://www.facebook.com/"></a></li>
+                        <li class="social-networks-button"><i class="fab fa-twitter"></i><a href="https://twitter.com/"></a></li>
+                    </div>
                 </ul>
             </nav>
         </section>
