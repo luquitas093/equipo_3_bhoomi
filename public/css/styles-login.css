@@ -56,7 +56,7 @@ body{
 
 .button{
  border:none;
- background-color: #9DD274;
+ background-color: #35120B;
  font-size: 20px;
  color:#fff;
  padding: 5px 10px;
@@ -72,8 +72,7 @@ body{
 
 .olvidemicontraseña{
     text-align: center;
-    padding: 10px;
-    padding-top: 15px;
+    padding: 10px 10px 10px 10px;
 }
 
 .olvidemicontraseña a {
@@ -84,8 +83,7 @@ body{
 
 .crearcuenta{
     text-align: center;
-    padding: 10px;
-    padding-top: 5px;
+    padding: 10px 10px 0px 10px;
 }
 
 .crearcuenta a {
@@ -99,12 +97,14 @@ body{
     .button:hover{
            background-color: #DD721B;
         }
+
+        .crearcuenta a:hover {
+            color: #DD721B;
+        }
+    
+        .olvidemicontraseña a:hover {
+            color: #DD721B;
+        }
     }
 
-    .crearcuenta a:hover {
-        color: #DD721B;
-    }
 
-    .olvidemicontraseña a:hover {
-        color: #DD721B;
-    }

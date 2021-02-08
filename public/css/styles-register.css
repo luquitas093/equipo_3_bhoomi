@@ -41,7 +41,7 @@ body{
 
 .button{
  border:none;
- background-color: #9DD274;
+ background-color: #35120B;
  font-size: 20px;
  color:#fff;
  padding: 5px 10px;
@@ -52,6 +52,17 @@ body{
 .center{
     text-align: center;
     padding: 10px;
+}
+
+.iniciarsesion {
+    text-align: center;
+    padding: 5px 10px 20px 10px;
+}
+
+.iniciarsesion a {
+    text-decoration: none;
+    color: #35120B;
+    font-size: 0.9rem;
 }
 
 @media (min-width: 769px) {

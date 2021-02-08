@@ -110,7 +110,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin-top: 50vh;
+	margin-top: 53vh;
 	border-top: black solid 1px;
 	text-align: center;
 }
@@ -145,6 +145,7 @@ a {
 	height: auto;
 	align-self: center;
 	text-align: center;
+	margin-right: -2rem;
 }
 
 .logo img {
@@ -358,6 +359,20 @@ article img {
 	font-size: 1rem;
 	padding: 1vh 1vw;
 	margin-top: -1.6vh;
+}
+
+.banner-carrousel-bottom {
+	width: 90%;
+	display: block;
+	margin: auto;
+	padding: 0.3rem;
+	margin-top: 0.5vh;
+	margin-bottom: 0.5vh;
+}
+
+.banner-carrousel-bottom img {
+	width: 100%;
+	border: 1px solid #35120B;
 }
 
 /*FOOTER*/
