@@ -81,24 +81,46 @@
         </nav>
     </header>
 
+  <!--************************************************************************************************************
+                                                     MAIN
+    ************************************************************************************************************-->                                                 
+
     <main class="main-content">
+
         <!--CONTENEDOR: IMÁGENES PRODUCTO Y DESCRIPCIÓN-->
     <section class="product-and-description">
-        <!--Imágenes del producto-->
-        <figure class="product-images">
-            <img src="/img/ss1.jpg" class="product-style">
-            <img src="/img/ss1.jpg" class="product-style">
-            <img src="/img/ss1.jpg" class="product-style">
+
+        <!--Header del producto-->
+        <h4 class="header-product">Shampoo sólido fortalecedor de ortiga y romero</h4>
+
+        <!--Imagen principal del producto-->
+        <figure class="product-image-principal">
+            <img src="/img/ss1.jpg" alt="Imagen principal">
         </figure>
+
+        <!--Imágenes del producto-->
+            <figure class="product-images-container">
+                <div class="product-images-item">
+                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 1"></a>
+                </div>
+                <div class="product-images-item">
+                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 2"></a>
+                </div>
+                <div class="product-images-item">
+                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 3"></a>
+                </div>
+            </figure>
+
         <!--Nombre y precio-->
         <article class="product-name-and-price">
-            <h2 class="product-name">SHAMPOO SÓLIDO FORTALECEDOR 100% NATURAL</h2>
+            <h2 class="product-name">SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO - 100% NATURAL</h2>
             <p class="prices">$400</p>
         </article>
+
         <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
         <div class="conteiner-cards-networks">
             <div class="payment-methods">
-                <p class="info-pay-share">Pagá en 3 o 6 cuotas sin interés</p>
+                <p>Pagá en hasta 6 cuotas sin interés</p>
                 <div class="pay-icons-style">
                     <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
                         data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
@@ -112,36 +134,59 @@
                     <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
                         data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
                         class="card-logo">
+                <div class="pay-icon-more">
                     <i class="fas fa-credit-card" class="card-logo"></i>
                     <i class="fas fa-plus" class="card-logo"></i>
                 </div>
             </div>
+            <a href="#"class="pay-cards">VER MEDIOS DE PAGO</a>
+            </div>
 
-            <div>
                 <!--Compartí en las redes-->
-                <p class="info-product-share">Compartir</p>
-                <div class="pay-icons-style">
-                    <i class="fab fa-instagram" class="share-networks-logo"></i>
-                    <i class="fab fa-facebook" class="share-networks-logo"></i>
-                    <i class="fab fa-whatsapp" class="share-networks-logo"></i>
-                    <i class="fab fa-twitter" class="share-networks-logo"></i>
+            <div class="sharing-methods">
+                <p>Compartir</p>
+                <div class="share-icons-style">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" class="share-networks-logo"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook" class="share-networks-logo"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter" class="share-networks-logo"></i></a>
+                    <a href="https://whatsapp.com"><i class="fab fa-whatsapp" class="share-networks-logo"></i></a>
                 </div>
             </div>
         </div>
 
-        <!--Contador de productos-->
-        <form action="" class="product-counter-form">
-            <div class="product-counter">
-                <i class="fas fa-chevron-up" class="counter-arrow"></i>
-                <input class="control" type="text" name="productCounter" placeholder="1" required>
-                <i class="fas fa-chevron-down" class="counter-arrow"></i>
-            </div>
-        </form>
+        <!--Combos-->
 
-        <!--Botón agregar al carrito-->
-        <div class="button-add-cart">
-            <button type="submit">AGREGAR AL CARRITO</button>
-        </div>
+        <section class="combo">
+            <p>ELEGÍ CON QUE COMBINARLO:</p>
+            <select>
+                <label>Elegí con que combinarlo</label>
+                <option name="acondicionador1">Acondicionador para cabello reseco</option>
+                <option name="jabón1">Jabón corporal de rosa mosqueta</option>
+                <option name="exfoliante1">Exfoliante facial de café y azúcar</option>
+                <option name="balsamo-labial1">Bálsamo labial de cacao</option>
+            </select>
+        </section>
+
+        <!--Contenedor de cantidad y de agregar al carrito-->
+        <section class="quantity-button-add-cart">
+                    <!--Contador de productos-->
+        <section class="quantity">
+            <p>CANTIDAD:</p>
+            <select>
+                <label>Cantidad</label>
+                <option name="1">1</option>
+                <option name="2">2</option>
+                <option name="3">3</option>
+                <option name="4">4</option>
+                <option name="5">5</option>
+                <option name="6">6</option>
+            </select>
+        </section>
+                <!--Botón agregar al carrito-->
+                <div class="add-cart">
+                    <a href="/cart">AGREGAR AL CARRITO</a>
+                </div>
+        </section>
 
         <!--Medios de envío-->
         <div class="shipping">
@@ -149,45 +194,43 @@
                 <i class="fas fa-truck"></i>
                 <p>Medios de envío</p>
             </div>
-            <div class="code-and-button">
-            <input type="text" name="shippingCalculator" placeholder="Tu código postal" required class="postal-code">
-            <button type="submit" class="shipping-calculator-button">CALCULAR</button>
+            <div class="add-cp">
+                <input type="number" name="shippingCalculator" placeholder="Tu código postal" min=4 max=4 required>
+                <button type="submit">CALCULAR</button>
+            </div>
         </div>
+
         <!--Descripción del producto-->
         <article class="product-description">
-            <p>ACERCA DEL PRODUCTO: Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos
-                derivados del coco (SCI),
-                manteca de cacao y aceites esenciales.
-                Su aroma es herbal. Su espuma es suave y cremosa. Para uso diario. Contiene aceite esencial de romero y
-                extracto de hortiga.
-                Para todo tipo de cabello, especialmente para cabellos debilitados o con caída. La manteca de cacao
-                otorga suavidad y flexibilidad. El coco y el romero fortalecen la fibra capilar. El extracto de ortiga
-                previene la caída del cabello.</p>
+            <h4>Caracteristicas:</h4>
+            <p>Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos derivados del coco (SCI), manteca de cacao y aceites esenciales. Su aroma es herbal. Su espuma es suave y cremosa. Para uso diario. Contiene aceite esencial de romero y extracto de hortiga. Para todo tipo de cabello, especialmente para cabellos debilitados o con caída. La manteca de cacao otorga suavidad y flexibilidad. El coco y el romero fortalecen la fibra capilar. El extracto de ortiga previene la caída del cabello.</p>
+            <h4>Cómo se usa:</h4>
+            <p>Frotar suavemente sobre el cuero cabelludo en la nuca, las sienes y la coronilla. Luego generar espuma con las manos y extender al resto del cabello. No es necesario frotar la pastilla en el largo del pelo, usá la menor cantidad posible y justa.</p>
+            <h4>Duración:</h4>
+            <p>Cada pastilla dura entre 40 y 50 lavados, dependiendo del largo del pelo y el cuidado que se le dé a la pastilla (Recordá siempre mantenerla en seco y que no esté en contacto con el agua cuando no la usas para que no se desgaste y tenga mayor duración). Peso del producto: 50 grs</p>
+            <h6>IMPORTANTE: Nuestros shampoos NO son de tratamiento, no curan afecciones como la caspa, dermatitis ceborréica, etc., aunque tengan aditivos naturales que pueden ayudar a atenuarlas. Tampoco contienen aditivos para preservar cabellos con tintura. No son aptos para menores de 3 años.</h6>
         </article>
-        </div>
+        
     </section>
-
     <!--Galería de productos relacionados-->
     <section class="related-products-gallery">
-        <h3 class="related-products-title">PRODUCTOS RELACIONADOS</h3>
+        <h3>PRODUCTOS RELACIONADOS</h3>
         <div class="conteiner-related-products">
-               <article class="related-product">
-            <img src="img/exf2.jpg" class="related-product-image">
-            <p class="related-product-name">Exfoliante natural limón y romero</p>
-        </article> 
-        <article class="related-product">
-            <img src="img/bl1.jpg" class="related-product-image">
-            <p class="related-product-name">Bálsamo labial de cacao</p>
-        </article>
-        <article class="related-product">
-            <img src="img/j3.jpg" class="related-product-image">
-            <p class="related-product-name">Jabón calmante de avena y miel</p>
-        </article>
+            <article class="related-product">
+                <a href="/products"><img src="img/exf2.jpg"></a>
+                <a href="/products"class="related-products-title">Exfoliante natural limón y romero</a>
+            </article>
+            <article class="related-product">
+                <a href="/products"><img src="img/bl1.jpg"></a>
+                <a href="/products"class="related-products-title">Bálsamo labial de cacao</a>
+            </article> 
+            <article class="related-product">
+                <a href="/products"><img src="img/j3.jpg"></a>
+                <a href="/products"class="related-products-title">Jabón calmante de avena y miel</a>
+            </article>
     </div>
     </section>
     </main>
-
-    
 
      <!--FOOTER-->
      <footer class="main-footer">
