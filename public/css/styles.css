@@ -17,13 +17,16 @@ a {
 /* CONTENEDOR DEL MENU, EL LOGO, LA BUSQUEDA Y EL CARRITO */
 
 .main-header {
+	width: 100%;
 	height: 10vh;
 	background-color: #9DD274;
 	padding: 2vw;
-    width: 100%;
     display: flex;
 	justify-content: space-between;
 	align-items: stretch;
+	position: fixed;
+	top: 0vh;
+	left: 0vw;
 }
 
 /*MENU HAMBURGUESA*/
@@ -35,7 +38,7 @@ a {
 	align-self: stretch;
 	text-align: center;
 	margin-left: 1vw;
-	margin-top: 1vh;
+	margin-top: 1.5vh;
 }
 
 .icon-menu-list {
@@ -138,17 +141,15 @@ a {
 
 .logo {
 	display:block;
-	width: 48vw;
-	height: 8vh;
-	align-self: stretch;
+	width: 40vw;
+	height: auto;
+	align-self: center;
 	text-align: center;
-	margin-left: 3vw;
-	margin-top: -0.6vh;
 }
 
 .logo img {
-	width: 95%;
-	height: 95%;
+	max-width: 100%;
+	height: auto;
 	margin: auto;
 }
 
@@ -160,7 +161,7 @@ a {
 	align-self: stretch;
 	text-align: center;
 	margin-right: 1vw;
-	margin-top: 1vh;
+	margin-top: 1.5vh;
 }
 
 /* BOTON BUSQUEDA */
@@ -178,8 +179,8 @@ a {
 
 #search {
 	position: fixed;
-	bottom: 91.5vh;
-	right: -1.6vw;
+	top: 11vh;
+	right: 3.5vw;
 	height: 7.3vh;
 	width: 80%;
 	border-radius: 3vh;
@@ -204,22 +205,32 @@ a {
 	font-size: 1rem;
 }
 .search-button {
-	width: 5vh;
+	width: 6vw;
+	height: auto;
+	padding: 1.2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-decoration: none;
 	background-color: #9DD274;
 	color: white;
-	border-radius: 50%;
-	margin-right: 4vw;
 	border: 1px solid #9DD274;
+}
+
+.search-button i {
+	padding: 1rem;
 }
 
 #search:target {
 	opacity: 100%;
 	visibility: visible;
 	transition: all 0.8s ease-in-out;
+}
+
+/* NAVBAR OCULTO (APARECE EN EL MEDIA QUERY 481px) */
+
+.navbar-mediaquery {
+	display: none;
 }
 
 /* BOTON CARRITO */
@@ -231,6 +242,12 @@ a {
 	color: white;
 	font-size: 4.5vw;
 	text-align: center;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+	padding-top: 10vh;
 }
 
 /* SECCION CATEGORIAS */
@@ -246,7 +263,7 @@ a {
 }
 
 .categories li {
-	background-color: #9DD274;
+	background-color: #35120B;
 }
 
 .categories a {
@@ -267,6 +284,7 @@ a {
 
 .banner-carrousel img {
 	width: 100%;
+	border: 1px solid #35120B;
 }
 
 /* SECCION PRODUCTOS DESTACADOS */
@@ -311,7 +329,7 @@ article img {
 	display: block;
 	width: 100%;
 	height: 5vh;
-	background-color: black;
+	background-color: #35120B;
 	text-align: center;
 	padding: 2vh 2vw;
 	margin-bottom: 2vh;
@@ -369,7 +387,7 @@ article img {
 
 .button-newsletter {
 	width: 15vw;
-	color: white;
+	color: #35120B;
 	text-decoration: none;
 	display: flex;
 	justify-content: center;
@@ -388,7 +406,7 @@ article img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
-	border-top: 1px solid white;
+	border-top: 1px solid #35120B;
 	margin-top: 1vh;
 }
 
@@ -410,7 +428,7 @@ article img {
 
 .navbar-list {
 	padding: 0.5vw 0.5vh;
-	margin-left: 22vw;
+	margin-left: 20vw;
 }
 
 .contact-us {
@@ -419,7 +437,7 @@ article img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
-	border-top: 1px solid white;
+	border-top: 1px solid #35120B;
 	margin-top: 1vh;
 }
 
@@ -455,7 +473,7 @@ article img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: center;
-	border-top: 1px solid white;
+	border-top: 1px solid #35120B;
 	margin-top: 1vh;
 }
 
@@ -494,6 +512,84 @@ article img {
 /* VERSION TABLET */
 
 @media (min-width: 481px) {
+	.menu-list {
+		display: none;
+	}
+	
+	.logo {
+		max-width: 25vw;
+	}
+	.icon-search-item {
+		display: none;
+	}
+
+	#search {
+		max-width: 35vw;
+	    height: 5vh;
+	    position: absolute;
+	    left: 32vw;
+	    top: 2.5vh;
+	    border-radius: 3vh;
+	    overflow: hidden;
+	    visibility: visible;
+	    opacity: 100%;
+	    box-shadow: 0 0 0.25rem 0.15rem #9DD274;
+	}
+	
+	.search {
+		width: 100%;
+	}
+
+    .search-input {
+		width: 80%;
+	    padding: 0.8rem;
+	    font-size: 0.8rem;
+    }
+    .search-button {
+	    background-color: white;
+	    color: #9DD274;
+	    width: 10%;
+	    height: 5vh;
+		border: none;
+		margin-left: -7.3vw;
+	    padding: 1rem;
+		font-size: 0.8rem;
+	}
+
+	.icon-cart-item {
+		display: none;
+	}
+
+	.navbar-mediaquery {
+		display: flex;
+		max-width: 30vw;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.3rem;
+
+	}
+
+	.icon-cart {
+		color: white;
+		padding: 0.2rem;
+	}
+		
+	.user-account {
+		text-decoration: none;
+		font-size: 0.7rem;
+		color: white;
+		padding: 0.2rem;
+		text-align: center;
+	}
+		
+	.sign-up {
+		text-decoration: none;
+		font-size: 0.7rem;
+		color: white;
+		padding: 0.2rem;
+		border-left: 1px solid #35120B;
+		text-align: center;
+	}
 
 }
 
