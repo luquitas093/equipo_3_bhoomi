@@ -1,0 +1,151 @@
+
+/**/
+
+/*Foto del producto*/
+
+/*Caja foto y descripción*/
+.product-and-description{
+width:100%;
+
+background-color: #f5e7d9;
+}
+
+.product-and-description p{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 5%;
+}
+
+/*Estilo imágenes*/
+.product-images{
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.product-style{
+    width:33%;
+
+
+}
+
+/*caja nombre y precio del producto*/
+.product-name-and-price{
+
+}
+
+.product-name{
+    font-size: 1.5rem;
+    text-align: center;
+    color:black;
+    padding:5%;
+    }
+
+.prices{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #dd721b;
+    text-shadow: -1px -1px 1px rgb(61, 57, 57);
+    padding:0%;
+
+}
+
+/*Caja métodos de pago y cuotas*/
+
+.conteiner-cards-networks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.conteiner-cards-networks div{
+    margin: auto;
+    width: 45%;
+    min-width: 150px;
+}
+
+
+
+.pay-share-text{
+    display: flex;
+    margin: 5%;
+    padding:0.75rem;
+    align-items:center;
+    justify-content: space-around;
+    font-size: 1.5rem;
+
+}
+
+.card-logo{
+    width:1.5rem;
+    margin: auto;
+}
+
+
+
+/*Caja compartir producto en las redes*/
+.info-product-share{
+
+}
+
+
+
+/*Contador de productos y botón añadir al carrito*/
+
+.product-counter{
+
+}
+
+.counter-arrow{
+
+}
+
+.button-add-cart{
+
+}
+
+/*Medios de envío y calculadora con código postal*/
+
+.shipping{
+
+}
+
+.postal-code{
+
+}
+
+.shipping-calculator-button{
+
+}
+
+/*Descripción del producto*/
+
+.product-description{
+    width: 100%;
+}
+
+/*Galería de productos relacionados*/
+
+.related-products-gallery{
+    background-color: #f5e7d9;
+
+}
+
+.related-products-title{
+
+}
+
+.related-product{
+ width: 100%;
+}
+
+.related-product-image{
+    width: 90%;
+}
+
+.related-product-name{
+
+}
+
+/*FIN DEL MAIN*/

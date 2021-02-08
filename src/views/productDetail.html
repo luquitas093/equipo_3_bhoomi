@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto</title>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
 </head>
 
 <body>
@@ -31,34 +32,40 @@
         <!--Nombre y precio-->
         <article class="product-name-and-price">
             <h2 class="product-name">SHAMPOO SÓLIDO FORTALECEDOR 100% NATURAL</h2>
-            <p class="prices">$350</p>
+            <p class="prices">$400</p>
         </article>
         <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
-        <div class="payment-methods">
-            <p class="info-pay-share">Pagá en 3 o 6 cuotas sin interés</p>
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
-                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
-                class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
-                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
-                class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
-                data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
-                class="card-logo">
-            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
-                data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
-                class="card-logo">
-            <div><i class="fas fa-credit-card" class="card-logo"></i></div>
-            <div><i class="fas fa-plus" class="card-logo"></i></div>
-        </div>
+        <div class="conteiner-cards-networks">
+            <div class="payment-methods">
+                <p class="info-pay-share">Pagá en 3 o 6 cuotas sin interés</p>
+                <div class="pay-icons-style">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                        data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                        class="card-logo">
+                    <i class="fas fa-credit-card" class="card-logo"></i>
+                    <i class="fas fa-plus" class="card-logo"></i>
+                </div>
+            </div>
 
-        <div>
-            <!--Compartí en las redes-->
-            <p class="info-pay-share">Compartir</p>
-            <div><i class="fab fa-instagram" class="share-networks"></i></div>
-            <div><i class="fab fa-facebook" class="share-networks"></i></div>
-            <div><i class="fab fa-whatsapp" class="share-networks"></i></div>
-            <div><i class="fab fa-twitter" class="share-networks"></i></div>
+            <div>
+                <!--Compartí en las redes-->
+                <p class="info-product-share">Compartir</p>
+                <div  class="pay-icons-style">
+                    <i class="fab fa-instagram" class="share-networks-logo"></i>
+                    <i class="fab fa-facebook" class="share-networks-logo"></i>
+                    <i class="fab fa-whatsapp" class="share-networks-logo"></i>
+                    <i class="fab fa-twitter" class="share-networks-logo"></i>
+                </div>
+            </div>
         </div>
 
         <!--Contador de productos-->
@@ -81,13 +88,14 @@
             <p>Medios de envío</p>
             <input type="text" name="shippingCalculator" placeholder="Tu código postal" required class="control"
                 class="postal-code">
-            <button type="submit" class="shipping-button">CALCULAR</button>
+            <button type="submit" class="shipping-calculator-button">CALCULAR</button>
 
 
         </div>
         <!--Descripción del producto-->
         <article class="product-description">
-            <p>ACERCA DEL PRODUCTO: Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos derivados del coco (SCI),
+            <p>ACERCA DEL PRODUCTO: Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos
+                derivados del coco (SCI),
                 manteca de cacao y aceites esenciales.
                 Su aroma es herbal. Su espuma es suave y cremosa. Para uso diario. Contiene aceite esencial de romero y
                 extracto de hortiga.
@@ -100,7 +108,7 @@
 
     <!--Galería de productos relacionados-->
     <section class="related-products-gallery">
-    <h3 class="related-products-title">PRODUCTOS RELACIONADOS</h3>
+        <h3 class="related-products-title">PRODUCTOS RELACIONADOS</h3>
         <article class="related-product">
             <img src="img/bl1.jpg" class="related-product-image">
             <p class="related-product-name">Bálsamo labial de cacao</p>
