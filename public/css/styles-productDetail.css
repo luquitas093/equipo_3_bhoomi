@@ -4,10 +4,15 @@
 /*Foto del producto*/
 
 /*Caja foto y descripción*/
+*{
+    color: #35120B;
+}
 .product-and-description{
-width:100%;
-
+width:95%;
+padding-top:25% ;
 background-color: #f5e7d9;
+
+margin:auto;
 }
 
 .product-and-description p{
@@ -22,6 +27,7 @@ background-color: #f5e7d9;
     justify-content:space-around;
     align-items: flex-start;
     flex-wrap: nowrap;
+    border: solid 2px #35120b97
 }
 
 .product-style{
@@ -31,15 +37,19 @@ background-color: #f5e7d9;
 }
 
 /*caja nombre y precio del producto*/
-.product-name-and-price{
+.product-name-and-price p{
+    margin:auto;
+    text-align: center;
+    font-size: 1.5rem;
 
 }
 
 .product-name{
     font-size: 1.5rem;
     text-align: center;
-    color:black;
-    padding:5%;
+    color: #35120B;
+    padding:3%;
+    padding-bottom: 0;
     }
 
 .prices{
@@ -48,6 +58,7 @@ background-color: #f5e7d9;
     color: #dd721b;
     text-shadow: -1px -1px 1px rgb(61, 57, 57);
     padding:0%;
+    
 
 }
 
@@ -57,8 +68,9 @@ background-color: #f5e7d9;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    align-items:flex-start;
 }
+
 .conteiner-cards-networks div{
     margin: auto;
     width: 45%;
@@ -74,11 +86,16 @@ background-color: #f5e7d9;
     align-items:center;
     justify-content: space-around;
     font-size: 1.5rem;
+ }
+
+.payment-methods p{
+    text-align: center;
+
+	
 
 }
-
 .card-logo{
-    width:1.5rem;
+    width: 1.5rem;
     margin: auto;
 }
 
@@ -93,22 +110,71 @@ background-color: #f5e7d9;
 
 /*Contador de productos y botón añadir al carrito*/
 
-.product-counter{
+.product-counter-form div{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
+    padding: 5%;
+    text-align: center;
+
+}
+.control{
+    text-align: center;
+}
+.product-counter i{
+    margin: auto; 
+    padding:1%;
 
 }
 
-.counter-arrow{
+.counter-arrow input {
+ 
+   
 
 }
 
-.button-add-cart{
+.button-add-cart {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin: auto;
+
 
 }
+.button-add-cart button{
+
+    margin: auto;
+
+
+}
+
 
 /*Medios de envío y calculadora con código postal*/
 
 .shipping{
 
+}
+.truck-ship-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    width:100%;
+}
+
+.code-and-button{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: auto;
+    width:100%;  /*REVISAR*/
+}
+
+.code-and-button input{
+margin-left: 5%;
 }
 
 .postal-code{
@@ -128,24 +194,43 @@ background-color: #f5e7d9;
 /*Galería de productos relacionados*/
 
 .related-products-gallery{
-    background-color: #f5e7d9;
+    width:90%;
+    padding-top:3%;
+    margin:auto;
+}
+
+.conteiner-related-products{
+    width: 90%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:auto;
+    align-items: flex-start;
+    padding-bottom: 3%;
 
 }
 
 .related-products-title{
-
+    margin:auto;
+    text-align: center;
+    padding-bottom: 3%;
 }
 
 .related-product{
- width: 100%;
-}
-
-.related-product-image{
-    width: 90%;
+    width: 28%;
 }
 
 .related-product-name{
+    margin:auto;
+    text-align: center;
+}
 
+.related-product-image {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border: solid 2px #35120b97
 }
 
 /*FIN DEL MAIN*/

@@ -17,9 +17,9 @@
 
 <body>
     <!--HEADER-->
-    <header class = "main-header">
+    <header class="main-header">
         <!-- MENU DE NAVEGACION -->
-        <nav class ="menu-list">
+        <nav class="menu-list">
             <a href="#menu" class="icon-menu-list" id="btn-menu">
                 <i class="fas fa-bars"></i>
             </a>
@@ -63,21 +63,21 @@
                 <i class="fas fa-search"></i>
             </a>
 
-            <form action="#" id= "search" autocomplete = "off" method="GET">
+            <form action="#" id="search" autocomplete="off" method="GET">
                 <label class="search" for="keyword">
-                    <input class="search-input" type="text" name="keyword" id="keyword" placeholder="Buscar..." >
+                    <input class="search-input" type="text" name="keyword" id="keyword" placeholder="Buscar...">
                     <a href="#btn-search" class="search-button">
                         <i class="fas fa-search"></i>
                     </a>
                 </label>
-                 </form>
+            </form>
 
-            <a href="/cart" class="icon-cart-item"> <i class="fas fa-shopping-cart"></i> </a>    
+            <a href="/cart" class="icon-cart-item"> <i class="fas fa-shopping-cart"></i> </a>
         </nav>
         <nav class="navbar-mediaquery">
             <a href="/register" class="user-account">Crear Cuenta</a>
             <a href="/login" class="sign-up">Iniciar Sesión</a>
-            <a href="/cart" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>    
+            <a href="/cart" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
         </nav>
     </header>
 
@@ -119,7 +119,7 @@
             <div>
                 <!--Compartí en las redes-->
                 <p class="info-product-share">Compartir</p>
-                <div  class="pay-icons-style">
+                <div class="pay-icons-style">
                     <i class="fab fa-instagram" class="share-networks-logo"></i>
                     <i class="fab fa-facebook" class="share-networks-logo"></i>
                     <i class="fab fa-whatsapp" class="share-networks-logo"></i>
@@ -129,10 +129,10 @@
         </div>
 
         <!--Contador de productos-->
-        <form action="">
+        <form action="" class="product-counter-form">
             <div class="product-counter">
                 <i class="fas fa-chevron-up" class="counter-arrow"></i>
-                <input type="text" name="productCounter" placeholder="1" required class="control">
+                <input class="control" type="text" name="productCounter" placeholder="1" required>
                 <i class="fas fa-chevron-down" class="counter-arrow"></i>
             </div>
         </form>
@@ -144,13 +144,13 @@
 
         <!--Medios de envío-->
         <div class="shipping">
-            <i class="fas fa-truck"></i>
-            <p>Medios de envío</p>
-            <input type="text" name="shippingCalculator" placeholder="Tu código postal" required class="control"
-                class="postal-code">
+            <div class="truck-ship-container">
+                <i class="fas fa-truck"></i>
+                <p>Medios de envío</p>
+            </div>
+            <div class="code-and-button">
+            <input type="text" name="shippingCalculator" placeholder="Tu código postal" required class="postal-code">
             <button type="submit" class="shipping-calculator-button">CALCULAR</button>
-
-
         </div>
         <!--Descripción del producto-->
         <article class="product-description">
@@ -169,80 +169,86 @@
     <!--Galería de productos relacionados-->
     <section class="related-products-gallery">
         <h3 class="related-products-title">PRODUCTOS RELACIONADOS</h3>
+        <div class="conteiner-related-products">
+               <article class="related-product">
+            <img src="img/exf2.jpg" class="related-product-image">
+            <p class="related-product-name">Exfoliante natural limón y romero</p>
+        </article> 
         <article class="related-product">
             <img src="img/bl1.jpg" class="related-product-image">
             <p class="related-product-name">Bálsamo labial de cacao</p>
         </article>
         <article class="related-product">
-            <img src="img/exf2.jpg" class="related-product-image">
-            <p class="related-product-name">Exfoliante natural limón y romero</p>
-        </article>
-        <article class="related-product">
             <img src="img/j3.jpg" class="related-product-image">
             <p class="related-product-name">Jabón calmante de avena y miel</p>
         </article>
+    </div>
     </section>
 
-     <!--FOOTER-->
-     <footer class="main-footer">
+    <!--FOOTER-->
+    <footer class="main-footer">
 
         <!--Suscribite a nuestro newsletter-->
         <section class="newsletter">
             <p class="bottom-titles">Newsletter</p>
-            <form action="#" id= "email-newsletter" autocomplete = "off" method="GET" class="form-newsletter">
-                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email" class="suscribe-newsletter" required>
+            <form action="#" id="email-newsletter" autocomplete="off" method="GET" class="form-newsletter">
+                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email"
+                    class="suscribe-newsletter" required>
                 <button type="submit" class="button-newsletter">
                     <i class="fas fa-paper-plane"></i>
-                 </button>
+                </button>
             </form>
 
-        <!--Barra de navegación del footer -->
-        <section class="bottom-navbar">
-            <p class="bottom-titles">Navegación</p>
-            <nav>
-                <ul class="bottom-navbar-options">
-                    <li class="navbar-list"><a href="/">Inicio</a></li>
-                    <li class="navbar-list"><a href="/products">Productos</a></li>
-                    <li class="navbar-list"><a href="/cart">Carrito</a></li>
-                    <li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>
-                </ul>
-            </nav>
-        </section>
+            <!--Barra de navegación del footer -->
+            <section class="bottom-navbar">
+                <p class="bottom-titles">Navegación</p>
+                <nav>
+                    <ul class="bottom-navbar-options">
+                        <li class="navbar-list"><a href="/">Inicio</a></li>
+                        <li class="navbar-list"><a href="/products">Productos</a></li>
+                        <li class="navbar-list"><a href="/cart">Carrito</a></li>
+                        <li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>
+                    </ul>
+                </nav>
+            </section>
 
-        <!--Contactanos-->
-        <section class="contact-us">
-            <p class="bottom-titles">Contactanos</p>
-            <nav>
-                <ul class="bottom-navbar-contact-us">
-                    <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
-                    <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
-                    <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
-                </ul>
-            </nav>
-        </section>
+            <!--Contactanos-->
+            <section class="contact-us">
+                <p class="bottom-titles">Contactanos</p>
+                <nav>
+                    <ul class="bottom-navbar-contact-us">
+                        <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
+                        <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
+                        <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
+                    </ul>
+                </nav>
+            </section>
 
-        <!--Redes sociales-->
-        <section class="social-networks">
-            <p class="bottom-titles">Redes sociales</p>
-            <nav>
-                <ul class="bottom-navbar-networks">
-                    <div class="bottom-networks-position">
-                        <li class="social-networks-button"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                        <li class="social-networks-button"><a href="https://www.facebook.com/"></a><i class="fab fa-facebook"></i></li>
-                        <li class="social-networks-button"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                    </div>
-                </ul>
-            </nav>
-        </section>
+            <!--Redes sociales-->
+            <section class="social-networks">
+                <p class="bottom-titles">Redes sociales</p>
+                <nav>
+                    <ul class="bottom-navbar-networks">
+                        <div class="bottom-networks-position">
+                            <li class="social-networks-button"><a href="https://www.instagram.com/"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="social-networks-button"><a href="https://www.facebook.com/"></a><i
+                                    class="fab fa-facebook"></i></li>
+                            <li class="social-networks-button"><a href="https://twitter.com/"><i
+                                        class="fab fa-twitter"></i></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </section>
 
-        <!--Certificaciones-->
-        <section class="certifications">
-            <p class="bottom-titles">Certificaciones</p>
-            <nav>
-                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
-                    class="certification-logo">
-            </nav>
-        </section>
+            <!--Certificaciones-->
+            <section class="certifications">
+                <p class="bottom-titles">Certificaciones</p>
+                <nav>
+                    <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
+                        class="certification-logo">
+                </nav>
+            </section>
     </footer>
 </body>
 
