@@ -266,7 +266,7 @@ a {
 	justify-content: space-between;
 	list-style: none;
 	padding: 0.3rem;
-	margin-top: 1vh;
+	margin-bottom: 1vh;
 }
 
 .categories-hidden {
@@ -358,6 +358,20 @@ article img {
 	margin-top: -1.6vh;
 }
 
+/* BANNER - CARROUSEL BOTTOM */
+
+.banner-carrousel-bottom {
+	width: 90%;
+	display: block;
+	margin: auto;
+	padding: 2vh 0vw;
+}
+
+.banner-carrousel-bottom img {
+	width: 100%;
+	border: 1px solid #35120B;
+}
+
 /*FOOTER*/
 
 .main-footer {
@@ -400,7 +414,7 @@ article img {
 }
 
 .button-newsletter {
-	width: 15vw;
+	width: 40vw;
 	color: #35120B;
 	text-decoration: none;
 	display: flex;
@@ -413,6 +427,12 @@ article img {
 	margin: auto;
 	font-size: 0.9rem;
 	border-left: 1px solid #35120B;
+}
+
+.button-newsletter i {
+	font-size: 0.8rem;
+	margin-left: -0.8vw;
+	padding: 0.2vw
 }
 
 .bottom-navbar {
