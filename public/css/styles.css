@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Poppins';
-    overflow-x: hidden;
+	overflow-x: hidden;
+	background-color: #F5E7D9;
 }
 
 a {
@@ -23,7 +24,6 @@ a {
     display: flex;
 	justify-content: space-between;
 	align-items: stretch;
-	position: relative;
 }
 
 /*MENU HAMBURGUESA*/
@@ -231,28 +231,42 @@ a {
 	color: white;
 	font-size: 4.5vw;
 	text-align: center;
-
 }
 
 /* SECCION CATEGORIAS */
 
 .categories {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	list-style: none;
-	padding: 2vh 1vw;
+	padding: 2vh 1vw 1vh 1vw;
+	margin-top: 1vh;
 }
 
 .categories li {
-	font-size: 1rem;
-	background-color: grey;
+	background-color: #9DD274;
 }
 
 .categories a {
 	color: white;
 	text-decoration: none;
-	padding: 2px;
+	padding: 1vh 1vw;
+	font-size: 0.9rem;
+}
+
+/* BANNER - CARROUSEL PRINCIPAL */
+
+.banner-carrousel {
+	width: 90%;
+	display: block;
+	margin: auto;
+	padding: 2vh 0vw;
+}
+
+.banner-carrousel img {
+	width: 100%;
 }
 
 /* SECCION PRODUCTOS DESTACADOS */
@@ -280,13 +294,14 @@ article img {
 }
 
 .product-name {
-	color: black;
+	color: #35120B;
 	font-size: 1rem;
 	padding: 0.5vh 1vw;
 	text-decoration: none;
 }
 
 .product-price {
+	color: #35120B;
 	font-size: 1rem;
 	font-weight: bold;
 	padding: 0.5vh 1vw;
@@ -318,6 +333,156 @@ article img {
 	width: 100%;
 	background-color: #9DD274;
 	padding: 1vh 1vw;
+}
+
+.newsletter {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.bottom-titles {
+	color: #35120B;
+	font-size: 0.8rem;
+	width: 30vw;
+	padding: 1vh 1vw;
+	align-self: flex-start;
+	text-align: left;
+}
+
+.form-newsletter {
+	display: flex;
+	width: 65vw;
+}
+
+.suscribe-newsletter {
+	width: 60vw;
+	padding: 1vh 0.5vw;
+	flex: 1 0 auto;
+	border: none;
+	outline: none;
+	font-size: 0.8rem;
+	margin: auto;
+}
+
+.button-newsletter {
+	width: 15vw;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	background-color: #9DD274;
+	border: none;
+	padding: 0.5vh 0.5vw;
+	margin: auto;
+	font-size: 0.9rem;
+}
+
+.bottom-navbar {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	border-top: 1px solid white;
+	margin-top: 1vh;
+}
+
+.bottom-navbar-options {
+	width: 65vw;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-self: center;
+	list-style: none;
+	margin: auto;
+}
+
+.bottom-navbar-options a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: white;
+}
+
+.navbar-list {
+	padding: 0.5vw 0.5vh;
+	margin-left: 22vw;
+}
+
+.contact-us {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	border-top: 1px solid white;
+	margin-top: 1vh;
+}
+
+.bottom-navbar-contact-us {
+	width: 65vw;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-self: center;
+	list-style: none;
+	margin: auto;
+	padding: 0.5vh 0.5vw;
+}
+
+.contact-ways {
+	padding: 0.5vw 0.5vh;
+	margin-left: 15vw;
+}
+
+.contact-ways i {
+	color: #35120B;
+}
+
+.bottom-navbar-contact-us a {
+	text-decoration: none;
+	font-size: 0.8rem;
+	color: white;
+}
+
+.social-networks {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	border-top: 1px solid white;
+	margin-top: 1vh;
+}
+
+.bottom-navbar-networks {
+	width: 65vw;
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	list-style: none;
+	margin: auto;
+	padding: 0.5vh 0.5vw;
+}
+
+.bottom-networks-position {
+	display: flex;
+	margin-left: 13vw;
+}
+
+.social-networks-button {
+	border-radius: 100%;
+	padding: 0.5vw 0.5vh;
+	margin-left: 2vw;
+	text-align: center;
+}
+
+.social-networks-button i {
+	color: #35120B;
 }
 
 .certifications {
