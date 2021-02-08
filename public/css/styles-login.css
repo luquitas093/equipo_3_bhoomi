@@ -100,3 +100,11 @@ body{
            background-color: #DD721B;
         }
     }
+
+    .crearcuenta a:hover {
+        color: #DD721B;
+    }
+
+    .olvidemicontraseña a:hover {
+        color: #DD721B;
+    }

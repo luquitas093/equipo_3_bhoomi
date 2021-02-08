@@ -1,0 +1,112 @@
+
+/*TÍTULO*/
+.encabezadocarrito {
+    padding: 1vh;
+    font-size: 2vh;
+}
+
+/*PRIMER DIV CON PRODUCTO Y SUBTOTAL*/
+
+.top-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+}
+
+.producto {
+    margin: auto;
+}
+
+.subtotal {
+    margin: auto;
+}
+
+/*SEGUNDA DIV CON IMAGEN, DESCRIPCIÓN Y PRECIO*/
+
+.detalleproducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedorimagen {
+    width: 20%;
+}
+
+.imgproducto {
+    width: 100%;
+    padding: 2vh;
+    margin: 0;
+
+
+}
+
+.descripcion {
+    width: 80%;
+    padding: 2vh;
+
+}
+
+.contenedorasubtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+    width: 40%;
+
+}
+
+.papelera {
+    padding-bottom: 11vh;
+    border: none;
+    background-color: #F5E7D9;
+
+}
+
+/*TERCERA DIV CON SUBTOTAL Y PRECIO*/
+
+.subtotalfinal {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vh;
+}
+
+.subt {
+    margin: auto;
+    font-size: 3vh;
+}
+
+.preciofinal {
+    margin: auto;
+    font-size: 3vh;
+}
+
+/*DIV CON ESTILO DEL ENVÍO*/
+
+.envío {
+    padding: 2vh;
+}
+
+/*BOTÓN DE FINALIZAR COMPRA*/
+
+.finalizarcompra {
+    padding: 2vh;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    background-color: #9DD274;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.button:hover{
+   
+    background-color: #DD721B;
+  
+    
+}
