@@ -29,6 +29,7 @@ body{
     margin-bottom: 5px;
     font-style: italic;
     display: block;
+    color: #35120B;
 }
 
 .formatocampo{
@@ -47,7 +48,7 @@ body{
 .titulologin{
     text-align: center;
     font-family: 'Poppins';
-    color: #9DD274;
+    color: #35120B;
     
 }
 
@@ -64,13 +65,6 @@ body{
  
 }
 
-.button:hover{
-   
-    background-color: #DD721B;
-  
-    
-}
-
 .center{
     text-align: center;
     padding: 10px;
@@ -79,5 +73,30 @@ body{
 .olvidemicontraseña{
     text-align: center;
     padding: 10px;
-    font-style: italic;
+    padding-top: 15px;
 }
+
+.olvidemicontraseña a {
+    text-decoration: none;
+    color: #35120B;
+    font-size: 0.9rem;
+}
+
+.crearcuenta{
+    text-align: center;
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.crearcuenta a {
+    text-decoration: none;
+    color: #35120B;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 769px) {
+
+    .button:hover{
+           background-color: #DD721B;
+        }
+    }

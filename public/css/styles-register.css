@@ -1,6 +1,5 @@
 body{
     background-color: #F5E7D9;
- 
 }
 
 /*ESTILO CAMPOS DEL FORMULARIO*/
@@ -17,6 +16,7 @@ body{
     margin-bottom: 5px;
     font-style: italic;
     display: block;
+    color: #35120B;
 }
 
 .formatocampo{
@@ -33,7 +33,7 @@ body{
 .encabezado{
     text-align: center;
     font-family: 'Poppins';
-    color: #9DD274;
+    color: #35120B;
     
 }
 
@@ -47,17 +47,16 @@ body{
  padding: 5px 10px;
  border-radius: 5px;
  text-align: center;
- 
-}
-
-.button:hover{
-   
-    background-color: #DD721B;
-  
-    
 }
 
 .center{
     text-align: center;
     padding: 10px;
 }
+
+@media (min-width: 769px) {
+
+    .button:hover{
+           background-color: #DD721B;
+        }
+    }
