@@ -84,7 +84,7 @@
     <!--CARRITO CON PRODUCTOS-->
     <main class="main-content">
         <div class="encabezadocarrito">
-            <h1>CARRITO DE COMPRAS</h1>
+            <h1>Carrito de compras</h1>
         </div>
         <hr>
         <div class="top-carrito">
@@ -98,13 +98,15 @@
                 <div class="detalleproducto">
                     <div class="contenedorimagen">
                         <figure class="imgproducto">
-                            <img src="img/j1.jpg" alt="Jabón">
+                            <img src="img/ss1.jpg" alt="Shampoo Sólido">
                         </figure>
                     </div>
                     <div class="descripcion">
-                        <h3>JABÓN CORPORAL DE ROSA MOSQUETA</h3>
-                        <h5>Equilibrio para tu piel</h5>
-                        <h3>$240</h3>
+                        <h3>SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO</h3>
+                        <h5>100% Natural</h5>
+                        <h3>$400</h3>
+                        <div class="quantity">
+                        <p>Cantidad:</p>
                         <select>
                             <label>Cantidad</label>
                             <option name="1">1</option>
@@ -114,6 +116,7 @@
                             <option name="5">5</option>
                             <option name="6">6</option>
                         </select>
+                    </div>
                     </div>
                     <div class="contenedorasubtotal">
                         <h3>$240</h3>
@@ -127,7 +130,7 @@
 
         <div class="subtotalfinal">
             <div class="subt">
-                <p>Subtotal de su compra:</p>
+                <p>Subtotal (sin envío):</p>
             </div>
             <div class="preciofinal">
                 <h3>$240</h3>
@@ -137,7 +140,7 @@
         <hr>
 
         <div class="envío">
-            <label>Seleccione método de retiro</label>
+            <label>Método de envío:</label>
             <select>
                 <option name="retirolocal">Retiro en el local</option>
                 <option name="envíoadomicilio">Envío a domicilio</option>
@@ -147,79 +150,31 @@
 
         <hr>
 
-        <div class="finalizarcompra">
-            <input type="submit" value="Finalizar compra" class="button">
+        <div class="subtotalfinal">
+            <div class="total">
+                <p>Total:</p>
+            </div>
+            <div class="preciofinal">
+                <h3>$240</h3>
+            </div>
+            
         </div>
+
+        <div class="finalizarcompra">
+            <a href="/">FINALIZAR COMPRA</a>
+        </div>
+
+        <div class="vermas">
+            <a href="/">Ver más productos</a>
+        </div>
+
+       
+
 
 
 
     </main>
 
-
-    <!--FOOTER-->
-    <footer class="main-footer">
-
-        <!--Suscribite a nuestro newsletter-->
-    <div class="footer-mediaquery">
-        <section class="newsletter">
-            <p class="bottom-titles">Newsletter</p>
-            <form action="#" id= "email-newsletter" autocomplete = "off" method="GET" class="form-newsletter">
-                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email" class="suscribe-newsletter" required>
-                <button type="submit" class="button-newsletter">
-                    <i class="fas fa-paper-plane"></i>
-                 </button>
-                </form>
-            </section>
-
-        <!--Barra de navegación del footer -->
-        <section class="bottom-navbar">
-            <p class="bottom-titles">Navegación</p>
-            <nav>
-                <ul class="bottom-navbar-options">
-                    <li class="navbar-list"><a href="/">Inicio</a></li>
-                    <li class="navbar-list"><a href="/products">Productos</a></li>
-                    <li class="navbar-list"><a href="/cart">Carrito</a></li>
-                    <li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Contactanos-->
-        <section class="contact-us">
-            <p class="bottom-titles">Contactanos</p>
-            <nav>
-                <ul class="bottom-navbar-contact-us">
-                    <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
-                    <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
-                    <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Redes sociales-->
-        <section class="social-networks">
-            <p class="bottom-titles">Redes sociales</p>
-            <nav>
-                <ul class="bottom-navbar-networks">
-                    <div class="bottom-networks-position">
-                        <li class="social-networks-button"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                        <li class="social-networks-button"><a href="https://www.facebook.com/"></a><i class="fab fa-facebook"></i></li>
-                        <li class="social-networks-button"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                    </div>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Certificaciones-->
-        <section class="certifications">
-            <p class="bottom-titles">Certificaciones</p>
-            <nav>
-                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
-                    class="certification-logo">
-            </nav>
-        </section>
-    </div>
-    </footer>
 </body>
 
 </html>

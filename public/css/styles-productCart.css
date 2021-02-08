@@ -1,24 +1,29 @@
 
+
+hr {
+    color: #35120B;
+}
+
 /*TÍTULO*/
 .encabezadocarrito {
     padding: 1vh;
     font-size: 2vh;
+    color: #35120B;
 }
 
 /*PRIMER DIV CON PRODUCTO Y SUBTOTAL*/
 
 .top-carrito {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     padding: 2vh;
-}
-
-.producto {
-    margin: auto;
+    color: #35120B;
 }
 
 .subtotal {
-    margin: auto;
+    padding-right: 8%;
 }
 
 /*SEGUNDA DIV CON IMAGEN, DESCRIPCIÓN Y PRECIO*/
@@ -27,24 +32,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    color: #35120B;
 }
 
 .contenedorimagen {
-    width: 20%;
+    width: 25%;
 }
 
 .imgproducto {
     width: 100%;
     padding: 2vh;
     margin: 0;
-
-
 }
 
 .descripcion {
     width: 80%;
     padding: 2vh;
-
 }
 
 .contenedorasubtotal {
@@ -56,10 +59,36 @@
 }
 
 .papelera {
-    padding-bottom: 11vh;
+    padding-bottom: 20.8vh;
     border: none;
     background-color: #F5E7D9;
+    color: #35120B;
 
+}
+
+/* CANTIDAD */
+
+.quantity {
+    display:flex;
+}
+
+.quantity p {
+    padding-top: 0.5rem;
+    padding-right: 0.3rem;
+}
+
+.quantity option {
+    background-color: #f5e7d9;
+    border: #35120B;
+    font-size: 0.8rem;
+}
+
+.quantity select {
+    font-size: 0.9rem;
+    padding: 0.3rem 0rem;
+    border: 1px solid #35120B;
+    background-color: white;
+    border-radius: 10%;
 }
 
 /*TERCERA DIV CON SUBTOTAL Y PRECIO*/
@@ -71,42 +100,86 @@
 }
 
 .subt {
-    margin: auto;
     font-size: 3vh;
+    color: #35120B;
 }
 
 .preciofinal {
-    margin: auto;
     font-size: 3vh;
+    color: #35120B;
+}
+
+.total {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #35120B;
 }
 
 /*DIV CON ESTILO DEL ENVÍO*/
 
 .envío {
     padding: 2vh;
+    width: 100%;
+    color: #35120B;
+}
+
+.envio label {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.envio option {
+    background-color: #f5e7d9;
+    border: #35120B;
+    font-size: 0.8rem;
+}
+
+.envio select {
+    font-size: 0.9rem;
+    padding: 0.3rem 0rem;
+    border: 1px solid #35120B;
+    background-color: white;
+    border-radius: 10%;
 }
 
 /*BOTÓN DE FINALIZAR COMPRA*/
 
 .finalizarcompra {
-    padding: 2vh;
+    padding: 1.5rem;
     text-align: center;
 }
 
-.button {
+.finalizarcompra a {
     border: none;
-    background-color: #9DD274;
+    background-color: #35120B;
     font-size: 20px;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     text-align: center;
+    text-decoration: none;
 
 }
 
-.button:hover{
+.vermas {
+    text-align: center;
+    color: #35120B;
+}
+
+.vermas a{
+    text-decoration: none;
+    color: #35120B;
+}
+
+@media (min-width: 769px) {
+    .finalizarcompra a:hover{
    
-    background-color: #DD721B;
-  
-    
+        background-color: #DD721B;
+    }
+
+    .vermas a:hover{
+        text-decoration: underline;
+        transition: 0.3s all;
+    }
+
 }
