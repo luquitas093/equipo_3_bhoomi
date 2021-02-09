@@ -85,7 +85,25 @@
                                                      MAIN
     ************************************************************************************************************-->                                                 
 
-    <main class="main-content">
+    <main class="main-productDetail">
+
+                <!--MENU PARA MEDIA QUERY-->
+                <section>
+                    <ul class="mediaquery-menu-list">
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/" class="mediaquery-menu-list-item-anchor">Inicio</a>
+                        </li>
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/products" class="mediaquery-menu-list-item-anchor">Productos</a>
+                        </li>
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/cart" class="mediaquery-menu-list-item-anchor">Carrito</a>
+                        </li>
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/products" class="mediaquery-menu-list-item-anchor">¡Sale!</a>
+                        </li>
+                    </ul>
+                </section>
 
         <!--CONTENEDOR: IMÁGENES PRODUCTO Y DESCRIPCIÓN-->
     <section class="product-and-description">
@@ -94,23 +112,24 @@
         <h4 class="header-product">Shampoo sólido fortalecedor de ortiga y romero</h4>
 
         <!--Imagen principal del producto-->
-        <figure class="product-image-principal">
-            <img src="/img/ss1.jpg" alt="Imagen principal">
-        </figure>
-
-        <!--Imágenes del producto-->
-            <figure class="product-images-container">
-                <div class="product-images-item">
-                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 1"></a>
-                </div>
-                <div class="product-images-item">
-                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 2"></a>
-                </div>
-                <div class="product-images-item">
-                    <a href="#"><img src="/img/ss1.jpg" alt="Imagen 3"></a>
-                </div>
+        <div class="total-images">
+            <figure class="product-image-principal">
+                <img src="/img/ss1.jpg" alt="Imagen principal">
             </figure>
-
+    
+            <!--Imágenes del producto-->
+                <figure class="product-images-container">
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 1"></a>
+                    </div>
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 2"></a>
+                    </div>
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 3"></a>
+                    </div>
+                </figure>
+        </div>
         <!--Nombre y precio-->
         <article class="product-name-and-price">
             <h2 class="product-name">SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO - 100% NATURAL</h2>
@@ -228,6 +247,10 @@
                 <a href="/products"><img src="img/j3.jpg"></a>
                 <a href="/products"class="related-products-title">Jabón calmante de avena y miel</a>
             </article>
+                    <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
+                    <figure class="banner-carrousel-bottom-detail">
+                        <img src="img/banner-bottom.gif" alt="banner-bottom">
+                    </figure>
     </div>
     </section>
     </main>

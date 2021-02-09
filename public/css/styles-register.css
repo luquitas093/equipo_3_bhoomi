@@ -2,6 +2,10 @@ body{
     background-color: #F5E7D9;
 }
 
+.main-register {
+    padding-top: 10vh;
+}
+
 /*ESTILO CAMPOS DEL FORMULARIO*/
 .formularioregistro{
     padding: 20px;
@@ -34,7 +38,6 @@ body{
     text-align: center;
     font-family: 'Poppins';
     color: #35120B;
-    
 }
 
 /*ESTILO BOTON*/
@@ -65,9 +68,41 @@ body{
     font-size: 0.9rem;
 }
 
+.terms-newsletter {
+    margin-bottom: 0.5rem;
+}
+
+.terms {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: #35120B;
+}
+
+.terms a {
+    text-decoration: none;
+    color: #9DD274;
+    text-decoration: underline;
+}
+
+.newsletter {
+    padding: none;
+}
+
+@media (min-width: 481px) {
+    .encabezadoregistro {
+        padding-top: 8vh;
+    }
+}
+
 @media (min-width: 769px) {
 
     .button:hover{
            background-color: #DD721B;
         }
+        .terms a:hover {
+            color: #35120B;
+            transition: 0.3s all;
+        }
+
+    
     }

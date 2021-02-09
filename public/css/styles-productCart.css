@@ -4,6 +4,10 @@ hr {
     color: #35120B;
 }
 
+.main-cart {
+    padding-top: 10vh;
+}
+
 /*TÍTULO*/
 .encabezadocarrito {
     padding: 1vh;
@@ -172,7 +176,71 @@ hr {
     color: #35120B;
 }
 
+.banner-carrousel-bottom-cart {
+	width: 90%;
+	display: none;
+	margin: auto;
+	padding: 0.3rem;
+	margin-top: 0.5vh;
+	margin-bottom: 0.5vh;
+}
+
+.banner-carrousel-bottom-cart img {
+	width: 100%;
+	border: 1px solid #35120B;
+}
+
+.main-footer {
+    display: none;
+}
+
+@media (min-width: 481px) {
+    .encabezadocarrito {
+        padding-top: 8vh;
+    }
+    .subtotal {
+        padding-right: 16%;
+    }
+
+}
+
 @media (min-width: 769px) {
+
+    .subtotal {
+        padding-right: 20.7%;
+    }
+
+    .banner-carrousel-bottom-cart {
+        display: block;
+    }
+
+    .quantity select {
+        width: 10vw;
+        border-radius: 0%;
+    }
+
+    .quantity option {
+        text-align: center;
+    }
+
+    .papelera {
+        padding-bottom: 22vh;
+    }
+
+    .envío label {
+        font-size: 1.2rem;
+        padding-right: 1rem;
+    }
+    
+    .envío select{
+        width: 50%;
+    }
+
+    .papelera:hover {
+        color: #DD721B;
+    
+    }
+    
     .finalizarcompra a:hover{
    
         background-color: #DD721B;
@@ -183,4 +251,14 @@ hr {
         transition: 0.3s all;
     }
 
+    .main-footer {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .papelera {
+        padding-bottom: 30.1vh;
+    }
 }

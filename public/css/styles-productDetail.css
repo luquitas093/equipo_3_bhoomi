@@ -4,7 +4,7 @@
 
 /*Caja foto y descripción*/
 
-main{
+.main-productDetail {
     color: #35120B;
 }
 
@@ -319,4 +319,81 @@ main{
     border: solid 1px #35120b97
 }
 
+.banner-carrousel-bottom-detail {
+	width: 90%;
+	display: none;
+	margin: auto;
+	padding: 0.3rem;
+	margin-top: 1.5vh;
+	margin-bottom: 0.5vh;
+}
+
+.banner-carrousel-bottom-detail img {
+	width: 100%;
+	border: 1px solid #35120B;
+}
+
 /*FIN DEL MAIN*/
+
+@media (min-width: 481px) {
+    .main-productDetail {
+        padding-top: 10vh;
+    }
+    .product-and-description {
+        padding-top: 10vh;
+    }
+
+    .total-images {
+        width: 50%;
+        margin: auto;
+    }
+
+    .share-icons-style {
+        justify-content: center;
+    }
+
+    .share-icons-style a {
+        padding: 0rem 0.8rem;
+    }
+    
+    .share-icons-style a:hover{
+        color: #DD721B;
+        transition: 0.3s all;
+    }
+
+    .card-logo{
+        width: 3rem;
+    }
+
+    .pay-cards:hover {
+        color: white;
+    }
+
+    .quantity select {
+        width: 10vw;
+        border-radius: 0%;
+    }
+
+    .quantity option {
+        text-align: center;
+    }
+
+    .add-cart a:hover {
+        background-color: #DD721B;
+        transition: 0.3s all;
+    }
+
+    .add-cp button:hover {
+        background-color: #DD721B;
+        transition: 0.3s all;
+    }
+
+    .product-description h6 {
+        padding-bottom: 1rem;
+    }
+
+    .banner-carrousel-bottom-detail {
+        display: block;
+    }
+
+}

@@ -12,6 +12,10 @@ body{
     align-items: flex-end;
 }
 
+.main-login {
+    padding-top: 10vh;
+}
+
 
 
 /*ESTILO CAMPOS DEL FORMULARIO*/
@@ -65,6 +69,18 @@ body{
  
 }
 
+.remember-me {
+    padding: 0.25rem;
+}
+
+.remember-me label {
+    color: #35120B;
+}
+
+.remember-me i {
+    color: #35120B;
+}
+
 .center{
     text-align: center;
     padding: 10px;
@@ -90,6 +106,12 @@ body{
     text-decoration: none;
     color: #35120B;
     font-size: 0.9rem;
+}
+
+@media (min-width: 481px) {
+    .encabezadologin {
+        padding-top: 8vh;
+    }
 }
 
 @media (min-width: 769px) {

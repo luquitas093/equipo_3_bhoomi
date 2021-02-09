@@ -82,7 +82,22 @@
     </header>
 
     <!-- FORMULARIO REGISTRO -->
-    <main class="main-content">
+    <main class="main-register">
+        <ul class="mediaquery-menu-list">
+            <li class="mediaquery-menu-list-item">
+                <a href="/" class="mediaquery-menu-list-item-anchor">Inicio</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/products" class="mediaquery-menu-list-item-anchor">Productos</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/cart" class="mediaquery-menu-list-item-anchor">Carrito</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/products" class="mediaquery-menu-list-item-anchor">¡Sale!</a>
+            </li>
+        </ul>
+    </section>
         <section class="encabezadoregistro">
             <h1 class="encabezado"> Registrarme</h1>
         </section>
@@ -133,6 +148,18 @@
                     <label for="contraseña2">Confirmar contraseña</label>
                     <input type="password" id="contraseña2" name="contraseña2" class="formatocampo" required>
                 </div>
+
+                <div class="terms-newsletter">
+                    <div class="terms">
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">Acepta <a href="#">términos y condiciones</a></label>
+                    </div>
+                    <div class="terms">
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                        <label for="terms">¡Quiero suscribirme al newsletter!</label>
+                    </div>
+                </div>
+
                 <div class="estilodiv center">
                     <input type="reset" value="Borrar" class="button">
                     <input type="submit" value="Registrarme" class="button">
