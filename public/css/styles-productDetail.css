@@ -301,6 +301,8 @@
 .related-product{
     width: 30%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .related-products-title{
@@ -310,6 +312,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #35120B;
+    padding: 0.3rem;
 }
 
 .related-product img {
@@ -355,18 +358,9 @@
     .share-icons-style a {
         padding: 0rem 0.8rem;
     }
-    
-    .share-icons-style a:hover{
-        color: #DD721B;
-        transition: 0.3s all;
-    }
 
     .card-logo{
         width: 3rem;
-    }
-
-    .pay-cards:hover {
-        color: white;
     }
 
     .quantity select {
@@ -376,6 +370,46 @@
 
     .quantity option {
         text-align: center;
+    }
+
+    .product-description h6 {
+        padding-bottom: 1rem;
+    }
+
+    .conteiner-related-products{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .related-product img {
+        max-width: 70%;
+    }
+
+    .related-products-title{
+        padding: 0.5rem;
+    }
+
+    .banner-carrousel-bottom-detail {
+        display: block;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .product-images-item:hover {
+        transform: scale(1.1);
+        transition: 0.3s all;
+        padding: 1rem;
+    }
+
+    .share-icons-style a:hover{
+        color: #DD721B;
+        transition: 0.3s all;
+    }
+
+    .pay-cards:hover {
+        color: #DD721B;
     }
 
     .add-cart a:hover {
@@ -388,12 +422,15 @@
         transition: 0.3s all;
     }
 
-    .product-description h6 {
-        padding-bottom: 1rem;
+    .related-product img:hover {
+        border: none;
+		box-shadow: 0px 0px 10px #a0eb67;
+        transition-duration: 0.5s;
+        transition-property: all;
     }
 
-    .banner-carrousel-bottom-detail {
-        display: block;
+    .related-products-title:hover {
+        text-decoration: underline;
+        transition: 0.3s all;
     }
-
 }

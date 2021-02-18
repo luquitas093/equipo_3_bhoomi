@@ -710,11 +710,6 @@ article img {
 		transition: all 0.3s;
 	}
 
-	.product-article {
-		display: block;
-		width: 24%;
-	}
-
 	.categories-hidden {
 		display: inline;
 	}
@@ -726,6 +721,23 @@ article img {
 
 	.all-products:hover {
 		background-color: #DD721B;
+		transition: all 0.3s;
+	}
+
+	.product-article {
+		display: block;
+		width: 24%;
+	}
+
+	.product-article img:hover {
+		border: none;
+		box-shadow: 0px 0px 10px #a0eb67;
+        transition-duration: 0.5s;
+        transition-property: all;
+	}
+
+	.product-description a:hover {
+		text-decoration: underline;
 		transition: all 0.3s;
 	}
 
