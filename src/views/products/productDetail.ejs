@@ -1,85 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles-productDetail.css">
-</head>
+    <%- include("../partials/head.ejs")%>
 
 <body>
-    <!--HEADER-->
-    <header class = "main-header">
-        <!-- MENU DE NAVEGACION -->
-        <nav class ="menu-list">
-            <a href="#menu" class="icon-menu-list" id="btn-menu">
-                <i class="fas fa-bars"></i>
-            </a>
-        </nav>
-        <!-- BARRA OCULTA DEL MENU DE NAVEGACION-->
-        <nav class="hidden-menu" id="menu">
-            <!-- CRUZ DE CIERRE -->
-            <a href="#" class="hidden-menu-list-close">
-                <i class="fas fa-times"></i>
-            </a>
-            <!-- LINKS A PAGINAS -->
-            <ul class="hidden-menu-list">
-                <li class="hidden-menu-list-item">
-                    <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
-                </li>
-                <li class="hidden-menu-list-item">
-                    <a href="/products" class="hidden-menu-list-item-anchor">Productos</a>
-                </li>
-                <li class="hidden-menu-list-item">
-                    <a href="/cart" class="hidden-menu-list-item-anchor">Carrito</a>
-                </li>
-                <!--                <li class="hidden-menu-list-item">
-                    <a href="/about-us" class="hidden-menu-list-item-anchor">¿Quienes Somos?</a>
-                </li>-->
-                <li class="hidden-menu-list-item-user">
-                    <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
-                    <a href="/register" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
-                    <a href="/login" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- LOGO -->
-        <figure class="logo">
-            <a href="/"><img src="img/bhoomi-logo-3.png" alt="Logo Bhoomi"></a>
-        </figure>
-
-        <!-- BARRA DE BUSQUEDA Y CARRITO -->
-        <nav class="search-cart">
-            <a href="#search" class="icon-search-item" id="btn-search">
-                <i class="fas fa-search"></i>
-            </a>
-
-            <form action="#" id= "search" autocomplete = "off" method="GET">
-                <label class="search" for="keyword">
-                    <input class="search-input" type="text" name="keyword" id="keyword" placeholder="Buscar..." >
-                    <a href="#btn-search" class="search-button">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </label>
-                 </form>
-
-            <a href="/cart" class="icon-cart-item"> <i class="fas fa-shopping-cart"></i> </a>    
-        </nav>
-        <nav class="navbar-mediaquery">
-            <a href="/register" class="user-account">Crear Cuenta</a>
-            <a href="/login" class="sign-up">Iniciar Sesión</a>
-            <a href="/cart" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>    
-        </nav>
-    </header>
+    <%- include("../partials/header.ejs")%>
 
   <!--************************************************************************************************************
                                                      MAIN
@@ -255,70 +181,8 @@
     </section>
     </main>
 
-       <!--FOOTER-->
-       <footer class="main-footer">
-
-        <!--Suscribite a nuestro newsletter-->
-    <div class="footer-mediaquery">
-        <section class="newsletter">
-            <p class="bottom-titles">Newsletter</p>
-            <form action="#" id= "email-newsletter" autocomplete = "off" method="GET" class="form-newsletter">
-                <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email" class="suscribe-newsletter" required>
-                <button type="submit" class="button-newsletter">
-                    <i class="fas fa-paper-plane"></i>
-                 </button>
-                </form>
-            </section>
-
-        <!--Barra de navegación del footer -->
-        <section class="bottom-navbar">
-            <p class="bottom-titles">Navegación</p>
-            <nav>
-                <ul class="bottom-navbar-options">
-                    <li class="navbar-list"><a href="/">Inicio</a></li>
-                    <li class="navbar-list"><a href="/products">Productos</a></li>
-                    <li class="navbar-list"><a href="/cart">Carrito</a></li>
-                    <!--<li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>-->
-                </ul>
-            </nav>
-        </section>
-
-        <!--Contactanos-->
-        <section class="contact-us">
-            <p class="bottom-titles">Contactanos</p>
-            <nav>
-                <ul class="bottom-navbar-contact-us">
-                    <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
-                    <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
-                    <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Redes sociales-->
-        <section class="social-networks">
-            <p class="bottom-titles">Redes sociales</p>
-            <nav>
-                <ul class="bottom-navbar-networks">
-                    <div class="bottom-networks-position">
-                        <li class="social-networks-button"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                        <li class="social-networks-button"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
-                        <li class="social-networks-button"><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
-                    </div>
-                </ul>
-            </nav>
-        </section>
-
-        <!--Certificaciones-->
-        <section class="certifications">
-            <p class="bottom-titles">Certificaciones</p>
-            <nav>
-                <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
-                    class="certification-logo">
-            </nav>
-        </section>
-    </div>
-    </footer>
+    <%- include("../partials/footer.ejs")%>
+    
 </body>
 
 </html>
