@@ -12,7 +12,7 @@ app.use (express.static (publicPath));
 
 // Configuracion template engine - EJS
 
-app.set ("view engine", "ejs");
+app.set("view engine", "ejs");
 
 // Llamado al Router
 

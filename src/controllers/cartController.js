@@ -3,6 +3,6 @@ const path = require ("path");
 
 module.exports = {
     cart : (req,res) => {
-        return res.render (path.resolve (__dirname, "../views/products/productCart.ejs"))
+        return res.render (path.resolve (__dirname, "../views/users/productCart.ejs"))
     },
 }
