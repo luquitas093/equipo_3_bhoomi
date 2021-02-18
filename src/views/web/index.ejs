@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomi - Cosmetica Natural</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <!-- MENU DE NAVEGACION -->
+        <nav class="menu-list">
+            <a href="#menu" class="icon-menu-list" id="btn-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+        </nav>
+        <!-- BARRA OCULTA DEL MENU DE NAVEGACION-->
+        <nav class="hidden-menu" id="menu">
+            <!-- CRUZ DE CIERRE -->
+            <a href="#" class="hidden-menu-list-close">
+                <i class="fas fa-times"></i>
+            </a>
+            <!-- LINKS A PAGINAS -->
+            <ul class="hidden-menu-list">
+                <li class="hidden-menu-list-item">
+                    <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
+                </li>
+                <li class="hidden-menu-list-item">
+                    <a href="/products" class="hidden-menu-list-item-anchor">Productos</a>
+                </li>
+                <li class="hidden-menu-list-item">
+                    <a href="/cart" class="hidden-menu-list-item-anchor">Carrito</a>
+                </li>
+                <!--                <li class="hidden-menu-list-item">
+                    <a href="/about-us" class="hidden-menu-list-item-anchor">¿Quienes Somos?</a>
+                </li>-->
+                <li class="hidden-menu-list-item-user">
+                    <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
+                    <a href="/register" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
+                    <a href="/login" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- LOGO -->
+        <figure class="logo">
+            <a href="/"><img src="img/bhoomi-logo-3.png" alt="Logo Bhoomi"></a>
+        </figure>
+
+        <!-- BARRA DE BUSQUEDA Y CARRITO -->
+        <nav class="search-cart">
+            <a href="#search" class="icon-search-item" id="btn-search">
+                <i class="fas fa-search"></i>
+            </a>
+
+            <!-- BARRA DE BUSQUEDA OCULTA-->
+            <form action="#" id="search" autocomplete="off" method="GET">
+                <label class="search" for="keyword">
+                    <input class="search-input" type="text" name="keyword" id="keyword" placeholder="Buscar...">
+                    <a href="#btn-search" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </label>
+            </form>
+
+            <a href="/cart" class="icon-cart-item"> <i class="fas fa-shopping-cart"></i> </a>
+        </nav>
+        <nav class="navbar-mediaquery">
+            <a href="/register" class="user-account">Crear Cuenta</a>
+            <a href="/login" class="sign-up">Iniciar Sesión</a>
+            <a href="/cart" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <!--MENU PARA MEDIA QUERY-->
+        <section>
+            <ul class="mediaquery-menu-list">
+                <li class="mediaquery-menu-list-item">
+                    <a href="/" class="mediaquery-menu-list-item-anchor">Inicio</a>
+                </li>
+                <li class="mediaquery-menu-list-item">
+                    <a href="/products" class="mediaquery-menu-list-item-anchor">Productos</a>
+                </li>
+                <li class="mediaquery-menu-list-item">
+                    <a href="/cart" class="mediaquery-menu-list-item-anchor">Carrito</a>
+                </li>
+                <li class="mediaquery-menu-list-item">
+                    <a href="/products" class="mediaquery-menu-list-item-anchor">¡Sale!</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- BANNER (FUTURO CARROUSEL)-->
+        <div class="main-products">
+            <figure class="banner-carrousel">
+                <img src="img/banner-galeria.gif" alt="banner-principal">
+            </figure>
+
+            <!--CATEGORIAS DE PRODUCTOS-->
+            <section>
+                <ul class="categories">
+                    <li>
+                        <a href="/products">CUIDADO CAPILAR</a>
+                    </li>
+                    <li>
+                        <a href="/products">ROSTRO Y CUERPO</a>
+                    </li>
+                    <li>
+                        <a href="/products">COMBOS</a>
+                    </li>
+                    <li class="categories-hidden">
+                        <a href="/products">REGALOS</a>
+                    </li>
+                    <li class="categories-hidden">
+                        <a href="/products">¡SALE!</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!--PRODUCTOS DESTACADOS-->
+            <section class="best-products">
+                <article class="product-article">
+                    <a href="/products"> <img src="img/bl1.jpg" alt="Balsamo labial cacao"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">BÁLSAMO LABIAL DE CACAO</a>
+                        <p class="product-price">$170</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/exf1.jpg" alt="Exfoliante Cafe y Azuzar"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">EXFOLIANTE FACIAL DE CAFÉ Y AZÚCAR</a>
+                        <p class="product-price">$320</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/j1.jpg" alt="Jabon rosa mosqueta"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">JABÓN CORPORAL DE ROSA MOSQUETA</a>
+                        <p class="product-price">$210</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/ss1.jpg" alt="Shampoo solido ortiga romero"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO</a>
+                        <p class="product-price">$400</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/bl2.jpg" alt="Balsamo labial cafe"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">BÁLSAMO LABIAL DE CAFÉ</a>
+                        <p class="product-price">$180</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/exf2.jpg" alt="exfoliante corporal limon romero"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">EXFOLIANTE CORPORAL DE LIMÓN Y ROMERO</a>
+                        <p class="product-price">$290</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/j4.jpg" alt="Jabon detox oliva y carbon "></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">JABÓN DETOX DE OLIVA Y CARBÓN</a>
+                        <p class="product-price">$230</p>
+                    </div>
+                </article>
+                <article class="product-article">
+                    <a href="/products"><img src="img/ss3.jpg" alt="Shampoo solido reparador karite"></a>
+                    <div class="product-description">
+                        <a href="/products" class="product-name">SHAMPOO SÓLIDO REPARADOR KARITÉ</a>
+                        <p class="product-price">$210</p>
+                    </div>
+                </article>
+                <div class="all-products">
+                    <a href="/products">VER TODOS LOS PRODUCTOS</a>
+                </div>
+            </section>
+
+            <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
+            <figure class="banner-carrousel-bottom">
+                <img src="img/banner-bottom.gif" alt="banner-bottom">
+            </figure>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer class="main-footer">
+
+        <!--Suscribite a nuestro newsletter-->
+        <div class="footer-mediaquery">
+            <section class="newsletter">
+                <p class="bottom-titles">Newsletter</p>
+                <form action="#" id="email-newsletter" autocomplete="off" method="GET" class="form-newsletter">
+                    <input type="email" name="email-newsletter" id="email-newsletter" placeholder="Dejanos tu email"
+                        class="suscribe-newsletter" required>
+                    <button type="submit" class="button-newsletter">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </section>
+
+            <!--Barra de navegación del footer -->
+            <section class="bottom-navbar">
+                <p class="bottom-titles">Navegación</p>
+                <nav>
+                    <ul class="bottom-navbar-options">
+                        <li class="navbar-list"><a href="/">Inicio</a></li>
+                        <li class="navbar-list"><a href="/products">Productos</a></li>
+                        <li class="navbar-list"><a href="/cart">Carrito</a></li>
+                        <!--<li class="navbar-list"><a href="/about-us">Quiénes somos</a></li>-->
+                    </ul>
+                </nav>
+            </section>
+
+            <!--Contactanos-->
+            <section class="contact-us">
+                <p class="bottom-titles">Contactanos</p>
+                <nav>
+                    <ul class="bottom-navbar-contact-us">
+                        <li class="contact-ways"><i class="fab fa-whatsapp"></i> <a href="#">+54 11 1234 1234</a></li>
+                        <li class="contact-ways"><i class="fas fa-envelope"></i> <a href="#">info@bhoomi.com.ar</a></li>
+                        <li class="contact-ways"><i class="fas fa-store"></i> <a href="#">Neuquén 546 - CABA</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!--Redes sociales-->
+            <section class="social-networks">
+                <p class="bottom-titles">Redes sociales</p>
+                <nav>
+                    <ul class="bottom-navbar-networks">
+                        <div class="bottom-networks-position">
+                            <li class="social-networks-button"><a href="https://www.instagram.com/"><i
+                                        class="fab fa-instagram"></i></a></li>
+                            <li class="social-networks-button"><a href="https://www.facebook.com/"><i
+                                        class="fab fa-facebook"></i></a></li>
+                            <li class="social-networks-button"><a href="https://twitter.com/"><i
+                                        class="fab fa-twitter"></i></a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </section>
+
+            <!--Certificaciones-->
+            <section class="certifications">
+                <p class="bottom-titles">Certificaciones</p>
+                <nav>
+                    <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Logo de AFIP"
+                        class="certification-logo">
+                </nav>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
