@@ -1,0 +1,18 @@
+.main-productList {
+        padding-top: 10vh;
+    }
+
+.list-products {
+        width: 90%;
+        margin: auto;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+}
+
+@media (min-width: 481px) {
+    .list-products {
+        padding-top: 8vh;
+    }
+}
