@@ -16,11 +16,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-top: 0.5rem;
 }
 
 .order {
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .order option {
@@ -39,7 +40,7 @@
 
 .filter {
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .filter option {
@@ -68,5 +69,15 @@
 @media (min-width: 481px) {
     .header-filter {
         padding-top: 10vh;
+    }
+
+    .header-list {
+        font-size: 1.2rem;
+    }
+
+    .order-filter {
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 1rem;
     }
 }

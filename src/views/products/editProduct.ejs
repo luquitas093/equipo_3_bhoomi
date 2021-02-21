@@ -9,35 +9,35 @@
     <%- include("../partials/header.ejs")%>
 
     <!-- FORMULARIO EDITAR PRODUCTO -->
-    <main class="main-register">
+    <main class="main-editproduct">
 
         <%- include("../partials/menuMediaQuery.ejs")%>
         
     
         <section class="encabezadoEdicion">
-            <h1 class="encabezado"> Editar Producto Exitente</h1>
+            <h1 class="encabezado"> Editar Producto</h1>
         </section>
         <section class="editProduct">
             <form class="editform" action="/" method="POST">
                 <div class="stylediv">
-                    <strong><label for="editName">Editar nombre del producto</label></strong>
+                    <strong><label for="editName">Modificar Nombre</label></strong>
                     <input type="text" id="editName" name="editName" placeholder="Ingresar nuevo nombre" class="camp-edit"required>
 
                 </div>
                 <div class="stylediv">
-                    <strong><label for="descriptionEdit"> Editar descripción del Producto</label></strong>
+                    <strong><label for="descriptionEdit"> Modificar Descripción</label></strong>
                     <textarea name="descriptionEdit" class="camp-edit" required> </textarea>
                     
                 </div>
                 <div class="stylediv">
-                    <strong><label for="imagenEdit">Cambiar Imagen del Producto</label></strong>
+                    <strong><label for="imagenEdit">Agregar y/o Modificar Imagenes</label></strong>
                    
-                    <input class="center" type="file" id="imagenEdit" name="imagenEdit" accept=".jpg">
+                    <input class="camp-edit" type="file" id="imagenEdit" name="imagenEdit" accept=".jpg">
                      
                 </div>
              
                 <div class="stylediv">
-                    <strong><label for="categoryEdit">Elegir nueva Categoría</label></strong>
+                    <strong><label for="categoryEdit">Modificar Categoría</label></strong>
                     <select name="categoryEdit">
                         <option name="cuidadocapilar">Cuidado Capilar</option>
                         <option name="rostroycuerpo">Rostro y Cuerpo</option>
@@ -49,19 +49,19 @@
                 </div>
 
                 <div class="stylediv">
-                    <strong><label for="stockEdit">Actualizar Stock</label></strong>
+                    <strong><label for="stockEdit">Modificar Stock</label></strong>
                     <input type="number" id="stockEdit" name="stockEdit" placeholder="Ingrese nuevo Stock" class="camp-edit" required>
 
                 </div>
                              
                 <div class="stylediv">
-                    <strong><label for="priceEdit"> Actualizar precio</label></strong>
+                    <strong><label for="priceEdit"> Modificar Precio</label></strong>
                     <input type="number" id="priceEdit" name="priceEdit" placeholder="$" class="camp-edit" required>
                 </div>
 
                 <div class="stylediv center">
-                    <input type="reset" value="Borrar Producto" class="button">
-                    <input type="submit" value="Actualizar Producto" class="button"> 
+                    <input type="reset" value="Borrar" class="button">
+                    <input type="submit" value="Actualizar" class="button"> 
 
                 </div>
 

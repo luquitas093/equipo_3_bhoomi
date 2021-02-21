@@ -26,7 +26,7 @@ const loginRoutes = require ("./src/routes/loginRouter.js");
 app.use ("/login", loginRoutes);
 
 const productsRoutes = require ("./src/routes/productsRouter.js");
-app.use ("/products/detail", productsRoutes);
+app.use ("/detailProduct", productsRoutes);
 
 const registerRoutes = require ("./src/routes/registerRouter.js");
 app.use ("/register", registerRoutes);

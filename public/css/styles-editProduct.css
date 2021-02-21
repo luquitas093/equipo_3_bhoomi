@@ -2,7 +2,7 @@ body{
     background-color: #F5E7D9;
 }
 
-.main-register {
+.main-editproduct {
     padding-top: 10vh;
 }
 
@@ -11,9 +11,7 @@ body{
 
 .editform{
     padding: 20px;
-    margin: auto 0;
-    text-align: center;
-    
+    margin: auto;
 }
 
 .stylediv{
@@ -21,21 +19,30 @@ body{
 }
 
 .stylediv label{
-    margin-bottom: 1vh;
-    font-style:italic;
+    margin-bottom: 5px;
+    font-style: italic;
     display: block;
     color: #35120B;
 }
 
-.camp-edit{
-    width: 70%;
-    height: 4vh;
-    border-radius: 5px;
-    margin: auto;
-    text-align: center;
-
-   
+.stylediv option {
+    background-color: #f5e7d9;
+    border: #35120B;
+    font-size: 0.8rem;
 }
+
+.stylediv select {
+    font-size: 0.9rem;
+    padding: 0.3rem 0rem;
+    border: 1px solid #35120B;
+    background-color: white;
+}
+
+.camp-edit{
+    width: 100%;
+    padding: 10px 10px ;
+}
+
 
 
 
@@ -54,15 +61,14 @@ body{
 /*ESTILO BOTON*/
 
 .button{
- border:none;
- background-color: #35120B;
- font-size: 20px;
- color:#fff;
- padding: 5px 10px;
- margin-bottom: 10px;
- border-radius: 5px;
- text-align: center;
-}
+    border:none;
+    background-color: #35120B;
+    font-size: 20px;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+   }
 
 .center{
     text-align: center;
@@ -82,7 +88,4 @@ body{
     .button:hover{
            background-color: #DD721B;
         }
-    
-
-    
     }

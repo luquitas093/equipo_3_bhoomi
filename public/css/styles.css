@@ -110,7 +110,7 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin-top: 53vh;
+	margin-top: 48vh;
 	border-top: black solid 1px;
 	text-align: center;
 }
@@ -635,7 +635,7 @@ article img {
 		display:flex;
 		justify-content: center;
 		list-style: none;
-		padding: 0.25rem;
+		padding: 0.20rem;
 		background-color: #9DD274;
 		position: fixed;
 		width: 100%;

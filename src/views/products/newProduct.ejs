@@ -9,19 +9,18 @@
     <%- include("../partials/header.ejs")%>
 
     <!-- FORMULARIO NUEVO PRODUCTO -->
-    <main class="main-register">
+    <main class="main-newproduct">
 
         <%- include("../partials/menuMediaQuery.ejs")%>
     
-        <section class="encabezadoregistro">
-            <h1 class="encabezado"> Ingresar Nuevo Producto</h1>
+        <section class="encabezadonewproduct">
+            <h1 class="encabezado">¿Qué vas a vender?</h1>
         </section>
         <section class="newProduct">
             <form class="formularioproducto" action="/" method="POST">
                 <div class="stylediv">
                     <strong><label for="name">Nombre del producto</label></strong>
                     <input type="text" id="name" name="name" placeholder="Nombre del Producto" class="camp"required>
-
                 </div>
                 <div class="stylediv">
                     <strong><label for="description">Descripción del Producto</label></strong>
@@ -30,8 +29,7 @@
                 </div>
                 <div class="stylediv">
                     <strong><label for="imagen">Imagen del Producto</label></strong>
-                   
-                    <input class="center" type="file" id="imagen" name="imagen" accept=".jpg">
+                    <input class="camp" type="file" id="imagen" name="imagen" accept=".jpg">
                      
                 </div>
              
@@ -49,7 +47,7 @@
 
                 <div class="stylediv">
                     <strong><label for="stock">Stock</label></strong>
-                    <input type="number" id="stock" name="stock" placeholder="Cantidad de Stock" class="camp" required>
+                    <input type="number" id="stock" name="stock" placeholder="Cantidad en Stock" class="camp" required>
 
                 </div>
                              
@@ -59,8 +57,8 @@
                 </div>
 
                 <div class="stylediv center">
-                    <input type="reset" value="Borrar Producto" class="button">
-                    <input type="submit" value="Ingresar Producto" class="button"> 
+                    <input type="reset" value="Borrar" class="button">
+                    <input type="submit" value="Crear Producto" class="button"> 
 
                 </div>
 
