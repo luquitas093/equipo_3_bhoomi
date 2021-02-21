@@ -3,6 +3,7 @@
 const express = require ("express");
 const app = express();
 const path = require ("path");
+const methodOverride = require ("method-override");
 
 //Ruta Absoluta de la carpeta Public
 
@@ -13,6 +14,15 @@ app.use (express.static (publicPath));
 // Configuracion template engine - EJS
 
 app.set("view engine", "ejs");
+
+// Configuración Metodo POST
+
+app.use (express.urlencoded ({ extended: false}));
+app.use (express.json ());
+
+// Configuracion Method-Override
+
+app.use (methodOverride("_method"));
 
 // Llamado al Router
 
