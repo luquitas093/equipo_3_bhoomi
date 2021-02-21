@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-newProduct.css">
+
+<body>
+
+    <%- include("../partials/header.ejs")%>
+
+    <!-- FORMULARIO NUEVO PRODUCTO -->
+    <main class="main-register">
+        <ul class="mediaquery-menu-list">
+            <li class="mediaquery-menu-list-item">
+                <a href="/" class="mediaquery-menu-list-item-anchor">Inicio</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/products" class="mediaquery-menu-list-item-anchor">Productos</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/cart" class="mediaquery-menu-list-item-anchor">Carrito</a>
+            </li>
+            <li class="mediaquery-menu-list-item">
+                <a href="/products" class="mediaquery-menu-list-item-anchor">¡Sale!</a>
+            </li>
+          
+        </ul>
+    
+        <section class="encabezadoregistro">
+            <h1 class="encabezado"> Ingresar Nuevo Producto</h1>
+        </section>
+        <section class="newProduct">
+            <form class="formularioproducto" action="/" method="POST">
+                <div class="stylediv">
+                    <strong><label for="name">Nombre del producto</label></strong>
+                    <input type="text" id="name" name="name" placeholder="Nombre del Producto" class="camp"required>
+
+                </div>
+                <div class="stylediv">
+                    <strong><label for="description">Descripción del Producto</label></strong>
+                    <textarea name="description" class="camp" required> </textarea>
+                    
+                </div>
+                <div class="stylediv">
+                    <strong><label for="imagen">Imagen del Producto</label></strong>
+                   
+                    <input class="center" type="file" id="imagen" name="imagen" accept=".jpg">
+                     
+                </div>
+             
+                <div class="stylediv">
+                    <strong><label for="category">Categoría</label></strong>
+                    <select name="category">
+                        <option name="cuidadocapilar">Cuidado Capilar</option>
+                        <option name="rostroycuerpo">Rostro y Cuerpo</option>
+                        <option name="combos">Combos</option>
+                        <option name="regalos">Regalos</option>
+                        <option name="sale">Sale</option>
+                    </select>    
+
+                </div>
+
+                <div class="stylediv">
+                    <strong><label for="stock">Stock</label></strong>
+                    <input type="number" id="stock" name="stock" placeholder="Cantidad de Stock" class="camp" required>
+
+                </div>
+                             
+                <div class="stylediv">
+                    <strong><label for="price">Precio</label></strong>
+                    <input type="number" id="price" name="price" placeholder="$" class="camp" required>
+                </div>
+
+                <div class="stylediv center">
+                    <input type="reset" value="Borrar Producto" class="button">
+                    <input type="submit" value="Ingresar Producto" class="button"> 
+
+                </div>
+
+
+            </form>
+            
+        </section>
+
+                <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
+                <figure class="banner-carrousel-bottom">
+                    <img src="img/banner-bottom.gif" alt="banner-bottom">
+                </figure>
+
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+    
+</body>
+
+</html>

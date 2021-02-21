@@ -1,0 +1,88 @@
+body{
+    background-color: #F5E7D9;
+}
+
+.main-register {
+    padding-top: 10vh;
+}
+
+/*ESTILO CAMPOS DEL FORMULARIO*/
+
+
+.editform{
+    padding: 20px;
+    margin: auto 0;
+    text-align: center;
+    
+}
+
+.stylediv{
+    padding-bottom: 15px;
+}
+
+.stylediv label{
+    margin-bottom: 1vh;
+    font-style:italic;
+    display: block;
+    color: #35120B;
+}
+
+.camp-edit{
+    width: 70%;
+    height: 4vh;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+
+   
+}
+
+
+
+/*FORMATO ENCABEZADO*/
+
+.encabezadoEdicion{
+    margin: auto 0;
+}
+
+.encabezado{
+    text-align: center;
+    font-family: 'Poppins';
+    color: #35120B;
+}
+
+/*ESTILO BOTON*/
+
+.button{
+ border:none;
+ background-color: #35120B;
+ font-size: 20px;
+ color:#fff;
+ padding: 5px 10px;
+ margin-bottom: 10px;
+ border-radius: 5px;
+ text-align: center;
+}
+
+.center{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 481px) {
+    .encabezadoEdicion {
+        padding-top: 8vh;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .button:hover{
+           background-color: #DD721B;
+        }
+    
+
+    
+    }

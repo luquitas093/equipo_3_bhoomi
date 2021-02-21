@@ -31,6 +31,12 @@ app.use ("/products", productsRoutes);
 const registerRoutes = require ("./src/routes/registerRouter.js");
 app.use ("/register", registerRoutes);
 
+const newProductRoutes = require ("./src/routes/newProductRouter.js");
+app.use ("/newProduct", newProductRoutes);
+
+const editProductRoutes = require ("./src/routes/editProductRouter.js");
+app.use ("/editProduct", editProductRoutes);
+
 
 //Levantar el Servidor
 

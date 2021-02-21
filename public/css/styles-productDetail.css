@@ -278,6 +278,14 @@
     padding-top: 1rem;
 }
 
+/* Editar Producto */
+
+.edit-cart{
+  text-align: center;
+  padding: 2em;
+   
+}
+
 /*Galería de productos relacionados*/
 
 .related-products-gallery{
