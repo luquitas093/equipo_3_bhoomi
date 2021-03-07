@@ -20,17 +20,17 @@ app.set("view engine", "ejs");
 app.use (express.urlencoded ({ extended: false}));
 app.use (express.json ());
 
-// Configuracion Method-Override
+// Middleware Method-Override
 
 app.use (methodOverride("_method"));
 
-// Llamado al Router
+// Llamado a las Rutas
 
 const indexRoutes = require ("./src/routes/indexRouter.js");
 app.use ("/", indexRoutes);
 
 const cartRoutes = require ("./src/routes/cartRouter.js");
-app.use ("/carritodecompras", cartRoutes);
+app.use ("/carrito", cartRoutes);
 
 const loginRoutes = require ("./src/routes/loginRouter.js");
 app.use ("/ingresar", loginRoutes);
@@ -39,7 +39,7 @@ const productsRoutes = require ("./src/routes/productsRouter.js");
 app.use ("/detalledelproducto", productsRoutes);
 
 const registerRoutes = require ("./src/routes/registerRouter.js");
-app.use ("/registrarse", registerRoutes);
+app.use ("/registro", registerRoutes);
 
 const newProductRoutes = require ("./src/routes/newProductRouter.js");
 app.use ("/crearproducto", newProductRoutes);
@@ -50,11 +50,15 @@ app.use ("/editarproducto", editProductRoutes);
 const productsList = require ("./src/routes/productListRouter.js");
 app.use ("/productos", productsList);
 
+const adminRoutes = require ("./src/routes/adminRouter.js");
+app.use ("/administrador", adminRoutes);
+
 //Levantar el Servidor
 
 app.set('puerto', process.env.PORT || 3000);
 
 app.listen (app.get('puerto'), ()=> console.log(`Servidor corriendo de manera satisfactoria  ${app.get('puerto')}` ));
+
 
 /*Rutas HTML
 

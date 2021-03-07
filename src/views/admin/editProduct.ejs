@@ -18,7 +18,7 @@
             <h1 class="encabezado"> Editar Producto</h1>
         </section>
         <section class="editProduct">
-            <form class="editform" action="/" method="POST">
+            <form class="editform" action="/admin/editProduct/<%= productEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="stylediv">
                     <strong><label for="editName">Modificar Nombre</label></strong>
                     <input type="text" id="editName" name="editName" placeholder="Ingresar nuevo nombre" class="camp-edit"required>

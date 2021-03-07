@@ -1,14 +1,13 @@
 const express = require ("express");
 const router = express.Router ();
 const path = require ("path");
-
 const multer = require('multer');
 
 const adminController = require(path.resolve(__dirname,"../controllers/adminController.js")) 
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/img'));
+      cb(null, path.resolve(__dirname, '../../public/img/products'));
     },
     filename: function (req, file, cb) {
       cb(null, 'product-'+Date.now()+path.extname(file.originalname))

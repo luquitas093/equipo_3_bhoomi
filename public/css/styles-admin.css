@@ -1,0 +1,34 @@
+.main-admin {
+    padding-top: 10vh;
+}
+
+.encabezado-admin {
+    text-align: center;
+    font-family: 'Poppins';
+    color: #35120B;
+}
+
+.add-product {
+    padding: 1rem;
+}
+
+.add-product a {
+    text-align: center;
+    font-family: 'Poppins';
+    color: #35120B;
+    text-decoration: none;
+}
+
+
+@media (min-width: 481px) {
+    .admin-products {
+        padding-top: 10vh;
+    }
+}
+
+@media (min-width: 769px) {
+    .add-product :hover {
+        color: #DD721B;
+        text-decoration: underline;
+    }
+}

@@ -5,8 +5,8 @@ const { name } = require("ejs");
 
 module.exports = {
     admin : (req,res) => {
-        let products=JSON.parse(fs.readFileSync(path.resolve(__dirname,__dirname, '../data/products.json' )));
-        return res.render (path.resolve (__dirname, "../views/admin/admin.ejs"), {products, titulo: 'Bhoomi - Cosmetica Natural'});
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json' )));
+        return res.render (path.resolve (__dirname, "../views/admin/admin.ejs"), {products, titulo: 'Bhoomi - Administrador'});
     },
     create: (req,res)=> {
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
