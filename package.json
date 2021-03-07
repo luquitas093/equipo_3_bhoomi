@@ -7,10 +7,15 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
+<<<<<<< HEAD
     "multer": "^1.4.2",
+=======
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+>>>>>>> 3850af934d44f294c95b70880210cb15c29ae362
     "nodemon": "^2.0.7"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node app.js",
     "test": "nodemon app.js"
