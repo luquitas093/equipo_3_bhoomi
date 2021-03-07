@@ -36,19 +36,22 @@ const loginRoutes = require ("./src/routes/loginRouter.js");
 app.use ("/login", loginRoutes);
 
 const productsRoutes = require ("./src/routes/productsRouter.js");
-app.use ("/detailProduct", productsRoutes);
+app.use ("/admin/detailProduct", productsRoutes);
 
 const registerRoutes = require ("./src/routes/registerRouter.js");
 app.use ("/register", registerRoutes);
 
 const newProductRoutes = require ("./src/routes/newProductRouter.js");
-app.use ("/newProduct", newProductRoutes);
+app.use ("/admin/newProduct", newProductRoutes);
 
 const editProductRoutes = require ("./src/routes/editProductRouter.js");
-app.use ("/editProduct", editProductRoutes);
+app.use ("/admin/editProduct", editProductRoutes);
 
 const productsList = require ("./src/routes/productListRouter.js");
 app.use ("/products", productsList);
+
+const adminRoutes = require ("./src/routes/adminRouter.js");
+app.use ("/admin", adminRoutes);
 
 //Levantar el Servidor
 
