@@ -30,25 +30,25 @@ const indexRoutes = require ("./src/routes/indexRouter.js");
 app.use ("/", indexRoutes);
 
 const cartRoutes = require ("./src/routes/cartRouter.js");
-app.use ("/cart", cartRoutes);
+app.use ("/carritodecompras", cartRoutes);
 
 const loginRoutes = require ("./src/routes/loginRouter.js");
-app.use ("/login", loginRoutes);
+app.use ("/ingresar", loginRoutes);
 
 const productsRoutes = require ("./src/routes/productsRouter.js");
-app.use ("/detailProduct", productsRoutes);
+app.use ("/detalledelproducto", productsRoutes);
 
 const registerRoutes = require ("./src/routes/registerRouter.js");
-app.use ("/register", registerRoutes);
+app.use ("/registrarse", registerRoutes);
 
 const newProductRoutes = require ("./src/routes/newProductRouter.js");
-app.use ("/newProduct", newProductRoutes);
+app.use ("/crearproducto", newProductRoutes);
 
 const editProductRoutes = require ("./src/routes/editProductRouter.js");
-app.use ("/editProduct", editProductRoutes);
+app.use ("/editarproducto", editProductRoutes);
 
 const productsList = require ("./src/routes/productListRouter.js");
-app.use ("/products", productsList);
+app.use ("/productos", productsList);
 
 //Levantar el Servidor
 
