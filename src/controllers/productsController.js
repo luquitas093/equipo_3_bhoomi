@@ -3,6 +3,6 @@ const path = require ("path");
 
 module.exports = {
     detail : (req,res) => {
-        return res.render (path.resolve (__dirname, "../views/products/productDetail.ejs"), {titulo: 'Bhoomi - Detalle del Producto'});
+        return res.render (path.resolve (__dirname, "../views/admin/productDetail.ejs"), {titulo: 'Bhoomi - Detalle del Producto'});
     },
 }
