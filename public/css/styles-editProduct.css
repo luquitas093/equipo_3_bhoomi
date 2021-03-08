@@ -19,6 +19,7 @@ body{
 }
 
 .stylediv label{
+    padding-bottom: 0.3rem;
     margin-bottom: 5px;
     font-style: italic;
     display: block;
@@ -81,10 +82,19 @@ body{
     .encabezadoEdicion {
         padding-top: 8vh;
     }
+    .editProduct {
+        width: 70%;
+        margin: auto;
+    }
+    .stylediv {
+        padding: 0.6rem;
+    }
 }
 
 @media (min-width: 769px) {
-
+    .editProduct {
+        width: 60%;
+    }
     .button:hover{
            background-color: #DD721B;
         }

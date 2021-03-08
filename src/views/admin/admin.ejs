@@ -16,9 +16,9 @@
          <section class = "admin-products">
            <h1 class = "encabezado-admin">Administrador de productos</h1>
            <div class = "add-product">
-             <a href="/administrador/crearproducto">Agregar producto</a>
+             <a href="/administrador/crear">Agregar producto</a>
           </div>
-          <table>
+          <table class = "table-products">
               <thead>
                   <th>Id</th>
                   <th>Nombre</th>
@@ -31,21 +31,13 @@
                 <tr>
                     <td><%=product.id%></td>
                     <td><%=product.name%></td>
-                    <td><a href="/admin/detailProduct/<%= product.id%> "> Detalle </a></td>
-                    <td><a href="/admin/editProduct/<%= product.id%> "> Editar</a></td>
-                    <td><a href="/admin/delete/<%= product.id%>">Borrar</a></td>
+                    <td><a href="/administrador/detalle/<%= product.id%> "><i class="fas fa-eye"></i></a></td>
+                    <td><a href="/administrador/editar/<%= product.id%> "><i class="fas fa-edit"></i></a></td>
+                    <td><a href="/administrador/borrar/<%= product.id%>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
                 <%});%>
               </tbody>
           </table>
-
-
-         </section>
-
-                <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
-                <figure class="banner-carrousel-bottom">
-                    <img src="img/banner-bottom.gif" alt="banner-bottom">
-                </figure>
 
     </main>
 

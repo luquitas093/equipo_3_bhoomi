@@ -11,7 +11,7 @@ module.exports = {
     create: (req,res)=> {
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
             );
-        res.render(path.resolve(__dirname, '../views/admin/newProduct'));    
+        res.render(path.resolve(__dirname, '../views/admin/newProduct.ejs'), {titulo: 'Bhoomi - Crear Producto'});
     },
     save: (req,res)=>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))

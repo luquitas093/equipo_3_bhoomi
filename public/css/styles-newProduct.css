@@ -19,6 +19,7 @@ body{
 }
 
 .stylediv label{
+    padding-bottom: 0.3rem;
     margin-bottom: 5px;
     font-style: italic;
     display: block;
@@ -78,10 +79,19 @@ body{
     .encabezadonewproduct {
         padding-top: 8vh;
     }
+    .newProduct {
+        width: 70%;
+        margin: auto;
+    }
+    .stylediv {
+        padding: 0.6rem;
+    }
 }
 
 @media (min-width: 769px) {
-
+    .newProduct {
+        width: 60%;
+    }
     .button:hover{
            background-color: #DD721B;
         }

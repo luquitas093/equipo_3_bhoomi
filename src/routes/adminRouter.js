@@ -17,7 +17,7 @@ var storage = multer.diskStorage({
   const upload = multer({ storage })
 
 router.get ("/", adminController.admin);
-router.get('/admin/newProduct', adminController.create);
+router.get('/crear', adminController.create);
 router.get('/admin/newProduct', upload.single('imagenEdit'), adminController.save);
 router.get('/admin/detailProduct/:id', adminController.show);
 router.get('/admin/editProduct/:id', adminController.edit);

@@ -30,6 +30,7 @@ body{
 }
 
 .estilodivlogin label{
+    padding-bottom: 0.3rem;
     margin-bottom: 5px;
     font-style: italic;
     display: block;
@@ -112,10 +113,19 @@ body{
     .encabezadologin {
         padding-top: 8vh;
     }
+    .login {
+        width: 70%;
+        margin: auto;
+    }
+    .estilodivlogin {
+        padding: 0.6rem;
+    }
 }
 
 @media (min-width: 769px) {
-
+    .login {
+        width: 60%;
+    }
     .button:hover{
            background-color: #DD721B;
         }

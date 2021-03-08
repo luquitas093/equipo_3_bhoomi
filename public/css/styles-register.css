@@ -17,6 +17,7 @@ body{
 }
 
 .estilodiv label{
+    padding-bottom: 0.3rem;
     margin-bottom: 5px;
     font-style: italic;
     display: block;
@@ -92,10 +93,19 @@ body{
     .encabezadoregistro {
         padding-top: 8vh;
     }
+    .registro {
+        width: 70%;
+        margin: auto;
+    }
+    .estilodiv {
+        padding: 0.6rem;
+    }
 }
 
 @media (min-width: 769px) {
-
+    .registro {
+        width: 60%;
+    }
     .button:hover{
            background-color: #DD721B;
         }

@@ -41,9 +41,6 @@ app.use ("/detalledelproducto", productsRoutes);
 const registerRoutes = require ("./src/routes/registerRouter.js");
 app.use ("/registro", registerRoutes);
 
-const newProductRoutes = require ("./src/routes/newProductRouter.js");
-app.use ("/crearproducto", newProductRoutes);
-
 const editProductRoutes = require ("./src/routes/editProductRouter.js");
 app.use ("/editarproducto", editProductRoutes);
 

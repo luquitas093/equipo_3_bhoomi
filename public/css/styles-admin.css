@@ -1,5 +1,13 @@
+main {
+    width: 100%;
+    height: auto;
+}
+
 .main-admin {
     padding-top: 10vh;
+    padding-bottom: 5vh;
+    width: 100%;
+    height: auto;
 }
 
 .encabezado-admin {
@@ -13,16 +21,57 @@
 }
 
 .add-product a {
+    font-size: 0.8rem;
+    font-weight: bold;
     text-align: center;
     font-family: 'Poppins';
     color: #35120B;
     text-decoration: none;
 }
 
+.table-products {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+}
+
+.table-products th {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    text-align: center;
+    color: #35120B;
+    text-decoration: underline;
+}
+
+.table-products td {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.3rem;
+    text-align: center;
+    color: #35120B;
+    border-bottom: 1px dashed #591d11;
+}
+
+.table-products td a {
+    text-decoration: none;
+    color: #35120B;
+    font-size: 0.8rem;
+}
 
 @media (min-width: 481px) {
     .admin-products {
         padding-top: 10vh;
+    }
+    .add-product a {
+        font-size: 1rem;
+    }
+    .table-products th {
+        font-size: 1rem;
+    }
+    .table-products td {
+        font-size: 1rem;
+    }
+    .table-products td a {
+        font-size: 1rem;
     }
 }
 
@@ -30,5 +79,8 @@
     .add-product :hover {
         color: #DD721B;
         text-decoration: underline;
+    }
+    .table-products td a :hover {
+        color: #DD721B;
     }
 }
