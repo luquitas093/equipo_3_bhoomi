@@ -56,17 +56,19 @@ module.exports = {
         let productEdit = products.find(product=>product.id==productId);
         res.render(path.resolve(__dirname, '../views/admin/editProduct.ejs'), {productEdit, titulo: "Bhoomi - Editar Producto"}); 
     },
-    update: (req,res) =>{
+    update: (req,res) => {
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
         );
         req.body.id = req.params.id;
+        req.body.imagenEdit = req.file ? req.file.filename : req.body.oldImagen;
         
         let productsUpdate = products.map(product =>{
-            if(product.id == req.body.id){
+            if (product.id == req.body.id) {
                 return product = req.body;
             }
             return product;
-        })
+        });
+
         let productUpdate = JSON.stringify(productsUpdate,null,2);
         fs.writeFileSync(path.resolve(__dirname,'../data/products.json'),productUpdate)
         res.redirect('/administrador');
@@ -74,11 +76,13 @@ module.exports = {
     destroy: (req,res) =>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
         );
+
         const deleteProduct = req.params.id;
+
         const listProduct = products.filter(product => product.id != deleteProduct);
+        
         let saveProducts = JSON.stringify(listProduct,null,2)
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'),saveProducts);
         res.redirect('/administrador');
     }
-
 }
