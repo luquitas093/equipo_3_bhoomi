@@ -45,14 +45,16 @@ module.exports = {
             }
         });
 
-        res.render(path.resolve(__dirname,'../views/admin/productDetail.ejs'), {myProduct, titulo: "Bhoomi - Editar Producto"});
+        res.render(path.resolve(__dirname,'../views/admin/productDetail.ejs'), {myProduct, titulo: "Bhoomi - Detalle del Producto"});
     },
     edit: (req,res)=>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
         );
-        const productId=req.params.id;
-        let productEdit=products.find(product=>product.id==productId);
-        res.render(path.resolve(__dirname, '../views/admin/editProduct'), {productEdit}); 
+
+        const productId = req.params.id;
+
+        let productEdit = products.find(product=>product.id==productId);
+        res.render(path.resolve(__dirname, '../views/admin/editProduct.ejs'), {productEdit, titulo: "Bhoomi - Editar Producto"}); 
     },
     update: (req,res) =>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))

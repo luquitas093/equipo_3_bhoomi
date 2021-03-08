@@ -21,41 +21,32 @@
 
         <!--Header del producto-->
         <nav class="title-edit">
-            <h4 class="header-product">Shampoo sólido fortalecedor de ortiga y romero</h4>
-            <!--Botón editar y borrar producto-->
-            <div class="edit-delete">
-                <div  class="edit-product">
-                    <a href="/editProduct"><i class="fas fa-edit"></i></a>
-                </div>
-                <div class="delete-product">
-                    <a href="/"><i class="fas fa-trash-alt"></i></a>
-                </div>
-            </div>
+            <h4 class="header-product"><%= myProduct.name%></h4>
         </nav>
 
         <!--Imagen principal del producto-->
         <div class="total-images">
             <figure class="product-image-principal">
-                <img src="/img/ss1.jpg" alt="Imagen principal">
+                <img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen principal">
             </figure>
     
             <!--Imágenes del producto-->
                 <figure class="product-images-container">
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 1"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 1"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 2"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 2"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/ss1.jpg" alt="Imagen 3"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 3"></a>
                     </div>
                 </figure>
         </div>
         <!--Nombre y precio-->
         <article class="product-name-and-price">
-            <h2 class="product-name">SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO - 100% NATURAL</h2>
-            <p class="prices">$400</p>
+            <h2 class="product-name"><%= myProduct.name%></h2>
+            <p class="prices">$<%= myProduct.price %></p>
         </article>
 
         <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
@@ -101,6 +92,7 @@
             <p>ELEGÍ CON QUE COMBINARLO:</p>
             <select>
                 <label>Elegí con que combinarlo</label>
+                <option value="#" selected disabled>Para Combinar...</option>
                 <option name="acondicionador1">Acondicionador para cabello reseco</option>
                 <option name="jabón1">Jabón corporal de rosa mosqueta</option>
                 <option name="exfoliante1">Exfoliante facial de café y azúcar</option>
@@ -125,7 +117,7 @@
         </section>
                 <!--Botón agregar al carrito-->
                 <div class="add-cart">
-                    <a href="/cart">AGREGAR AL CARRITO</a>
+                    <a href="/carrito">AGREGAR AL CARRITO</a>
                 </div>
         </section>
 
@@ -158,20 +150,20 @@
         <h3>PRODUCTOS RELACIONADOS</h3>
         <div class="conteiner-related-products">
             <article class="related-product">
-                <a href="/products"><img src="img/exf2.jpg"></a>
-                <a href="/products"class="related-products-title">Exfoliante natural limón y romero</a>
+                <a href="/productos"><img src="../../img/exf2.jpg"></a>
+                <a href="/productos"class="related-products-title">Exfoliante natural limón y romero</a>
             </article>
             <article class="related-product">
-                <a href="/products"><img src="img/bl1.jpg"></a>
-                <a href="/products"class="related-products-title">Bálsamo labial de cacao</a>
+                <a href="/productos"><img src="../../img/bl1.jpg"></a>
+                <a href="/productos"class="related-products-title">Bálsamo labial de cacao</a>
             </article> 
             <article class="related-product">
-                <a href="/products"><img src="img/j3.jpg"></a>
-                <a href="/products"class="related-products-title">Jabón calmante de avena y miel</a>
+                <a href="/productos"><img src="../../img/j3.jpg"></a>
+                <a href="/productos"class="related-products-title">Jabón calmante de avena y miel</a>
             </article>
                     <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
                     <figure class="banner-carrousel-bottom-detail">
-                        <img src="img/banner-bottom.gif" alt="banner-bottom">
+                        <img src="../../img/banner-bottom.gif" alt="banner-bottom">
                     </figure>
     </div>
     </section>

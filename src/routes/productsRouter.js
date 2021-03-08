@@ -5,6 +5,6 @@ const path = require ("path");
 const productsController = require ("../controllers/productsController.js")
 
 router.get ("/", productsController.list)
-router.get ("/detalleproducto", productsController.detail)
+router.get ("/detalleproducto/:id", productsController.detail)
 
 module.exports = router;

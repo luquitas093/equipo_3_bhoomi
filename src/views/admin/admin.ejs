@@ -16,7 +16,7 @@
          <section class = "admin-products">
            <h1 class = "encabezado-admin">Administrador de productos</h1>
            <div class = "add-product">
-             <a href="/administrador/crear">Agregar producto</a>
+             <a href="/administrador/crearproducto">Agregar producto</a>
           </div>
           <table class = "table-products">
               <thead>
@@ -32,7 +32,7 @@
                     <td><%=product.id%></td>
                     <td><%=product.name%></td>
                     <td><a href="/administrador/detalleproducto/<%= product.id%> "><i class="fas fa-eye"></i></a></td>
-                    <td><a href="/administrador/editar/<%= product.id%> "><i class="fas fa-edit"></i></a></td>
+                    <td><a href="/administrador/editarproducto/<%= product.id%> "><i class="fas fa-edit"></i></a></td>
                     <td><a href="/administrador/borrar/<%= product.id%>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
                 <%});%>
