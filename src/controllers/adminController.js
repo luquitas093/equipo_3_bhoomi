@@ -13,28 +13,26 @@ module.exports = {
             );
         res.render(path.resolve(__dirname, '../views/admin/newProduct.ejs'), {titulo: 'Bhoomi - Crear Producto'});
     },
-    save: (req,res)=>{
-        let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
+    save: (req,res)=> {
+        let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
             );
-        let lastproduct= products.pop();
+        
+        let lastproduct = products.pop();
         products.push(lastproduct);
-        let newProduct={
+
+        let newProduct = {
         id: lastproduct.id+1,
         name: req.body.name,
         description: req.body.description,
         imagenEdit: req.file.filename,
         category:req.body.category,
-        qunatity:req.body.qunatity,
+        quantity:req.body.stock,
         price:req.body.price,
-        keywords:req.body.keywords,      
-
-
-
         } 
         products.push(newProduct);
-        let saveProduct= JSON.stringify(products,null,2); 
-        fs.writeFileSync(path.resolve(__dirname,'../data/products.json'),saveProduct);
-        res.redirect ('/admin');
+        let saveNewProduct= JSON.stringify(products,null,2); 
+        fs.writeFileSync(path.resolve(__dirname,'../data/products.json'),saveNewProduct);
+        res.redirect ('/administrador');
     },
     show: (req,res)=>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
