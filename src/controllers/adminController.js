@@ -37,14 +37,15 @@ module.exports = {
     show: (req,res)=>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
         );
+
         let myProduct;
         products.forEach(product => {
-            if(product.id== req.params.id){
-                myProduct=product;
+            if (product.id == req.params.id){
+                myProduct = product;
             }
+        });
 
-        }); 
-        res.render(path.resolve(__dirname,'../views/admin/productDetail',{myProduct}));
+        res.render(path.resolve(__dirname,'../views/admin/productDetail.ejs'), {myProduct, titulo: "Bhoomi - Editar Producto"});
     },
     edit: (req,res)=>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
@@ -66,7 +67,7 @@ module.exports = {
         })
         let productUpdate = JSON.stringify(productsUpdate,null,2);
         fs.writeFileSync(path.resolve(__dirname,'../data/products.json'),productUpdate)
-        res.redirect('/admin');
+        res.redirect('/administrador');
     },
     destroy: (req,res) =>{
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
@@ -75,7 +76,7 @@ module.exports = {
         const listProduct = products.filter(product => product.id != deleteProduct);
         let saveProducts = JSON.stringify(listProduct,null,2)
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'),saveProducts);
-        res.redirect('/admin');
+        res.redirect('/administrador');
     }
 
 }

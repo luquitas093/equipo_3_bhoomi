@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
+
+<body>
+
+    <%- include("../partials/header.ejs")%>
+
+  <!--************************************************************************************************************
+                                                     MAIN
+    ************************************************************************************************************-->                                                 
+
+    <main class="main-productDetail">
+
+        <%- include("../partials/menuMediaQuery.ejs")%>
+
+        <!--CONTENEDOR: IMÁGENES PRODUCTO Y DESCRIPCIÓN-->
+    <section class="product-and-description">
+
+        <!--Header del producto-->
+        <nav class="title-edit">
+            <h4 class="header-product"><%= myProduct.name%></h4>
+            <!--Botón editar y borrar producto-->
+            <div class="edit-delete">
+                <div  class="edit-product">
+                    <a href="/editProduct"><i class="fas fa-edit"></i></a>
+                </div>
+                <div class="delete-product">
+                    <a href="/"><i class="fas fa-trash-alt"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        <!--Imagen principal del producto-->
+        <div class="total-images">
+            <figure class="product-image-principal">
+                <img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen principal">
+            </figure>
+    
+            <!--Imágenes del producto-->
+                <figure class="product-images-container">
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 1"></a>
+                    </div>
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 2"></a>
+                    </div>
+                    <div class="product-images-item">
+                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 3"></a>
+                    </div>
+                </figure>
+        </div>
+        <!--Nombre y precio-->
+        <article class="product-name-and-price">
+            <h2 class="product-name"><%= myProduct.name%></h2>
+            <p class="prices">$<%= myProduct.price %></p>
+        </article>
+
+        <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
+        <div class="conteiner-cards-networks">
+            <div class="payment-methods">
+                <p>Pagá en hasta 6 cuotas sin interés</p>
+                <div class="pay-icons-style">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/visa@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/mastercard@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                        data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png"
+                        class="card-logo">
+                    <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                        data-src="//d26lpennugtm82s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png"
+                        class="card-logo">
+                <div class="pay-icon-more">
+                    <i class="fas fa-credit-card" class="card-logo"></i>
+                    <i class="fas fa-plus" class="card-logo"></i>
+                </div>
+            </div>
+            <a href="#"class="pay-cards">VER MEDIOS DE PAGO</a>
+            </div>
+
+                <!--Compartí en las redes-->
+            <div class="sharing-methods">
+                <p>Compartir</p>
+                <div class="share-icons-style">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" class="share-networks-logo"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook" class="share-networks-logo"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter" class="share-networks-logo"></i></a>
+                    <a href="https://whatsapp.com"><i class="fab fa-whatsapp" class="share-networks-logo"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!--Combos-->
+
+        <section class="combo">
+            <p>ELEGÍ CON QUE COMBINARLO:</p>
+            <select>
+                <label>Elegí con que combinarlo</label>
+                <option name="acondicionador1">Acondicionador para cabello reseco</option>
+                <option name="jabón1">Jabón corporal de rosa mosqueta</option>
+                <option name="exfoliante1">Exfoliante facial de café y azúcar</option>
+                <option name="balsamo-labial1">Bálsamo labial de cacao</option>
+            </select>
+        </section>
+
+        <!--Contenedor de cantidad y de agregar al carrito-->
+        <section class="quantity-button-add-cart">
+                    <!--Contador de productos-->
+        <section class="quantity">
+            <p>CANTIDAD:</p>
+            <select>
+                <label>Cantidad</label>
+                <option name="1">1</option>
+                <option name="2">2</option>
+                <option name="3">3</option>
+                <option name="4">4</option>
+                <option name="5">5</option>
+                <option name="6">6</option>
+            </select>
+        </section>
+                <!--Botón agregar al carrito-->
+                <div class="add-cart">
+                    <a href="/cart">AGREGAR AL CARRITO</a>
+                </div>
+        </section>
+
+        <!--Medios de envío-->
+        <div class="shipping">
+            <div class="truck-ship-container">
+                <i class="fas fa-truck"></i>
+                <p>Medios de envío</p>
+            </div>
+            <div class="add-cp">
+                <input type="number" name="shippingCalculator" placeholder="Tu código postal" min=4 max=4 required>
+                <button type="submit">CALCULAR</button>
+            </div>
+        </div>
+
+        <!--Descripción del producto-->
+        <article class="product-description">
+            <h4>Caracteristicas:</h4>
+            <p>Sin parabenos, siliconas, detergentes ni sulfatos.Elaborado con tensioactivos derivados del coco (SCI), manteca de cacao y aceites esenciales. Su aroma es herbal. Su espuma es suave y cremosa. Para uso diario. Contiene aceite esencial de romero y extracto de hortiga. Para todo tipo de cabello, especialmente para cabellos debilitados o con caída. La manteca de cacao otorga suavidad y flexibilidad. El coco y el romero fortalecen la fibra capilar. El extracto de ortiga previene la caída del cabello.</p>
+            <h4>Cómo se usa:</h4>
+            <p>Frotar suavemente sobre el cuero cabelludo en la nuca, las sienes y la coronilla. Luego generar espuma con las manos y extender al resto del cabello. No es necesario frotar la pastilla en el largo del pelo, usá la menor cantidad posible y justa.</p>
+            <h4>Duración:</h4>
+            <p>Cada pastilla dura entre 40 y 50 lavados, dependiendo del largo del pelo y el cuidado que se le dé a la pastilla (Recordá siempre mantenerla en seco y que no esté en contacto con el agua cuando no la usas para que no se desgaste y tenga mayor duración). Peso del producto: 50 grs</p>
+            <h6>IMPORTANTE: Nuestros shampoos NO son de tratamiento, no curan afecciones como la caspa, dermatitis ceborréica, etc., aunque tengan aditivos naturales que pueden ayudar a atenuarlas. Tampoco contienen aditivos para preservar cabellos con tintura. No son aptos para menores de 3 años.</h6>
+        </article>
+        
+    </section>
+    <!--Galería de productos relacionados-->
+    <section class="related-products-gallery">
+        <h3>PRODUCTOS RELACIONADOS</h3>
+        <div class="conteiner-related-products">
+            <article class="related-product">
+                <a href="/productos"><img src="../../img/exf2.jpg"></a>
+                <a href="/productos"class="related-products-title">Exfoliante natural limón y romero</a>
+            </article>
+            <article class="related-product">
+                <a href="/productos"><img src="../../img/bl1.jpg"></a>
+                <a href="/productos"class="related-products-title">Bálsamo labial de cacao</a>
+            </article> 
+            <article class="related-product">
+                <a href="/productos"><img src="../../img/j3.jpg"></a>
+                <a href="/productos"class="related-products-title">Jabón calmante de avena y miel</a>
+            </article>
+                    <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
+                    <figure class="banner-carrousel-bottom-detail">
+                        <img src="../../img/banner-bottom.gif" alt="banner-bottom">
+                    </figure>
+    </div>
+    </section>
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+    
+</body>
+
+</html>

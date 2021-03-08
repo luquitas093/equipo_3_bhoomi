@@ -21,11 +21,11 @@ var storage = multer.diskStorage({
 // Requerir Rutas
 
 router.get ("/", adminController.admin);
-router.get('/crear', adminController.create);
-router.get('/crear', upload.single('imagen'), adminController.save);
-router.get('/admin/detailProduct/:id', adminController.show);
-router.get('/admin/editProduct/:id', adminController.edit);
-router.put('/admin/editProduct/:id', upload.single('imagenEdit'), adminController.update);
+router.get('/crearproducto', adminController.create);
+router.post('/crearproducto', upload.single('imagen'), adminController.save);
+router.get('/detalleproducto/:id', adminController.show);
+router.get('/editarproducto/:id', adminController.edit);
+router.put('/editarproducto/:id', upload.single('imagenEdit'), adminController.update);
 router.get('/admin/delete/:id', adminController.destroy);
 
 module.exports = router;
