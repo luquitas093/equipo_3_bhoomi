@@ -25,7 +25,7 @@ router.get('/crearproducto', adminController.create);
 router.post('/crearproducto', upload.single('imagen'), adminController.save);
 router.get('/detalleproducto/:id', adminController.show);
 router.get('/editarproducto/:id', adminController.edit);
-router.put('/editarproducto/:id', upload.single('imagenEdit'), adminController.update);
+router.put('/editarproducto/:id', upload.single('imagen'), adminController.update);
 router.get('/borrarproducto/:id', adminController.destroy);
 
 module.exports = router;

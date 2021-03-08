@@ -28,7 +28,7 @@
                     <a href="/administrador/editarproducto/<%= myProduct.id%>"><i class="fas fa-edit"></i></a>
                 </div>
                 <div class="delete-product">
-                    <a href="/administrador/borrarproducto/<%= product.id%>"><i class="fas fa-trash-alt"></i></a>
+                    <a href="/administrador/borrarproducto/<%= myProduct.id%>"><i class="fas fa-trash-alt"></i></a>
                 </div>
             </div>
         </nav>
@@ -36,19 +36,19 @@
         <!--Imagen principal del producto-->
         <div class="total-images">
             <figure class="product-image-principal">
-                <img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen principal">
+                <img src="/img/products/<%= myProduct.imagen%>" alt="Imagen principal">
             </figure>
     
             <!--Imágenes del producto-->
                 <figure class="product-images-container">
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 1"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 1"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 2"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 2"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagenEdit%>" alt="Imagen 3"></a>
+                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 3"></a>
                     </div>
                 </figure>
         </div>
@@ -126,7 +126,7 @@
         </section>
                 <!--Botón agregar al carrito-->
                 <div class="add-cart">
-                    <a href="/cart">AGREGAR AL CARRITO</a>
+                    <a href="/carrito">AGREGAR AL CARRITO</a>
                 </div>
         </section>
 

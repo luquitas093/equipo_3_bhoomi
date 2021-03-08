@@ -1,139 +1,139 @@
 [
-    {
-        "id": 1,
-        "name": "BÁLSAMO LABIAL DE CACAO",
-        "description": "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes",
-        "imagenEdit": "bl1.jpg",
-        "category": 2,
-        "quantity": 10,
-        "price": 170.00,
-        "keywords": [
-            "Bálsamo",
-            "Hidratacion",
-            "Cacao",
-            "Labial"
-        ]
-    },
-    {
-        "id": 2,
-        "name": "EXFOLIANTE FACIAL DE CAFÉ Y AZÚCAR",
-        "description": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet",
-        "imagenEdit": "exf1.jpg",
-        "category": 2,
-        "quantity": 33,
-        "price": 320.00,
-        "keywords": [
-            "Exfoliante",
-            "Café",
-            "Facial",
-            "Cuidado",
-            "Scrub",
-            "Azúcar"
-        ]
-    },
-    {
-        "id": 3,
-        "name": "JABÓN CORPORAL DE ROSA MOSQUETA",
-        "description": "pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
-        "imagenEdit": "j1.jpg",
-        "category": 2,
-        "quantity": 28,
-        "price": 210.00,
-        "keywords": [
-            "Limpieza",
-            "Facial",
-            "Jabón",
-            "Rosa",
-            "Mosqueta"         
-        ]
-    },
-    {
-        "id": 4,
-        "name": "SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO",
-        "description": "ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis",
-        "imagenEdit": "ss1.jpg",
-        "category": 1,
-        "quantity": 82,
-        "price": 400.00,
-        "keywords": [
-            "Shampoo",
-            "Champu",
-            "Solido",
-            "Lavado",
-            "Cabello",
-            "Ortiga",
-            "Romero"
-        ]
-    },
-    {
-        "id": 5,
-        "name": "BÁLSAMO LABIAL DE CAFÉ",
-        "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti",
-        "imagenEdit": "bl2.jpg",
-        "category": 2,
-        "quantity": 52,
-        "price": 180.00,
-        "keywords": [
-            "Bálsamo",
-            "Hidratacion",
-            "Cafe",
-            "Cacao",
-            "Labial"
-        ]
-    },
-    {
-        "id": 6,
-        "name": "EXFOLIANTE CORPORAL DE LIMÓN Y ROMERO",
-        "description": "at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
-        "imagenEdit": "exf2.jpg",
-        "category": 5,
-        "quantity": 4,
-        "price": 290.00,
-        "keywords": [
-            "Exfoliante",
-            "Romero",
-            "Limon",
-            "Corporal",
-            "Cuidado",
-            "Scrub"
-        ]
-    },
-    {
-        "id": 7,
-        "name": "JABÓN DETOX DE OLIVA Y CARBÓN",
-        "description": "faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus",
-        "imagenEdit": "j4.jpg",
-        "category": 2,
-        "quantity": 71,
-        "price": 230.00,
-        "keywords": [
-            "Limpieza",
-            "Facial",
-            "Jabón",
-            "Cutis",
-            "Oliva",
-            "Carbon",
-            "Detox"
-        ]
-    },
-    {
-        "id": 8,
-        "name": "SHAMPOO SÓLIDO REPARADOR KARITÉ",
-        "description": "sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-        "imagenEdit": "ss3.jpg",
-        "category": 1,
-        "quantity": 42,
-        "price": 210.00,
-        "keywords": [
-            "Shampoo",
-            "Champu",
-            "Solido",
-            "Lavado",
-            "Cabello",
-            "Katite",
-            "Manteca",
-            "Hidratacion",
-            "Reparador"
-        ]
-    }
+  {
+    "id": 1,
+    "name": "BÁLSAMO LABIAL DE CACAO",
+    "description": "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes",
+    "imagen": "bl1.jpg",
+    "category": 2,
+    "quantity": 10,
+    "price": 170,
+    "keywords": [
+      "Bálsamo",
+      "Hidratacion",
+      "Cacao",
+      "Labial"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "EXFOLIANTE FACIAL DE CAFÉ Y AZÚCAR",
+    "description": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet",
+    "imagen": "exf1.jpg",
+    "category": 2,
+    "quantity": 33,
+    "price": 320,
+    "keywords": [
+      "Exfoliante",
+      "Café",
+      "Facial",
+      "Cuidado",
+      "Scrub",
+      "Azúcar"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "JABÓN CORPORAL DE ROSA MOSQUETA",
+    "description": "pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
+    "imagen": "j1.jpg",
+    "category": 2,
+    "quantity": 28,
+    "price": 210,
+    "keywords": [
+      "Limpieza",
+      "Facial",
+      "Jabón",
+      "Rosa",
+      "Mosqueta"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO",
+    "description": "ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis",
+    "imagen": "ss1.jpg",
+    "category": 1,
+    "quantity": 82,
+    "price": 400,
+    "keywords": [
+      "Shampoo",
+      "Champu",
+      "Solido",
+      "Lavado",
+      "Cabello",
+      "Ortiga",
+      "Romero"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "BÁLSAMO LABIAL DE CAFÉ",
+    "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti",
+    "imagen": "bl2.jpg",
+    "category": 2,
+    "quantity": 52,
+    "price": 180,
+    "keywords": [
+      "Bálsamo",
+      "Hidratacion",
+      "Cafe",
+      "Cacao",
+      "Labial"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "EXFOLIANTE CORPORAL DE LIMÓN Y ROMERO",
+    "description": "at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
+    "imagen": "exf2.jpg",
+    "category": 5,
+    "quantity": 4,
+    "price": 290,
+    "keywords": [
+      "Exfoliante",
+      "Romero",
+      "Limon",
+      "Corporal",
+      "Cuidado",
+      "Scrub"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "JABÓN DETOX DE OLIVA Y CARBÓN",
+    "description": "faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus",
+    "imagen": "j4.jpg",
+    "category": 2,
+    "quantity": 71,
+    "price": 230,
+    "keywords": [
+      "Limpieza",
+      "Facial",
+      "Jabón",
+      "Cutis",
+      "Oliva",
+      "Carbon",
+      "Detox"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "SHAMPOO SÓLIDO REPARADOR KARITÉ",
+    "description": "sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
+    "imagen": "ss3.jpg",
+    "category": 1,
+    "quantity": 42,
+    "price": 210,
+    "keywords": [
+      "Shampoo",
+      "Champu",
+      "Solido",
+      "Lavado",
+      "Cabello",
+      "Katite",
+      "Manteca",
+      "Hidratacion",
+      "Reparador"
+    ]
+  }
 ]

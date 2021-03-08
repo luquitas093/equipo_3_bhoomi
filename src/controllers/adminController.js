@@ -24,9 +24,9 @@ module.exports = {
         id: lastproduct.id+1,
         name: req.body.name,
         description: req.body.description,
-        imagenEdit: req.file.filename,
+        imagen: req.file.filename,
         category:req.body.category,
-        quantity:req.body.stock,
+        quantity:req.body.quantity,
         price:req.body.price,
         } 
         products.push(newProduct);
@@ -60,7 +60,7 @@ module.exports = {
         let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
         );
         req.body.id = req.params.id;
-        req.body.imagenEdit = req.file ? req.file.filename : req.body.oldImagen;
+        req.body.imagen = req.file ? req.file.filename : req.body.oldImagen;
         
         let productsUpdate = products.map(product =>{
             if (product.id == req.body.id) {
@@ -80,7 +80,7 @@ module.exports = {
         const deleteProduct = req.params.id;
 
         const listProduct = products.filter(product => product.id != deleteProduct);
-        
+
         let saveProducts = JSON.stringify(listProduct,null,2)
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'),saveProducts);
         res.redirect('/administrador');

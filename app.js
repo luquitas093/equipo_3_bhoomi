@@ -48,7 +48,7 @@ app.use ("/registro", registerRoutes);
 
 //Levantar el Servidor
 
-app.set('puerto', process.env.PORT || 3000);
+app.set('puerto', process.env.PORT || 3001);
 
 app.listen (app.get('puerto'), ()=> console.log(`Servidor corriendo de manera satisfactoria  ${app.get('puerto')}` ));
 

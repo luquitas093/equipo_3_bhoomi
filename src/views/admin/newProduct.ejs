@@ -17,7 +17,7 @@
             <h1 class="encabezado">¿Qué vas a vender?</h1>
         </section>
         <section class="newProduct">
-            <form class="formularioproducto" action="/adminstrador/crear" method="POST" enctype="multipart/form-data">
+            <form class="formularioproducto" action="/administrador/crearproducto" method="POST" enctype="multipart/form-data">
                 <div class="stylediv">
                     <strong><label for="name">Nombre del producto</label></strong>
                     <input type="text" id="name" name="name" placeholder="Nombre del Producto" class="camp" required>
@@ -37,18 +37,18 @@
                     <strong><label for="category">Categoría</label></strong>
                     <select name="category" required>
                         <option value="#" selected disabled>Seleccione una opcion...</option>
-                        <option name="1">Cuidado Capilar</option>
-                        <option name="2">Rostro y Cuerpo</option>
-                        <option name="3">Combos</option>
-                        <option name="4">Regalos</option>
-                        <option name="5">Sale</option>
+                        <option value="1">Cuidado Capilar</option>
+                        <option value="2">Rostro y Cuerpo</option>
+                        <option value="3">Combos</option>
+                        <option value="4">Regalos</option>
+                        <option value="5">Sale</option>
                     </select>    
 
                 </div>
 
                 <div class="stylediv">
-                    <strong><label for="stock">Stock</label></strong>
-                    <input type="number" id="stock" name="stock" placeholder="Cantidad en Stock" class="camp" required>
+                    <strong><label for="quantity">Stock</label></strong>
+                    <input type="number" id="quantity" name="quantity" placeholder="Cantidad en Stock" class="camp" required>
 
                 </div>
                              

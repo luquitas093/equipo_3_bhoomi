@@ -18,49 +18,49 @@
             <h1 class="encabezado"> Editar Producto</h1>
         </section>
         <section class="editProduct">
-            <form class="editform" action="/admin/editProduct/<%= productEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form class="editform" action="/administrador/editarproducto/<%= productEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <div class="stylediv">
-                    <strong><label for="editName">Modificar Nombre</label></strong>
-                    <input type="text" id="editName" name="editName" placeholder="Ingresar nuevo nombre" class="camp-edit"required value = "<%= productEdit.name%>">
+                    <strong><label for="name">Modificar Nombre</label></strong>
+                    <input type="text" id="name" name="name" placeholder="Ingresar nuevo nombre" class="camp-edit"required value = "<%= productEdit.name%>">
 
                 </div>
                 <div class="stylediv">
-                    <strong><label for="descriptionEdit"> Modificar Descripción</label></strong>
-                    <textarea name="descriptionEdit" class="camp-edit" required value = "<%= productEdit.description%>"> </textarea>
+                    <strong><label for="description"> Modificar Descripción</label></strong>
+                    <textarea name="description" class="camp-edit" required value = "<%= productEdit.description%>"> </textarea>
                     
                 </div>
                 <div class="stylediv">
-                    <strong><label for="imagenEdit">Agregar y/o Modificar Imagenes</label></strong>
+                    <strong><label for="imagen">Agregar y/o Modificar Imagenes</label></strong>
                     <figure>
-                        <img class="img-editproduct" src="/img/products/<%= productEdit.imagenEdit%>" alt="<%= productEdit.name%>">
+                        <img class="img-editproduct" src="/img/products/<%= productEdit.imagen%>" alt="<%= productEdit.name%>">
                     </figure>
-                    <input type="hidden"  name="oldImagen"  value="<%= productEdit.imagenEdit%>">
-                    <input class="camp-edit" type="file" id="imagenEdit" name="imagenEdit" accept=".jpg" value = " ">
+                    <input type="hidden"  name="oldImagen"  value="<%= productEdit.imagen%>">
+                    <input class="camp-edit" type="file" id="imagen" name="imagen" accept=".jpg" value = " ">
                      
                 </div>
              
                 <div class="stylediv">
-                    <strong><label for="categoryEdit">Modificar Categoría</label></strong>
-                    <select name="categoryEdit">
-                        <option selected disabled value="#">Seleccione una categoría</option>
-                        <option name="1" <%= productEdit.category == 1 ? "selected" : null %>>Cuidado Capilar</option>
-                        <option name="2" <%= productEdit.category == 2 ? "selected" : null %>>Rostro y Cuerpo</option>
-                        <option name="3" <%= productEdit.category == 3 ? "selected" : null %>>Combos</option>
-                        <option name="4" <%= productEdit.category == 4 ? "selected" : null %>>Regalos</option>
-                        <option name="5" <%= productEdit.category == 5 ? "selected" : null %>>Sale</option>
+                    <strong><label for="category">Modificar Categoría</label></strong>
+                    <select name="category">
+                        <option disabled value="#">Seleccione una categoría</option>
+                        <option value="1" <%= productEdit.category == 1 ? "selected" : null %>>Cuidado Capilar</option>
+                        <option value="2" <%= productEdit.category == 2 ? "selected" : null %>>Rostro y Cuerpo</option>
+                        <option value="3" <%= productEdit.category == 3 ? "selected" : null %>>Combos</option>
+                        <option value="4" <%= productEdit.category == 4 ? "selected" : null %>>Regalos</option>
+                        <option value="5" <%= productEdit.category == 5 ? "selected" : null %>>Sale</option>
                     </select>    
 
                 </div>
 
                 <div class="stylediv">
-                    <strong><label for="stockEdit">Modificar Stock</label></strong>
-                    <input type="number" id="stockEdit" name="stockEdit" placeholder="Ingrese nuevo Stock" class="camp-edit" required value = "<%= productEdit.quantity%>">
+                    <strong><label for="quantity">Modificar Stock</label></strong>
+                    <input type="number" id="quantity" name="quantity" placeholder="Ingrese nuevo Stock" class="camp-edit" required value = "<%= productEdit.quantity%>">
 
                 </div>
                              
                 <div class="stylediv">
-                    <strong><label for="priceEdit"> Modificar Precio</label></strong>
-                    <input type="number" id="priceEdit" name="priceEdit" placeholder="$" class="camp-edit" required value = "<%= productEdit.price%>">
+                    <strong><label for="price"> Modificar Precio</label></strong>
+                    <input type="number" id="price" name="price" placeholder="$" class="camp-edit" required value = "<%= productEdit.price%>">
                 </div>
 
                 <div class="stylediv center">
