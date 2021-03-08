@@ -1,716 +1,140 @@
 [
     {
         "id": 1,
-        "name": "Dusicyon thous",
+        "name": "BÁLSAMO LABIAL DE CACAO",
         "description": "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes",
-        "imagenEdit": "product_1.jpg",
-        "category": 1,
+        "imagenEdit": "bl1.jpg",
+        "category": 2,
         "quantity": 10,
-        "price": 4285.48,
+        "price": 170.00,
         "keywords": [
-            "Lima",
-            "Papa",
-            "Echo"
+            "Bálsamo",
+            "Hidratacion",
+            "Cacao",
+            "Labial"
         ]
     },
     {
         "id": 2,
-        "name": "Oncorhynchus nerka",
+        "name": "EXFOLIANTE FACIAL DE CAFÉ Y AZÚCAR",
         "description": "sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet",
-        "imagenEdit": "product_2.jpg",
+        "imagenEdit": "exf1.jpg",
         "category": 2,
         "quantity": 33,
-        "price": 3710.69,
+        "price": 320.00,
         "keywords": [
-            "India",
-            "India",
-            "Tango"
+            "Exfoliante",
+            "Café",
+            "Facial",
+            "Cuidado",
+            "Scrub",
+            "Azúcar"
         ]
     },
     {
         "id": 3,
-        "name": "Procyon cancrivorus",
+        "name": "JABÓN CORPORAL DE ROSA MOSQUETA",
         "description": "pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
-        "imagenEdit": "product_3.jpg",
-        "category": 3,
+        "imagenEdit": "j1.jpg",
+        "category": 2,
         "quantity": 28,
-        "price": 1355.61,
+        "price": 210.00,
         "keywords": [
-            "Echo",
-            "Kilo",
-            "India",
-            "Charlie"
+            "Limpieza",
+            "Facial",
+            "Jabón",
+            "Rosa",
+            "Mosqueta"         
         ]
     },
     {
         "id": 4,
-        "name": "Isoodon obesulus",
+        "name": "SHAMPOO SÓLIDO FORTALECEDOR DE ORTIGA Y ROMERO",
         "description": "ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis",
-        "imagenEdit": "product_4.jpg",
-        "category": 4,
+        "imagenEdit": "ss1.jpg",
+        "category": 1,
         "quantity": 82,
-        "price": 1811.4,
+        "price": 400.00,
         "keywords": [
-            "Delta",
-            "India",
-            "Hotel"
+            "Shampoo",
+            "Champu",
+            "Solido",
+            "Lavado",
+            "Cabello",
+            "Ortiga",
+            "Romero"
         ]
     },
     {
         "id": 5,
-        "name": "Aonyx cinerea",
+        "name": "BÁLSAMO LABIAL DE CAFÉ",
         "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti",
-        "imagenEdit": "product_5.jpg",
-        "category": 5,
+        "imagenEdit": "bl2.jpg",
+        "category": 2,
         "quantity": 52,
-        "price": 2616.56,
+        "price": 180.00,
         "keywords": [
-            "Hotel",
-            "Yankee",
-            "Tango"
+            "Bálsamo",
+            "Hidratacion",
+            "Cafe",
+            "Cacao",
+            "Labial"
         ]
     },
     {
         "id": 6,
-        "name": "Merops sp.",
+        "name": "EXFOLIANTE CORPORAL DE LIMÓN Y ROMERO",
         "description": "at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
-        "imagenEdit": "product_6.jpg",
-        "category": 6,
+        "imagenEdit": "exf2.jpg",
+        "category": 5,
         "quantity": 4,
-        "price": 3700.91,
+        "price": 290.00,
         "keywords": [
-            "November",
-            "Mike",
-            "Mike"
+            "Exfoliante",
+            "Romero",
+            "Limon",
+            "Corporal",
+            "Cuidado",
+            "Scrub"
         ]
     },
     {
         "id": 7,
-        "name": "Ninox superciliaris",
+        "name": "JABÓN DETOX DE OLIVA Y CARBÓN",
         "description": "faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus",
-        "imagenEdit": "product_7.jpg",
-        "category": 7,
+        "imagenEdit": "j4.jpg",
+        "category": 2,
         "quantity": 71,
-        "price": 4248.49,
+        "price": 230.00,
         "keywords": [
-            "Charlie",
-            "India",
-            "Echo"
+            "Limpieza",
+            "Facial",
+            "Jabón",
+            "Cutis",
+            "Oliva",
+            "Carbon",
+            "Detox"
         ]
     },
     {
         "id": 8,
-        "name": "Castor fiber",
+        "name": "SHAMPOO SÓLIDO REPARADOR KARITÉ",
         "description": "sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede",
-        "imagenEdit": "product_8.jpg",
-        "category": 8,
+        "imagenEdit": "ss3.jpg",
+        "category": 1,
         "quantity": 42,
-        "price": 2721.87,
+        "price": 210.00,
         "keywords": [
-            "Whiskey",
-            "Quebec"
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Phasianus colchicus",
-        "description": "montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi",
-        "imagenEdit": "product_9.jpg",
-        "category": 9,
-        "quantity": 96,
-        "price": 2176.18,
-        "keywords": [
-            "November",
-            "Uniform",
-            "Charlie",
-            "X-ray"
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Bucephala clangula",
-        "description": "in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat",
-        "imagenEdit": "product_10.jpg",
-        "category": 10,
-        "quantity": 24,
-        "price": 3756.96,
-        "keywords": [
-            "Sierra",
-            "Golf"
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Anas bahamensis",
-        "description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam",
-        "imagenEdit": "product_11.jpg",
-        "category": 11,
-        "quantity": 17,
-        "price": 2815.5,
-        "keywords": [
-            "Alfa",
-            "Quebec",
-            "Zulu"
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Lasiodora parahybana",
-        "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam",
-        "imagenEdit": "product_12.jpg",
-        "category": 12,
-        "quantity": 100,
-        "price": 3848.04,
-        "keywords": [
-            "Quebec",
-            "Papa",
-            "Papa",
-            "Foxtrot",
-            "Yankee"
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Ictonyx striatus",
-        "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit",
-        "imagenEdit": "product_13.jpg",
-        "category": 13,
-        "quantity": 46,
-        "price": 1713.03,
-        "keywords": [
-            "Bravo",
-            "Hotel"
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Spermophilus parryii",
-        "description": "dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum",
-        "imagenEdit": "product_14.jpg",
-        "category": 14,
-        "quantity": 27,
-        "price": 4103.39,
-        "keywords": [
-            "Quebec",
-            "India",
-            "Kilo",
-            "Lima",
-            "Uniform"
-        ]
-    },
-    {
-        "id": 15,
-        "name": "Crocuta crocuta",
-        "description": "dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus",
-        "imagenEdit": "product_15.jpg",
-        "category": 15,
-        "quantity": 73,
-        "price": 3964.31,
-        "keywords": [
-            "Echo",
-            "Alfa",
-            "Tango",
-            "Kilo",
-            "Romeo"
-        ]
-    },
-    {
-        "id": 16,
-        "name": "Spheniscus mendiculus",
-        "description": "laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper",
-        "imagenEdit": "product_16.jpg",
-        "category": 16,
-        "quantity": 67,
-        "price": 943.39,
-        "keywords": [
-            "November",
-            "Zulu",
-            "Quebec"
-        ]
-    },
-    {
-        "id": 17,
-        "name": "Zenaida galapagoensis",
-        "description": "adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-        "imagenEdit": "product_17.jpg",
-        "category": 17,
-        "quantity": 33,
-        "price": 2104.0,
-        "keywords": [
-            "Hotel",
-            "Echo",
-            "Oscar",
-            "Charlie",
-            "Alfa"
-        ]
-    },
-    {
-        "id": 18,
-        "name": "Pterocles gutturalis",
-        "description": "semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam",
-        "imagenEdit": "product_18.jpg",
-        "category": 18,
-        "quantity": 25,
-        "price": 3355.0,
-        "keywords": [
-            "Tango",
-            "Mike",
-            "Alfa",
-            "Romeo"
-        ]
-    },
-    {
-        "id": 19,
-        "name": "Tursiops truncatus",
-        "description": "elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio",
-        "imagenEdit": "product_19.jpg",
-        "category": 19,
-        "quantity": 2,
-        "price": 2918.12,
-        "keywords": [
-            "Lima",
-            "Yankee"
-        ]
-    },
-    {
-        "id": 20,
-        "name": "Callipepla gambelii",
-        "description": "sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede",
-        "imagenEdit": "product_20.jpg",
-        "category": 20,
-        "quantity": 50,
-        "price": 3803.31,
-        "keywords": [
-            "Oscar",
-            "Alfa",
-            "Mike",
-            "Papa",
-            "Zulu"
-        ]
-    },
-    {
-        "id": 21,
-        "name": "Columba livia",
-        "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia",
-        "imagenEdit": "product_21.jpg",
-        "category": 21,
-        "quantity": 10,
-        "price": 1807.14,
-        "keywords": [
-            "Bravo",
-            "Hotel",
-            "Echo",
-            "Bravo"
-        ]
-    },
-    {
-        "id": 22,
-        "name": "Cracticus nigroagularis",
-        "description": "suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
-        "imagenEdit": "product_22.jpg",
-        "category": 22,
-        "quantity": 17,
-        "price": 1186.01,
-        "keywords": [
-            "Lima",
-            "Kilo"
-        ]
-    },
-    {
-        "id": 23,
-        "name": "Ara ararauna",
-        "description": "luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
-        "imagenEdit": "product_23.jpg",
-        "category": 23,
-        "quantity": 3,
-        "price": 2245.02,
-        "keywords": [
-            "Kilo",
-            "Juliett"
-        ]
-    },
-    {
-        "id": 24,
-        "name": "Taxidea taxus",
-        "description": "vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in",
-        "imagenEdit": "product_24.jpg",
-        "category": 24,
-        "quantity": 10,
-        "price": 3409.57,
-        "keywords": [
-            "Oscar",
-            "Charlie"
-        ]
-    },
-    {
-        "id": 25,
-        "name": "Cordylus giganteus",
-        "description": "nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
-        "imagenEdit": "product_25.jpg",
-        "category": 25,
-        "quantity": 51,
-        "price": 2122.91,
-        "keywords": [
-            "Oscar",
-            "Oscar",
-            "Zulu"
-        ]
-    },
-    {
-        "id": 26,
-        "name": "Oreamnos americanus",
-        "description": "orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus",
-        "imagenEdit": "product_26.jpg",
-        "category": 26,
-        "quantity": 14,
-        "price": 568.18,
-        "keywords": [
-            "Sierra",
-            "Yankee",
-            "Foxtrot",
-            "Oscar"
-        ]
-    },
-    {
-        "id": 27,
-        "name": "Mirounga angustirostris",
-        "description": "et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae",
-        "imagenEdit": "product_27.jpg",
-        "category": 27,
-        "quantity": 58,
-        "price": 2377.37,
-        "keywords": [
-            "Kilo",
-            "Oscar"
-        ]
-    },
-    {
-        "id": 28,
-        "name": "Cacatua tenuirostris",
-        "description": "cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi",
-        "imagenEdit": "product_28.jpg",
-        "category": 28,
-        "quantity": 94,
-        "price": 4644.87,
-        "keywords": [
-            "Quebec",
-            "Lima"
-        ]
-    },
-    {
-        "id": 29,
-        "name": "Lepilemur rufescens",
-        "description": "turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque",
-        "imagenEdit": "product_29.jpg",
-        "category": 29,
-        "quantity": 14,
-        "price": 1890.59,
-        "keywords": [
-            "Alfa",
-            "Whiskey",
-            "Oscar"
-        ]
-    },
-    {
-        "id": 30,
-        "name": "Butorides striatus",
-        "description": "mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
-        "imagenEdit": "product_30.jpg",
-        "category": 30,
-        "quantity": 69,
-        "price": 608.71,
-        "keywords": [
-            "Quebec",
-            "November"
-        ]
-    },
-    {
-        "id": 31,
-        "name": "Tapirus terrestris",
-        "description": "mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti",
-        "imagenEdit": "product_31.jpg",
-        "category": 31,
-        "quantity": 89,
-        "price": 4917.04,
-        "keywords": [
-            "India",
-            "X-ray",
-            "India"
-        ]
-    },
-    {
-        "id": 32,
-        "name": "Odocoileus hemionus",
-        "description": "vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit",
-        "imagenEdit": "product_32.jpg",
-        "category": 32,
-        "quantity": 10,
-        "price": 822.41,
-        "keywords": [
-            "Whiskey",
-            "Lima",
-            "Bravo",
-            "Kilo"
-        ]
-    },
-    {
-        "id": 33,
-        "name": "Phasianus colchicus",
-        "description": "nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede",
-        "imagenEdit": "product_33.jpg",
-        "category": 33,
-        "quantity": 85,
-        "price": 3747.17,
-        "keywords": [
-            "Juliett",
-            "Uniform",
-            "Golf",
-            "X-ray"
-        ]
-    },
-    {
-        "id": 34,
-        "name": "Lamprotornis chalybaeus",
-        "description": "pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
-        "imagenEdit": "product_34.jpg",
-        "category": 34,
-        "quantity": 36,
-        "price": 4316.74,
-        "keywords": [
-            "Sierra",
-            "Bravo",
-            "Bravo",
-            "India"
-        ]
-    },
-    {
-        "id": 35,
-        "name": "Nyctereutes procyonoides",
-        "description": "volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis",
-        "imagenEdit": "product_35.jpg",
-        "category": 35,
-        "quantity": 67,
-        "price": 1536.95,
-        "keywords": [
-            "Victor",
-            "Papa",
-            "Oscar",
-            "X-ray",
-            "Delta"
-        ]
-    },
-    {
-        "id": 36,
-        "name": "Tockus erythrorhyncus",
-        "description": "accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet",
-        "imagenEdit": "product_36.jpg",
-        "category": 36,
-        "quantity": 71,
-        "price": 1678.9,
-        "keywords": [
-            "Oscar",
-            "Bravo",
-            "Yankee",
-            "Mike"
-        ]
-    },
-    {
-        "id": 37,
-        "name": "Nyctea scandiaca",
-        "description": "sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id",
-        "imagenEdit": "product_37.jpg",
-        "category": 37,
-        "quantity": 15,
-        "price": 1520.06,
-        "keywords": [
-            "Foxtrot",
-            "Oscar"
-        ]
-    },
-    {
-        "id": 38,
-        "name": "Mazama gouazoubira",
-        "description": "in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat",
-        "imagenEdit": "product_38.jpg",
-        "category": 38,
-        "quantity": 22,
-        "price": 1035.56,
-        "keywords": [
-            "Alfa",
-            "X-ray",
-            "Juliett"
-        ]
-    },
-    {
-        "id": 39,
-        "name": "Scolopax minor",
-        "description": "praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate",
-        "imagenEdit": "product_39.jpg",
-        "category": 39,
-        "quantity": 14,
-        "price": 4299.73,
-        "keywords": [
-            "Zulu",
-            "Victor"
-        ]
-    },
-    {
-        "id": 40,
-        "name": "Larus fuliginosus",
-        "description": "in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non",
-        "imagenEdit": "product_40.jpg",
-        "category": 40,
-        "quantity": 83,
-        "price": 4926.32,
-        "keywords": [
-            "Alfa",
-            "Alfa"
-        ]
-    },
-    {
-        "id": 41,
-        "name": "Eremophila alpestris",
-        "description": "consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse",
-        "imagenEdit": "product_41.jpg",
-        "category": 41,
-        "quantity": 11,
-        "price": 3839.75,
-        "keywords": [
-            "India",
-            "Sierra"
-        ]
-    },
-    {
-        "id": 42,
-        "name": "Vulpes chama",
-        "description": "varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur",
-        "imagenEdit": "product_42.jpg",
-        "category": 42,
-        "quantity": 93,
-        "price": 2214.73,
-        "keywords": [
-            "Foxtrot",
-            "Sierra"
-        ]
-    },
-    {
-        "id": 43,
-        "name": "Trichoglossus chlorolepidotus",
-        "description": "donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis",
-        "imagenEdit": "product_43.jpg",
-        "category": 43,
-        "quantity": 46,
-        "price": 2156.42,
-        "keywords": [
-            "Echo",
-            "Zulu",
-            "November",
-            "Papa",
-            "Uniform"
-        ]
-    },
-    {
-        "id": 44,
-        "name": "Phaethon aethereus",
-        "description": "pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis",
-        "imagenEdit": "product_44.jpg",
-        "category": 44,
-        "quantity": 19,
-        "price": 1047.88,
-        "keywords": [
-            "Mike",
-            "Zulu",
-            "Whiskey",
-            "Tango",
-            "Yankee"
-        ]
-    },
-    {
-        "id": 45,
-        "name": "Theropithecus gelada",
-        "description": "sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend",
-        "imagenEdit": "product_45.jpg",
-        "category": 45,
-        "quantity": 76,
-        "price": 1724.46,
-        "keywords": [
-            "Papa",
-            "Hotel"
-        ]
-    },
-    {
-        "id": 46,
-        "name": "Dipodomys deserti",
-        "description": "tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend",
-        "imagenEdit": "product_46.jpg",
-        "category": 46,
-        "quantity": 1,
-        "price": 3702.72,
-        "keywords": [
-            "Kilo",
-            "Echo",
-            "Charlie",
-            "Foxtrot"
-        ]
-    },
-    {
-        "id": 47,
-        "name": "Vicugna vicugna",
-        "description": "est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien",
-        "imagenEdit": "product_47.jpg",
-        "category": 47,
-        "quantity": 39,
-        "price": 3264.42,
-        "keywords": [
-            "Lima",
-            "Foxtrot",
-            "Bravo",
-            "Quebec",
-            "Sierra"
-        ]
-    },
-    {
-        "id": 48,
-        "name": "Myiarchus tuberculifer",
-        "description": "fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis",
-        "imagenEdit": "product_48.jpg",
-        "category": 48,
-        "quantity": 42,
-        "price": 3414.27,
-        "keywords": [
-            "Papa",
-            "Kilo",
-            "Yankee",
-            "Delta"
-        ]
-    },
-    {
-        "id": 49,
-        "name": "Bos mutus",
-        "description": "vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
-        "imagenEdit": "product_49.jpg",
-        "category": 49,
-        "quantity": 99,
-        "price": 920.45,
-        "keywords": [
-            "Oscar",
-            "Golf",
-            "Mike"
-        ]
-    },
-    {
-        "id": 50,
-        "name": "Felis pardalis",
-        "description": "phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin",
-        "imagenEdit": "product_50.jpg",
-        "category": 50,
-        "quantity": 69,
-        "price": 1670.11,
-        "keywords": [
-            "November",
-            "Victor",
-            "Echo",
-            "Tango"
+            "Shampoo",
+            "Champu",
+            "Solido",
+            "Lavado",
+            "Cabello",
+            "Katite",
+            "Manteca",
+            "Hidratacion",
+            "Reparador"
         ]
     }
 ]
+  
