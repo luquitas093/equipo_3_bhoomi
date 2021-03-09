@@ -56,3 +56,40 @@
  - En el primer sprint no encontramos tareas o dinámicas que creamos prudente abandonar por el momento.
  - En el segundo sprint no encontramos tareas o dinámicas que creamos prudente abandonar por el momento.
 
+
+# Retrospectiva-Tercer sprint
+
+## 1. Comenzar a hacer
+
+ - Diagramar la utilidad del código para los distintos tipos de usuarios que utilicen el e-commerce.
+ - Incorporar herramientas que nos brinda Node.js como Method-Overriden y Multer para el envío de información y archivos.
+ - Pensar una página de fácil navegación e intuitiva con una interfaz amigable y sencilla tanto para el user como para los admin.
+ - Trabajar sobre la seguridad del envío de la información a través de la interfaz.
+ 
+## 2. Hacer más
+
+ - Reforzar la importancia de la reunión diaria y/o semanal para una mejor sinergía de trabajo.
+ - Recordar revisar y actualizar el estado de nuestro tablero de tareas en "Trello". No dejar el listado de tareas librado a la memoria grupal.
+ - Trabajar sobre plazos prestablecidos. Ponernos metas a corto plazo para fragmentar mejor el trabajo a lo largo del sprint.
+  
+## 3. Continuar haciendo
+
+ - Mantener la comunicación en equipo.
+ - División de tareas aprovechando las capacidades de cada uno de los intregrantes del equipo.
+ - Consulta constante al material de trabajo.
+ - Planteo y resolución de dudas que le puedan llegar a surgir a algún integrante del equipo.
+ - Seguir en constante revisión del código para buscar la optimización del mismo.
+
+## 4. Hacer menos
+
+ - Priorizar la funcionalidad del diseño por sobre el detalle en estas primeras etapas.
+ - Saltear pasos.
+ - Aplazar los tiempos de codeo hasta último momento.
+
+## 5. Dejar de hacer
+
+ - En el primer sprint no encontramos tareas o dinámicas que creamos prudente abandonar por el momento.
+ - En el segundo sprint no encontramos tareas o dinámicas que creamos prudente abandonar por el momento.
+ - En el tercer sprint creemos necesario dejar de trabajar, por momentos, contrarreloj.
+
+
