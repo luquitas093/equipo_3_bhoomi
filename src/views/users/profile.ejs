@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-userprofile.css">
+
+    <body>
+        <%- include("../partials/header.ejs")%>
+
+<!--***********************************************************************************************************
+                                             MAIN PERFIL DEL USUARIO
+************************************************************************************************************-->
+            <main class="main-userprofile">
+                <%- include("../partials/menuMediaQuery.ejs")%>
+
+                <section class="total-profile">
+                    <h3 class= "user-profilename">¡Bienvenido! <%= user.first_name%> <%= user.last_name%></h3> <!--Ávatar del usuario-->
+                    <figure class="user-avatar">
+                        <img src = "/img/users/<%= user.avatar%>"> <!--Imagen de perfil-->
+                    </figure>
+                    <article class= "details">
+                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Correo: <%= user.email%></h6><!--Correo electrónico usuario-->
+                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Cumpleaños: <%= user.date%></h6><!--Cumpleaños del usuario-->
+                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Domicilio: <%= user.address%></h6><!--Domicilio usuario-->
+                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Teléfono: <%= user.phone%></h6><!--Teléfono de contacto usuario-->
+                    </article>
+                </section>
+                    <nav class="buttons">
+                    <a href="/#"class="button-profile">HISTORIAL DE COMPRAS</a><!--Botón ir al historial de compras-->
+                    <a href="/perfil/editarperfil"class="button-profile">EDITAR PERFIL</a> <!--Botón editar perfil-->
+                    </nav>       
+            </main>
+
+            <!--************************************************************************************************************
+                                             FOOTER
+    ************************************************************************************************************-->
+            
+            <%- include("../partials/footer.ejs")%>
+
+    </body>
+
+</html>
+    

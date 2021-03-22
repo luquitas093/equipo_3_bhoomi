@@ -20,7 +20,7 @@
             <form class="formularioregistro" action="/registro" method="POST" enctype="multipart/form-data">
 
                 <div class="estilodiv">
-                    <label for="nombre">Nombre</label>
+                    <label for="first_name">Nombre</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>" class="formatocampo" required>
                     <% if(locals.errors && errors.first_name){%>
                         <span class="error">
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="estilodiv">
-                    <label for="apellido">Apellido</label>
+                    <label for="last_name">Apellido</label>
                     <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value="<%= typeof old != 'undefined' ? old.last_name : '' %>" required>
                     <% if(locals.errors && errors.last_name){%>
                         <span class="error">
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="estilodiv">
-                    <label for="fecha">Fecha de Nacimiento</label>
+                    <label for="date">Fecha de Nacimiento</label>
                     <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>" required>
                     <% if(locals.errors && errors.date){%>
                         <span class="error">
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="estilodiv">
-                    <label for="domicilio">Domicilio</label>
+                    <label for="address">Domicilio</label>
                     <input type="text" id="address" name="address" placeholder="Indique su domicilio" class="formatocampo" value="<%= typeof old != 'undefined' ? old.address : '' %>" required>
                     <% if(locals.errors && errors.address){%>
                         <span class="error">
@@ -58,9 +58,8 @@
                         </span>
                      <%}%>
                 </div>
-
                 <div class="estilodiv">
-                    <label for="telefono">Teléfono</label>
+                    <label for="phone">Teléfono</label>
                     <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value="<%= typeof old != 'undefined' ? old.phone : '' %>" required>
                     <% if(locals.errors && errors.phone){%>
                         <span class="error">
@@ -70,7 +69,7 @@
                 </div>
 
                 <div class="estilodiv">
-                    <label for="foto">Foto de Usuario</label>
+                    <label for="avatar">Foto de Usuario</label>
                     <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
                     <% if(locals.errors && errors.avatar){%>
                         <span class="error">

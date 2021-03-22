@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-register.css">
+
+<body>
+
+    <%- include("../partials/header.ejs")%>
+
+    <!-- FORMULARIO REGISTRO -->
+    <main class="main-register">
+
+        <%- include("../partials/menuMediaQuery.ejs")%>
+        
+        <section class="encabezadoregistro">
+            <h1 class="encabezado"> Registrarme</h1>
+        </section>
+        <section class="registro">
+            <form class="formularioregistro" action="/perfil/editarperfil" method="POST" enctype="multipart/form-data">
+
+                <div class="estilodiv">
+                    <label for="first_name">Nombre</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value = " " class="formatocampo" required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="last_name">Apellido</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value = " " required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="date">Fecha de Nacimiento</label>
+                    <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value = " " required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="address">Domicilio</label>
+                    <input type="text" id="address" name="address" placeholder="Indique su domicilio" class="formatocampo" value = " " required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="phone">Teléfono</label>
+                    <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value = " " required>
+                </div>
+                <div class="estilodiv">
+                    <label for="avatar">Foto de Usuario</label>
+                    <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
+                </div>
+                <div class="estilodiv">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value = "<%= userEdit.phone%>" required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" class="formatocampo" required>
+                </div>
+
+                <div class="estilodiv">
+                    <label for="password2">Confirmar contraseña</label>
+                    <input type="password" id="password2" name="password2" class="formatocampo" required>
+                </div>
+
+
+                <div class="estilodiv center">
+                    <input type="reset" value="Borrar" class="button">
+                    <input type="submit" value="Actualizar" class="button">
+
+                </div>
+
+
+            </form>
+
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+    
+</body>
+
+</html>

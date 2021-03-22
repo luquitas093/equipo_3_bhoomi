@@ -1,0 +1,99 @@
+/*BODY*/
+
+body {
+    background-color: #F5E7D9;
+}
+
+/*ESTILO DEL MAIN*/
+
+.main-userprofile {
+    padding-top: 10vh;
+}
+
+.total-profile {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+}
+
+.user-avatar img {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+/*NOMBRE DE USUARIO*/
+
+.user-profilename {
+    padding: 1rem;
+    font-style: italic;
+    display: block;
+    color: #35120B;
+}
+
+/*TEXTOS CON INFORMACIÓN DEL PERFIL DEL USUARIO*/
+
+.profile-text {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    display: block;
+    color: #35120B;
+}
+
+/*BOTONES*/
+
+.buttons {
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.button-profile {
+    border: none;
+    background-color: #35120B;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button-profile a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+
+/*MEDIA QUERY*/
+
+@media (min-width: 481px) {
+    .total-profile {
+        padding-top: 8vh;
+    }
+}
+
+@media (min-width: 769px) {
+    .user-avatar img {
+        width: 30%;
+    }
+
+    .user-profilename {
+        font-size: 1.5rem;
+    }
+    
+    .details {
+        padding-top: 0.5rem;
+    }
+
+    .profile-text {
+        font-size: 1rem;
+    }
+
+    .button-profile:hover {
+        background-color: #DD721B;
+    }
+}
