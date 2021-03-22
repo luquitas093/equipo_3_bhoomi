@@ -4,8 +4,12 @@
   "description": "> \"*bhoomi hamaare maata-pita kee viraasat nahin hai balki hamaare bachchon ka rn hai.*\"",
   "main": "app.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.10.0",
     "method-override": "^3.0.0",
     "multer": "^1.4.2"
   },
