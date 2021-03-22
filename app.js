@@ -4,9 +4,23 @@ const express = require ("express");
 const app = express();
 const path = require ("path");
 const methodOverride = require ("method-override");
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
+const session=require('express-session');
+const cookies= require('cookie-parser');
 
+
+//Ruta session
+app.use(session({
+    secret:'Es un secreto',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+//Ruta cookies
+app.use(cookies());
+
+//Loggeo
+const userLoggedMiddleware=require('./src/middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware);
 
 //Ruta Absoluta de la carpeta Public
 
@@ -20,23 +34,18 @@ app.set("view engine", "ejs");
 
 // Configuración Metodo POST
 
-app.use(express.urlencoded({ extended: false })); //Esta configuración nos permite que nos llegue la información ingresada en el req.body
+app.use (express.urlencoded ({ extended: false}));
 app.use (express.json ());
 
 // Middleware Method-Override
 
 app.use (methodOverride("_method"));
 
-// Middleware de Session y Cookies
-
-
 // Llamado a las Rutas
 
-// Ruta del Adminstrador
 const adminRoutes = require ("./src/routes/adminRouter.js");
 app.use ("/administrador", adminRoutes);
 
-// Ruta de los productos
 const productsRoutes = require ("./src/routes/productsRouter.js");
 app.use ("/productos", productsRoutes);
 
@@ -46,13 +55,20 @@ app.use ("/", indexRoutes);
 const cartRoutes = require ("./src/routes/cartRouter.js");
 app.use ("/carrito", cartRoutes);
 
-const userRoutes = require ("./src/routes/userRouter.js");
-app.use (userRoutes);
+const loginRoutes = require ("./src/routes/loginRouter.js");
+app.use ("/ingresar", loginRoutes);
+
+const registerRoutes = require ("./src/routes/registerRouter.js");
+app.use ("/registro", registerRoutes);
+
+
 
 //Levantar el Servidor
 
 app.set('puerto', process.env.PORT || 3001);
+
 app.listen (app.get('puerto'), ()=> console.log(`Servidor corriendo de manera satisfactoria  ${app.get('puerto')}` ));
+
 
 /*Rutas HTML
 
