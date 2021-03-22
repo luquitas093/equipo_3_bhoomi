@@ -1,6 +1,14 @@
                 <!--MENU PARA MEDIA QUERY-->
                 <section>
                     <ul class="mediaquery-menu-list">
+                        <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/administrador" class="mediaquery-menu-list-item-anchor">Administrar Productos</a>
+                        </li>
+                        <li class="mediaquery-menu-list-item">
+                            <a href="/administrador" class="mediaquery-menu-list-item-anchor">Administrar Usuarios</a>
+                        </li>
+                        <% } else { %>
                         <li class="mediaquery-menu-list-item">
                             <a href="/" class="mediaquery-menu-list-item-anchor">Inicio</a>
                         </li>
@@ -10,8 +18,6 @@
                         <li class="mediaquery-menu-list-item">
                             <a href="/carrito" class="mediaquery-menu-list-item-anchor">Carrito</a>
                         </li>
-                        <li class="mediaquery-menu-list-item">
-                            <a href="/administrador" class="mediaquery-menu-list-item-anchor">Administrar</a>
-                        </li>
+                        <% } %>
                     </ul>
                 </section>

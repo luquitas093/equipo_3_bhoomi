@@ -17,10 +17,10 @@
             <h1 class="titulologin">Ingresá</h1>
         </section>
         <section class="login">
-            <form class="formulariologin" action="/ingresar" method="POST">
+            <form class="formulariologin" action="/usuarios/ingresar" method="POST">
                 <div class="estilodivlogin">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Ingrese su mail" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su mail" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>">
                     <% if(typeof(errors) != 'undefined' && errors.email){%>
                         <span class="error">
                           <%= errors.email.msg %>
@@ -30,7 +30,7 @@
 
                 <div class="estilodivlogin">
                     <label for="contraseña">Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" class="formatocampo" required>
+                    <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" class="formatocampo">
                     <% if(typeof(errors) != 'undefined' && errors.password){%>
                         <span class="error">
                           <%= errors.password.msg %>
@@ -50,7 +50,7 @@
                     <h4 class="olvidemicontraseña"><a href="#">¿Te olvidaste la contraseña?</a></h4>
                 </div>
                 <div>
-                    <h4 class="crearcuenta"><a href="/registro">¿No tenés cuenta? ¡Creala!</a></h4>
+                    <h4 class="crearcuenta"><a href="/usuarios/registro">¿No tenés cuenta? ¡Creala!</a></h4>
                 </div>
 
 
@@ -59,7 +59,7 @@
 
                 <!-- BANNER-BOTTOM (FUTURO CARROUSEL)-->
                 <figure class="banner-carrousel-bottom">
-                    <img src="img/banner-bottom.gif" alt="banner-bottom">
+                    <img src="../img/banner-bottom.gif" alt="banner-bottom">
                 </figure>
 
     </main>

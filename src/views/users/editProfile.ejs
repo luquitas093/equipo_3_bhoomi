@@ -14,10 +14,10 @@
         <%- include("../partials/menuMediaQuery.ejs")%>
         
         <section class="encabezadoregistro">
-            <h1 class="encabezado"> Registrarme</h1>
+            <h1 class="encabezado"> Editar Perfil</h1>
         </section>
         <section class="registro">
-            <form class="formularioregistro" action="/perfil/editarperfil" method="POST" enctype="multipart/form-data">
+            <form class="formularioregistro" action="/usuarios/perfil/editarperfil" method="POST" enctype="multipart/form-data">
 
                 <div class="estilodiv">
                     <label for="first_name">Nombre</label>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="estilodiv">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value = "<%= userEdit.phone%>" required>
+                    <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value = " " required>
                 </div>
 
                 <div class="estilodiv">

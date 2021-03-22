@@ -47,7 +47,7 @@ const loginValidation = [
         }
     }
     return false
-  }).withMessage('El E-Mail ingresado no está registrado'),
+  }).withMessage('El mail ingresado no está registrado'),
   body('password').custom( (value, {req}) =>{
       for (let i = 0; i < jsonUsers.length; i++) {
           if (jsonUsers[i].email == req.body.email) {
@@ -58,7 +58,7 @@ const loginValidation = [
               }
           }
       }     
-  }).withMessage('La contraseña no coincide')
+  }).withMessage('Las credenciales son erróneas')
 ]
 
 //Validaciones del Registro
@@ -111,6 +111,7 @@ router.post ("/registro", upload.single ('avatar'), registerValidation, userCont
 router.get ('/ingresar', guestMiddleware, userController.login);
 router.post('/ingresar', loginValidation, userController.save);
 router.get ('/perfil', authMiddleware, userController.profile);
+router.get ('/perfil/editarperfil', userController.editprofile);
 router.get('/cerrarsesion', userController.logout);
 
 module.exports = router;

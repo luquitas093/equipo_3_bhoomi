@@ -55,7 +55,7 @@ const cartRoutes = require ("./src/routes/cartRouter.js");
 app.use ("/carrito", cartRoutes);
 
 const userRoutes = require ("./src/routes/userRouter.js");
-app.use (userRoutes);
+app.use ("/usuarios", userRoutes);
 
 
 //Levantar el Servidor

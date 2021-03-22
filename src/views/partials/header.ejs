@@ -12,7 +12,19 @@
             <i class="fas fa-times"></i>
         </a>
         <!-- LINKS A PAGINAS -->
+        <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
         <ul class="hidden-menu-list">
+            <li class="hidden-menu-list-item">
+                <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
+            </li>
+            <li class="hidden-menu-list-item">
+                <a href="/administrador" class="hidden-menu-list-item-anchor">Administrar Productos</a>
+            </li>
+            <li class="hidden-menu-list-item">
+                <a href="/administrador" class="hidden-menu-list-item-anchor">Administrar Usuarios</a>
+            </li>
+            <% } else { %>
+            <ul class="hidden-menu-list">
             <li class="hidden-menu-list-item">
                 <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
             </li>
@@ -22,19 +34,17 @@
             <li class="hidden-menu-list-item">
                 <a href="/carrito" class="hidden-menu-list-item-anchor">Carrito</a>
             </li>
-            <li class="hidden-menu-list-item">
-                <a href="/administrador" class="hidden-menu-list-item-anchor">Administrar</a>
-            </li>
+            <% } %>
             <li class="hidden-menu-list-item-user">
                 <% if (locals.isLogged) { %>
                     <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
-                    <a href="/perfil" class="hidden-menu-list-item-anchor-user">¡Hola!
+                    <a href="/usuarios/perfil" class="hidden-menu-list-item-anchor-user">¡Hola!
                         <%= locals.userLogged.first_name %></a>
-                    <a href="/cerrarsesion" class="hidden-menu-list-item-anchor-user">Cerrar Sesión</a> 
+                    <a href="/usuarios/cerrarsesion" class="hidden-menu-list-item-anchor-user">Cerrar Sesión</a> 
                 <% } else { %>
                     <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
-                    <a href="/registro" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
-                    <a href="/ingresar" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a> 
+                    <a href="/usuarios/registro" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
+                    <a href="/usuarios/ingresar" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a> 
                 <% } %>
             </li>
         </ul>
@@ -65,13 +75,13 @@
     </nav>
     <nav class="navbar-mediaquery">
         <% if (locals.isLogged) { %>
-            <a href="/perfil" class="user-account">¡Hola! <%= locals.userLogged.first_name %></a>
-            <a href="/cerrarsesion" class="sign-up">Cerrar Sesión</a>
+            <a href="/usuarios/perfil" class="user-account">¡Hola! <%= locals.userLogged.first_name %></a>
+            <a href="/usuarios/cerrarsesion" class="sign-up">Cerrar Sesión</a>
             <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
 
         <% } else { %>
-            <a href="/registro" class="user-account">Crear Cuenta</a>
-            <a href="/ingresar" class="sign-up">Iniciar Sesión</a>
+            <a href="/usuarios/registro" class="user-account">Crear Cuenta</a>
+            <a href="/usuarios/ingresar" class="sign-up">Iniciar Sesión</a>
             <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
         <% } %>
     </nav>

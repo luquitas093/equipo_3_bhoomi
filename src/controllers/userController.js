@@ -19,10 +19,11 @@ module.exports = {
     },
     create: (req, res) => {
       let resultValidation = validationResult (req);
-      if (resultValidation.errors.lenght > 0) {
+      if (!resultValidation.isEmpty()) {
         return res.render (path.resolve (__dirname, "../views/users/register.ejs"), {
+          titulo: 'Bhoomi - Registro',
           errors: resultValidation.mapped(),
-          oldData: req.body
+          old: req.body
         });
       }
       let userInDB = User.findByField ("email", req.body.email);
@@ -34,16 +35,22 @@ module.exports = {
                   msg: 'Este email ya esta registrado'
               }
           },
-          oldData:req.body
+          old:req.body
       });
     };
       let userToCreate = {
-        ...req.body,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        date: req.body.date,
+        address: req.body.address,
+        phone: req.body.phone,
+        avatar:  req.file ? req.file.filename : '',
+        email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        avatar: req.file.filename
+        category: "user"
       }
       let userCreated = User.create(userToCreate);
-      return res.redirect ("/ingresar")
+      return res.redirect ("/usuarios/ingresar")
     }, 
       /* EJEMPLO DE DANI EN CLASE:
       else {
@@ -75,11 +82,11 @@ module.exports = {
 
     save: (req,res) =>{
       let errors = validationResult(req);
-      if (errors.errors.lenght > 0) {
+      if (!errors.isEmpty()) {
         return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
           titulo: 'Bhoomi - Ingresá a tu cuenta',
           errors: errors.mapped(),
-          oldData: req.body
+          old: req.body
         });
       }
         let userToLogin = User.findByField ('email', req.body.email);
@@ -109,6 +116,13 @@ module.exports = {
         titulo: 'Bhoomi - Perfil de Usuario',
         user: req.session.userLogged
       });
+  },
+
+  editprofile: (req, res) => {
+    return res.render (path.resolve (__dirname, "../views/users/editProfile.ejs"), {
+      titulo: 'Bhoomi - Editar Perfil',
+      user: req.session.userLogged
+    });
   },
 
   logout: (req, res) => {
