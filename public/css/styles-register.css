@@ -94,6 +94,7 @@ body{
 /*ERRORES*/
 
 .error {
+    display: block;
     color: #35120B;
     padding: 1rem;
 }

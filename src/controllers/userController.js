@@ -3,7 +3,6 @@ const path = require ("path");
 const fs= require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
-const { name } = require("ejs");
 
 // Requerir el modelo de users
 const User = require ("../models/User.js")
@@ -19,16 +18,17 @@ module.exports = {
         return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {titulo: 'Bhoomi - Ingresá a tu cuenta'});
     },
     create: (req, res) => {
-      let errors = validationResult(req);
-      if (errors.errors.lenght > 0) {
+      let resultValidation = validationResult (req);
+      if (resultValidation.errors.lenght > 0) {
         return res.render (path.resolve (__dirname, "../views/users/register.ejs"), {
-          errors: errors.mapped(),
+          errors: resultValidation.mapped(),
           oldData: req.body
         });
       }
       let userInDB = User.findByField ("email", req.body.email);
-      if (UserInDB) {
+      if (userInDB) {
         return res.render(path.resolve (__dirname, "../views/users/register.ejs"), {
+          titulo: 'Bhoomi - Registro',
           errors: {
               email:{
                   msg: 'Este email ya esta registrado'
@@ -39,7 +39,7 @@ module.exports = {
     };
       let userToCreate = {
         ...req.body,
-        password: bcrypt.hashSync(req.body,password, 10),
+        password: bcrypt.hashSync(req.body.password, 10),
         avatar: req.file.filename
       }
       let userCreated = User.create(userToCreate);
@@ -77,6 +77,7 @@ module.exports = {
       let errors = validationResult(req);
       if (errors.errors.lenght > 0) {
         return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+          titulo: 'Bhoomi - Ingresá a tu cuenta',
           errors: errors.mapped(),
           oldData: req.body
         });
@@ -94,6 +95,7 @@ module.exports = {
           }
         }
         return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+          titulo: 'Bhoomi - Ingresá a tu cuenta',
           errors: {
             email: {
               msg: "Las credenciales son erróneas"

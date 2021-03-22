@@ -26,9 +26,16 @@
                 <a href="/administrador" class="hidden-menu-list-item-anchor">Administrar</a>
             </li>
             <li class="hidden-menu-list-item-user">
-                <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
-                <a href="/registro" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
-                <a href="/ingresar" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a>    
+                <% if (locals.isLogged) { %>
+                    <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
+                    <a href="/perfil" class="hidden-menu-list-item-anchor-user">¡Hola!
+                        <%= locals.userLogged.first_name %></a>
+                    <a href="/cerrarsesion" class="hidden-menu-list-item-anchor-user">Cerrar Sesión</a> 
+                <% } else { %>
+                    <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
+                    <a href="/registro" class="hidden-menu-list-item-anchor-user">Crear Cuenta</a>
+                    <a href="/ingresar" class="hidden-menu-list-item-anchor-user">Iniciar Sesión</a> 
+                <% } %>
             </li>
         </ul>
     </nav>
@@ -58,7 +65,7 @@
     </nav>
     <nav class="navbar-mediaquery">
         <% if (locals.isLogged) { %>
-            <a href="/perfil" class="user-account">¡Hola!</a>
+            <a href="/perfil" class="user-account">¡Hola! <%= locals.userLogged.first_name %></a>
             <a href="/cerrarsesion" class="sign-up">Cerrar Sesión</a>
             <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
 

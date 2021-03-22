@@ -17,11 +17,11 @@
             <h1 class="titulologin">Ingresá</h1>
         </section>
         <section class="login">
-            <form class="formulariologin" action="/" method="GET">
+            <form class="formulariologin" action="/ingresar" method="POST">
                 <div class="estilodivlogin">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Ingrese su mail" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>" required>
-                    <% if(locals.errors && errors.email){%>
+                    <% if(typeof(errors) != 'undefined' && errors.email){%>
                         <span class="error">
                           <%= errors.email.msg %>
                         </span>
