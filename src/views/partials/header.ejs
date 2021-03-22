@@ -57,9 +57,15 @@
         <a href="/carrito" class="icon-cart-item"> <i class="fas fa-shopping-cart"></i> </a>
     </nav>
     <nav class="navbar-mediaquery">
-        <a href="/registro" class="user-account">Crear Cuenta</a>
-        <a href="/ingresar" class="sign-up">Iniciar Sesión</a>
-        <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
-        
+        <% if (locals.isLogged) { %>
+            <a href="/perfil" class="user-account">¡Hola!</a>
+            <a href="/cerrarsesion" class="sign-up">Cerrar Sesión</a>
+            <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
+
+        <% } else { %>
+            <a href="/registro" class="user-account">Crear Cuenta</a>
+            <a href="/ingresar" class="sign-up">Iniciar Sesión</a>
+            <a href="/carrito" class="icon-cart"> <i class="fas fa-shopping-cart"></i> </a>
+        <% } %>
     </nav>
 </header>

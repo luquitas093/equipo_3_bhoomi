@@ -5,9 +5,11 @@ const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const { name } = require("ejs");
 
+// Requerir el modelo de users
+const User = require ("../models/User.js")
+
 //Validacion con Express-Validator
 const { validationResult } = require('express-validator');
-
 
 module.exports = {
     register : (req,res) => {
@@ -18,7 +20,33 @@ module.exports = {
     },
     create: (req, res) => {
       let errors = validationResult(req);
-      if (errors.isEmpty()) {
+      if (errors.errors.lenght > 0) {
+        return res.render (path.resolve (__dirname, "../views/users/register.ejs"), {
+          errors: errors.mapped(),
+          oldData: req.body
+        });
+      }
+      let userInDB = User.findByField ("email", req.body.email);
+      if (UserInDB) {
+        return res.render(path.resolve (__dirname, "../views/users/register.ejs"), {
+          errors: {
+              email:{
+                  msg: 'Este email ya esta registrado'
+              }
+          },
+          oldData:req.body
+      });
+    };
+      let userToCreate = {
+        ...req.body,
+        password: bcrypt.hashSync(req.body,password, 10),
+        avatar: req.file.filename
+      }
+      let userCreated = User.create(userToCreate);
+      return res.redirect ("/ingresar")
+    }, 
+      /* EJEMPLO DE DANI EN CLASE:
+      else {
         let user = {
           first_name: req.body.first_name,
           last_name: req.body.last_name,
@@ -43,13 +71,52 @@ module.exports = {
         usersJSON = JSON.stringify(users, null, 2);
         fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usersJSON);
         res.redirect('/ingresar');
-      } else {
-        return res.render(path.resolve(__dirname, '../views/users/register.ejs'), {
-          errors: errors.mapped(), old: req.body
+      } */
+
+    save: (req,res) =>{
+      let errors = validationResult(req);
+      if (errors.errors.lenght > 0) {
+        return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+          errors: errors.mapped(),
+          oldData: req.body
         });
       }
-    },
-    ingresar: (req,res) =>{
+        let userToLogin = User.findByField ('email', req.body.email);
+        if (userToLogin) {
+          let hashPassword = bcrypt.compareSync (req.body.password, userToLogin.password)
+          if (hashPassword) {
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+            if (req.body.remember) {
+              res.cookie ('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24})
+            }
+            return res.redirect ("/")
+          }
+        }
+        return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+          errors: {
+            email: {
+              msg: "Las credenciales son erróneas"
+            }
+          }
+        });
+      },
+
+    profile: (req, res) => {
+      return res.render (path.resolve (__dirname, "../views/users/profile.ejs"), {
+        titulo: 'Bhoomi - Perfil de Usuario',
+        user: req.session.userLogged
+      });
+  },
+
+  logout: (req, res) => {
+    res.clearCookie ('userEmail');
+    req.session.destroy();
+    return res.redirect ("/");
+  }
+}
+
+/* EJEMPLO DE DANI EN CLASE:
       const errors = validationResult(req);
       if(errors.isEmpty()){
         let jsonUsers =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
@@ -63,10 +130,4 @@ module.exports = {
       }else{
         res.render(path.resolve(__dirname, '../views/users/login.ejs'),{errors:errors.mapped(),old:req.body});        
       }
-    },
-    logout: (req,res) =>{
-      req.session.destroy();
-      res.cookie('email',null,{maxAge: -1});
-      res.redirect('/')
-    }
-  }
+    }, */

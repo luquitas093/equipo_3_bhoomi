@@ -4,23 +4,8 @@ const express = require ("express");
 const app = express();
 const path = require ("path");
 const methodOverride = require ("method-override");
-const session=require('express-session');
-const cookies= require('cookie-parser');
-
-
-//Ruta session
-app.use(session({
-    secret:'Es un secreto',
-    resave: false,
-    saveUninitialized: false,
-}))
-
-//Ruta cookies
-app.use(cookies());
-
-//Loggeo
-const userLoggedMiddleware=require('./src/middlewares/userLoggedMiddleware');
-app.use(userLoggedMiddleware);
+const session = require('express-session');
+const cookies = require('cookie-parser');
 
 //Ruta Absoluta de la carpeta Public
 
@@ -41,6 +26,20 @@ app.use (express.json ());
 
 app.use (methodOverride("_method"));
 
+//Ruta session
+app.use(session({
+    secret:'BhoomiIsASecret',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+//Ruta cookies
+app.use(cookies());
+
+//Middleware de Logueo
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware);
+
 // Llamado a las Rutas
 
 const adminRoutes = require ("./src/routes/adminRouter.js");
@@ -55,12 +54,8 @@ app.use ("/", indexRoutes);
 const cartRoutes = require ("./src/routes/cartRouter.js");
 app.use ("/carrito", cartRoutes);
 
-const loginRoutes = require ("./src/routes/loginRouter.js");
-app.use ("/ingresar", loginRoutes);
-
-const registerRoutes = require ("./src/routes/registerRouter.js");
-app.use ("/registro", registerRoutes);
-
+const userRoutes = require ("./src/routes/userRouter.js");
+app.use (userRoutes);
 
 
 //Levantar el Servidor
