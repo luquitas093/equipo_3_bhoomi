@@ -74,6 +74,13 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 - #### [Paleta de Colores](https://coolors.co/f5e7d9-66a535-dd721b-35120b-7b7b7b "Paleta de Colores")
 - #### [Tipografía](https://fonts.google.com/specimen/Poppins?query=pop "Fuente Poppins")
 
+## Our Database
+
+- #### [Schema - DB Designer](https://drive.google.com/file/d/121re-gkE6pN92meV0Wbs8NbRvVfXEu7J/view?usp=sharing "Esquema de Base de Datos en DB Designer")
+- #### [Schema - Workbench](https://drive.google.com/file/d/1COaQKOKS6g-eTDWLaOG9Py0YGU24D7bs/view?usp=sharing "Esquema de Base de Datos en Workbench")
+- #### [structure.sql](https://drive.google.com/file/d/1WC1uNNIqUG9FQfY5ICj_w-_QedZyKKPH/view?usp=sharing "Archivo structure.sql")
+- #### [data.sql](https://drive.google.com/file/d/1YefOP1v64diIu9saUvUe_okvOIZmVziG/view?usp=sharing "Archivo data.sql")
+
 ## Tablero de Trabajo
 
 - [*Trello*](https://trello.com/b/Z1dGZLn9/proyecto-equipo-3 "Tablero de Trabajo - Equipo 3")
