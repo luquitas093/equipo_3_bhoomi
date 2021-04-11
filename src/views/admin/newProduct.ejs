@@ -37,13 +37,12 @@
                     <strong><label for="category">Categoría</label></strong>
                     <select name="category" required>
                         <option value="#" selected disabled>Seleccione una opcion...</option>
-                        <option value="1">Cuidado Capilar</option>
-                        <option value="2">Rostro y Cuerpo</option>
-                        <option value="3">Combos</option>
-                        <option value="4">Regalos</option>
-                        <option value="5">Sale</option>
+                        <% for (let i = 0; i < categories.length; i++) { %>
+                            <option value="<%=categories[i].id%>">
+                                <%= categories[i].name%>
+                            </option>
+                        <% } %>
                     </select>    
-
                 </div>
 
                 <div class="stylediv">

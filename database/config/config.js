@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "bhoomi.db",
+    "database": "bhoomi",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

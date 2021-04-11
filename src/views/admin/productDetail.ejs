@@ -21,14 +21,14 @@
 
         <!--Header del producto-->
         <nav class="title-edit">
-            <h4 class="header-product"><%= myProduct.name%></h4>
+            <h4 class="header-product"><%= product.name%></h4>
             <!--Botón editar y borrar producto-->
             <div class="edit-delete">
                 <div  class="edit-product">
-                    <a href="/administrador/editarproducto/<%= myProduct.id%>"><i class="fas fa-edit"></i></a>
+                    <a href="/administrador/editarproducto/<%= product.id%>"><i class="fas fa-edit"></i></a>
                 </div>
                 <div class="delete-product">
-                    <a href="/administrador/borrarproducto/<%= myProduct.id%>"><i class="fas fa-trash-alt"></i></a>
+                    <a href="/administrador/borrarproducto/<%= product.id%>"><i class="fas fa-trash-alt"></i></a>
                 </div>
             </div>
         </nav>
@@ -36,26 +36,26 @@
         <!--Imagen principal del producto-->
         <div class="total-images">
             <figure class="product-image-principal">
-                <img src="/img/products/<%= myProduct.imagen%>" alt="Imagen principal">
+                <img src="/img/products/<%= product.image%>" alt="Imagen principal">
             </figure>
     
             <!--Imágenes del producto-->
                 <figure class="product-images-container">
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 1"></a>
+                        <a href="#"><img src="/img/products/<%= product.image%>" alt="Imagen 1"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 2"></a>
+                        <a href="#"><img src="/img/products/<%= product.image%>" alt="Imagen 2"></a>
                     </div>
                     <div class="product-images-item">
-                        <a href="#"><img src="/img/products/<%= myProduct.imagen%>" alt="Imagen 3"></a>
+                        <a href="#"><img src="/img/products/<%= product.image%>" alt="Imagen 3"></a>
                     </div>
                 </figure>
         </div>
         <!--Nombre y precio-->
         <article class="product-name-and-price">
-            <h2 class="product-name"><%= myProduct.name%></h2>
-            <p class="prices">$<%= myProduct.price %></p>
+            <h2 class="product-name"><%= product.name%></h2>
+            <p class="prices">$<%= product.price %></p>
         </article>
 
         <!--Pagá en cuotas e imágenes de tarjetas aceptadas-->
