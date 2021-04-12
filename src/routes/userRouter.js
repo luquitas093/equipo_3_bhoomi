@@ -111,7 +111,8 @@ router.post ("/registro", upload.single ('avatar'), registerValidation, userCont
 router.get ('/ingresar', guestMiddleware, userController.login);
 router.post('/ingresar', loginValidation, userController.save);
 router.get ('/perfil', authMiddleware, userController.profile);
-router.get ('/perfil/editarperfil', userController.editprofile);
+router.get ('/perfil/editarperfil/:id', userController.editprofile);
+router.get('/perfil/detail/:id',userController.detail);
 router.get('/cerrarsesion', userController.logout);
 
 module.exports = router;

@@ -27,5 +27,6 @@ router.get('/detalleproducto/:id', adminController.show);
 router.get('/editarproducto/:id', adminController.edit);
 router.put('/editarproducto/:id', upload.single('imagen'), adminController.update);
 router.get('/borrarproducto/:id', adminController.destroy);
+router.get('/detalleproducto/:id', adminController.findProduct);
 
 module.exports = router;
