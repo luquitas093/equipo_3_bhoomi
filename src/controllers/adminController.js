@@ -81,6 +81,18 @@ module.exports = {
             }
         })
         res.redirect('/administrador');
+    },
+
+    //Buscar Producto
+    findProduct: (req,res)=>{
+        const id=req.params.id;
+        db.Product.findByPk(id)
+        .then(data=>{
+            res.send(data)
+
+        });
+            
+
     }
 }
 

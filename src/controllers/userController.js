@@ -3,6 +3,8 @@ const path = require ("path");
 const fs= require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
+const { name } = require("ejs");
+let db = require ("../../database/models")
 
 // Requerir el modelo de users
 const User = require ("../models/User.js")
@@ -50,6 +52,11 @@ module.exports = {
         category: "user"
       }
       let userCreated = User.create(userToCreate);
+      //Database crear usuario
+      User.create(userCreated)
+      .then(data=>{
+        res.send(data);
+      })
       return res.redirect ("/usuarios/ingresar")
     }, 
       /* EJEMPLO DE DANI EN CLASE:
@@ -117,8 +124,24 @@ module.exports = {
         user: req.session.userLogged
       });
   },
-
+  
+  //Editar Perfil
   editprofile: (req, res) => {
+    let profile = db.User.findByPk(req.params.id);
+
+    let addressId = db.Address.findAll();
+    let roleId= db.Role.findAll();
+
+        Promise.all([profile, addressId, roleId])
+        .then(function([users, address, role]) {
+            return res.render(path.resolve(__dirname, '../views/users/editProfile.ejs'), {
+                titulo: "Bhoomi - Editar Perfil",
+                users: users,
+                addressId: address,
+                roleId:role,
+            })
+        })
+
     return res.render (path.resolve (__dirname, "../views/users/editProfile.ejs"), {
       titulo: 'Bhoomi - Editar Perfil',
       user: req.session.userLogged
@@ -129,6 +152,18 @@ module.exports = {
     res.clearCookie ('userEmail');
     req.session.destroy();
     return res.redirect ("/");
+  },
+  //Ver detalle Usuario
+  detail: (req,res)=>{
+    db.User.findByPk(req.params.id)
+  .then (function(User) {
+      return res.render(path.resolve(__dirname,'../views/users/detailUser.ejs'), {
+          titulo: 'Bhoomi - Detalle Usuario',
+          users: User,
+          
+      })
+  })
+
   }
 }
 
