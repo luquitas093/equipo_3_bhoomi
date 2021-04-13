@@ -53,9 +53,9 @@ module.exports = {
       }
       let userCreated = User.create(userToCreate);
       //Database crear usuario
-      User.create(userCreated)
-      .then(data=>{
-        res.send(data);
+      db.User.create(userCreated)
+      .then(userCreated=>{
+        res.send(userCreated);
       })
       return res.redirect ("/usuarios/ingresar")
     }, 
