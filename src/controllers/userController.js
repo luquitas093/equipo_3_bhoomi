@@ -127,25 +127,43 @@ module.exports = {
   
   //Editar Perfil
   editprofile: (req, res) => {
-    let profile = db.User.findByPk(req.params.id);
+    let profile = db.User.findByPk(req.session.userLogged.id,{include:["role","addresses"]});
 
-    let addressId = db.Address.findAll();
-    let roleId= db.Role.findAll();
-
-        Promise.all([profile, addressId, roleId])
-        .then(function([users, address, role]) {
-            return res.render(path.resolve(__dirname, '../views/users/editProfile.ejs'), {
+    
+        console.log(req.session.userLogged);
+        Promise.all([profile])
+        .then(function([users]) {
+            return res.render(path.resolve(__dirname, '../views/users/editProfile.ejs') ,{
                 titulo: "Bhoomi - Editar Perfil",
-                users: users,
-                addressId: address,
-                roleId:role,
+                user: req.session.userLogged,
+                profile: users                
             })
         })
 
-    return res.render (path.resolve (__dirname, "../views/users/editProfile.ejs"), {
-      titulo: 'Bhoomi - Editar Perfil',
-      user: req.session.userLogged
+ 
+  },
+
+  editprocess: (req,res)=>{
+    db.User.update({
+      first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        date: req.body.date,
+        address: req.body.address,
+        phone: req.body.phone,
+        avatar:  req.file ? req.file.filename : '',
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        category: "user"
+    },{
+      where:{
+        id:req.params.id
+      }
     });
+    res.redirect("/profile/"+req.params.id);
+
+    
+    
+
   },
 
   logout: (req, res) => {
