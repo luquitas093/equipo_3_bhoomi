@@ -41,8 +41,8 @@ module.exports = function (sequelize, dataTypes) {
     let user = sequelize.define (alias, cols, config);
 
     user.associate = function (models) {
-        user.belongsTo (models.Address, {
-            as: "address",
+        user.hasMany (models.Address, {
+            as: "addresses",
             foreignKey: "address_id"
         });
         user.belongsTo (models.Role, {

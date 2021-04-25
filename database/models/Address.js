@@ -39,7 +39,7 @@ module.exports = function (sequelize, dataTypes) {
             as: "country",
             foreignKey: "country_id"
         });
-        address.hasMany (models.User, {
+        address.belongsTo (models.User, {
             as: "users",
             foreignKey: "address_id"
         })
