@@ -6,6 +6,8 @@
 
 <body>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <%- include("../partials/header.ejs")%>
 
     <!-- FORMULARIO REGISTRO -->
@@ -17,9 +19,9 @@
             <h1 class="encabezado"> Registrarme</h1>
         </section>
         <section class="registro">
-            <form class="formularioregistro" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
+            <form id="form" class="formularioregistro" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-firstname">
                     <label for="first_name">Nombre</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>" class="formatocampo">
                     <% if(locals.errors && errors.first_name){%>
@@ -27,9 +29,10 @@
                           <%= errors.first_name.msg %>
                         </span>
                      <%}%>
+                     <i class="fire fab fa-free-code-camp"></i>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-lastname">
                     <label for="last_name">Apellido</label>
                     <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
                     <% if(locals.errors && errors.last_name){%>
@@ -39,7 +42,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "date">
                     <label for="date">Fecha de Nacimiento</label>
                     <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>">
                     <% if(locals.errors && errors.date){%>
@@ -49,7 +52,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-phone">
                     <label for="phone">Teléfono</label>
                     <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value="<%= typeof old != 'undefined' ? old.phone : '' %>">
                     <% if(locals.errors && errors.phone){%>
@@ -59,7 +62,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "avatar">
                     <label for="avatar">Foto de Usuario</label>
                     <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
                     <% if(locals.errors && errors.avatar){%>
@@ -69,7 +72,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-email">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>">
                     <% if(locals.errors && errors.email){%>
@@ -79,7 +82,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-password">
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" class="formatocampo">
                     <% if(locals.errors && errors.password){%>
@@ -89,7 +92,7 @@
                      <%}%>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id= "group-password2">
                     <label for="password2">Confirmar contraseña</label>
                     <input type="password" id="password2" name="password2" class="formatocampo">
                     <% if(locals.errors && errors.password2){%>
@@ -100,7 +103,7 @@
                 </div>
 
                 <div class="terms-newsletter">
-                    <div class="terms">
+                    <div class="terms" id ="terms">
                         <input type="checkbox" name="terms" id="terms" required>
                         <label for="terms">Acepta <a href="#">términos y condiciones</a></label>
                     </div>
@@ -131,6 +134,8 @@
     </main>
 
     <%- include("../partials/footer.ejs")%>
+
+    <script src="/js/register.js"></script>
     
 </body>
 

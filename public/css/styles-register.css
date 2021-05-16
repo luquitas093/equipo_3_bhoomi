@@ -15,7 +15,9 @@ body{
 
 .estilodiv{
     padding-bottom: 15px;
+    position: relative;
 }
+
 
 .estilodiv label{
     padding-bottom: 0.3rem;
@@ -28,7 +30,35 @@ body{
 .formatocampo{
     width: 100%;
     padding: 10px 10px ;
-    border: red;
+    border: 3px solid transparent;
+}
+
+.fire {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.4rem;
+        z-index: 100;
+        font-size: 1.2rem;
+        opacity: 0;
+}
+
+.alert-danger .formatocampo{
+    border: 2px solid #bb2929;
+}
+
+.alert-danger .formatocampo label{
+    color: #bb2929
+    
+}
+
+.alert-danger .estilodiv .fire {
+    color: #bb2929;
+    opacity: 1;
+}
+
+.is-valid .fire{
+    color: #9DD274;
+    opacity: 1;
 }
 
 /*FORMATO ENCABEZADO*/
@@ -126,5 +156,9 @@ body{
         }
         .error {
             font-size: 1rem;
+        }
+        .formatocampo:focus{
+            border: 2px solid #35120B;
+            outline: none;
         }
     }
