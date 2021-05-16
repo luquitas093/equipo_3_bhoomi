@@ -76,10 +76,10 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 
 ## Our Database
 
-- #### [Schema - DB Designer](https://drive.google.com/file/d/121re-gkE6pN92meV0Wbs8NbRvVfXEu7J/view?usp=sharing "Esquema de Base de Datos en DB Designer")
-- #### [Schema - Workbench](https://drive.google.com/file/d/1zuPKY9V22ZDRjNbdArTi5TIAoOldU3uV/view?usp=sharing "Esquema de Base de Datos en Workbench")
-- #### [structure.sql](https://drive.google.com/file/d/1WC1uNNIqUG9FQfY5ICj_w-_QedZyKKPH/view?usp=sharing "Archivo structure.sql")
-- #### [data.sql](https://drive.google.com/file/d/1dbZmwlT9myVLdrl2owF4aYmVcS4fmshh/view?usp=sharing "Archivo data.sql")
+- #### [Schema - DB Designer](https://drive.google.com/file/d/1oHWB6Gfz8wBYDk3AsBiW_HruCO4IoXfq/view?usp=sharing "Esquema de Base de Datos en DB Designer")
+- #### [Schema - Workbench](https://drive.google.com/file/d/1pSpl5eQtrThZwS5JCTvivXH-dEQZXIjh/view?usp=sharing "Esquema de Base de Datos en Workbench")
+- #### [structure.sql](https://drive.google.com/file/d/1fq7rPwH627bhZQTkCAHPpLQoROFDWjoT/view?usp=sharing "Archivo structure.sql")
+- #### [data.sql](https://drive.google.com/file/d/1wPFbsf7_yE4dC0FbWLsaC0TKzWrtR16g/view?usp=sharing "Archivo data.sql")
 
 ## Tablero de Trabajo
 
