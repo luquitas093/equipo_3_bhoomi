@@ -1,130 +1,92 @@
-CREATE TABLE `products` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL,
-	`description` TEXT,
-	`image` varchar(255) UNIQUE,
-	`category_id` INT NOT NULL,
-	`quantity` numeric NOT NULL DEFAULT '0',
-	`price` FLOAT NOT NULL DEFAULT '0',
-	PRIMARY KEY (`id`)
-);
-
 CREATE TABLE `users` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`first_name` varchar(255) NOT NULL,
-	`last_name` varchar(255) NOT NULL,
-	`date` DATE NOT NULL,
-	`address_id` INT NOT NULL,
-	`phone` numeric(15) NOT NULL UNIQUE,
-	`avatar` varchar(255) NOT NULL UNIQUE,
-	`email` varchar(255) NOT NULL UNIQUE,
-	`password_hash` varchar(255) NOT NULL,
-	`role_id` INT NOT NULL,
-	PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `categories` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL,
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `firstName` VARCHAR(255) NOT NULL,
+   `lastName` VARCHAR(255) NOT NULL,
+   `date` DATE NOT NULL,
+   `phone` VARCHAR(255) NOT NULL,
+   `avatar` VARCHAR(255) NOT NULL,
+   `email` VARCHAR(255) NOT NULL,
+   `passwordHash` VARCHAR(255) NOT NULL,
+   `addressId` INT,
+   `roleId` INT NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `role` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL UNIQUE,
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(255),
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `products` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(255) NOT NULL,
+   `description` TEXT,
+   `image` VARCHAR(255) NOT NULL,
+   `quantity` VARCHAR(255) NOT NULL,
+   `price` FLOAT NOT NULL,
+   `categoryId` INT NOT NULL,
+   PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `categories` (
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(255) NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `cart` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`users_id` INT NOT NULL,
-	`product_id` INT NOT NULL,
-	`quantity` numeric NOT NULL DEFAULT '1',
-	`subtotal` FLOAT NOT NULL,
-	`promo_id` INT NOT NULL,
-	`tax_id` INT NOT NULL,
-	`shipping_id` INT NOT NULL DEFAULT '0',
-	`total` FLOAT NOT NULL DEFAULT '0',
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL,
+   `usersId` INT NOT NULL,
+   `productsId` INT NOT NULL,
+   `quantity` VARCHAR(255) NOT NULL,
+   `subtotal` VARCHAR(255) NOT NULL,
+   `promoId` INT NOT NULL,
+   `shippingId` INT NOT NULL,
+   `total` FLOAT NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `promo` (
-	`id` int NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL,
-	`value` int(3) NOT NULL DEFAULT '0',
-	PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `tax` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL UNIQUE,
-	`value` FLOAT NOT NULL,
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `name` VARCHAR(255) NOT NULL,
+   `value` VARCHAR(255) NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `shipping` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`address_id` INT NOT NULL,
-	`km` numeric NOT NULL UNIQUE,
-	`value` FLOAT NOT NULL DEFAULT '0',
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL,
+   `addressId` INT NOT NULL,
+   `km` VARCHAR(255) NOT NULL,
+   `value` FLOAT NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `address` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`street` varchar(255) NOT NULL,
-	`number` numeric NOT NULL,
-	`floor` varchar(255) NOT NULL,
-	`cp` numeric NOT NULL,
-	`city` varchar(255) NOT NULL,
-	`province` varchar(255) NOT NULL,
-	`country_id` INT NOT NULL,
-	PRIMARY KEY (`id`)
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `street` VARCHAR(255) NOT NULL,
+   `number` VARCHAR(255) NOT NULL,
+   `floor` VARCHAR(255),
+   `cp` VARCHAR(255) NOT NULL,
+   `city` VARCHAR(255) NOT NULL,
+   `province` VARCHAR(255) NOT NULL,
+   `country` VARCHAR(255) NOT NULL,
+   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `country` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` varchar(255) NOT NULL UNIQUE,
-	PRIMARY KEY (`id`)
-);
 
-ALTER TABLE `products` ADD CONSTRAINT `products_fk0` FOREIGN KEY (`category_id`) REFERENCES `categories`(`id`);
+ALTER TABLE `users` ADD CONSTRAINT `FK_9a8e42ab-03d1-4391-b3bc-35697acd251d` FOREIGN KEY (`roleId`) REFERENCES `role`(`id`);
 
-ALTER TABLE `users` ADD CONSTRAINT `users_fk0` FOREIGN KEY (`address_id`) REFERENCES `address`(`id`);
+ALTER TABLE `users` ADD CONSTRAINT `FK_a413df7f-6834-4c4e-b0ba-4a2c75a9c680` FOREIGN KEY (`addressId`) REFERENCES `address`(`id`);
 
-ALTER TABLE `users` ADD CONSTRAINT `users_fk1` FOREIGN KEY (`role_id`) REFERENCES `role`(`id`);
+ALTER TABLE `products` ADD CONSTRAINT `FK_d90698a7-59e4-44a8-805d-e37112855561` FOREIGN KEY (`categoryId`) REFERENCES `categories`(`id`);
 
-ALTER TABLE `cart` ADD CONSTRAINT `cart_fk0` FOREIGN KEY (`users_id`) REFERENCES `users`(`id`);
+ALTER TABLE `cart` ADD CONSTRAINT `FK_73de4cbc-2cb8-44b7-a2f7-aa0e585c49b9` FOREIGN KEY (`usersId`) REFERENCES `users`(`id`);
 
-ALTER TABLE `cart` ADD CONSTRAINT `cart_fk1` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`);
+ALTER TABLE `cart` ADD CONSTRAINT `FK_01c10951-994c-4a07-966f-d0b782126546` FOREIGN KEY (`productsId`) REFERENCES `products`(`id`);
 
-ALTER TABLE `cart` ADD CONSTRAINT `cart_fk2` FOREIGN KEY (`promo_id`) REFERENCES `promo`(`id`);
+ALTER TABLE `cart` ADD CONSTRAINT `FK_04a78bc0-4416-4520-bbb4-cdc6cc960c84` FOREIGN KEY (`promoId`) REFERENCES `promo`(`id`);
 
-ALTER TABLE `cart` ADD CONSTRAINT `cart_fk3` FOREIGN KEY (`tax_id`) REFERENCES `tax`(`id`);
+ALTER TABLE `cart` ADD CONSTRAINT `FK_960a3cb5-e867-4726-980e-b9141dd20dec` FOREIGN KEY (`shippingId`) REFERENCES `shipping`(`id`);
 
-ALTER TABLE `cart` ADD CONSTRAINT `cart_fk4` FOREIGN KEY (`shipping_id`) REFERENCES `shipping`(`id`);
-
-ALTER TABLE `shipping` ADD CONSTRAINT `shipping_fk0` FOREIGN KEY (`address_id`) REFERENCES `address`(`id`);
-
-ALTER TABLE `address` ADD CONSTRAINT `address_fk0` FOREIGN KEY (`country_id`) REFERENCES `country`(`id`);
-
-ALTER TABLE `products`DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `users` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `categories` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `role` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `cart` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `promo` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `tax` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `shipping` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `address` DEFAULT CHARACTER SET utf8mb4;
-
-ALTER TABLE `country` DEFAULT CHARACTER SET utf8mb4;
-
+ALTER TABLE `shipping` ADD CONSTRAINT `FK_cb87685b-d280-4be1-af6e-0f7f55e31424` FOREIGN KEY (`addressId`) REFERENCES `address`(`id`);

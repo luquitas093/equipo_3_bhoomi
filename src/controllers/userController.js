@@ -16,121 +16,97 @@ module.exports = {
     register : (req,res) => {
         return res.render (path.resolve (__dirname, "../views/users/register.ejs"), {titulo: 'Bhoomi - Registro'});
     },
-    login : (req,res) => {
-        return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {titulo: 'Bhoomi - Ingresá a tu cuenta'});
-    },
     create: (req, res) => {
+      db.User.findOne ({
+        where : {
+          email : req.body.email
+        }
+      })
+      .then ((userInDb) => {
+        if (userInDb) {
+          return res.render(path.resolve (__dirname, "../views/users/register.ejs"), {
+            titulo: 'Bhoomi - Registro',
+            errors: {
+                email : {
+                    msg : 'Este email ya esta registrado'
+                }
+            },
+            old : req.body
+        });
+        }
+
       let resultValidation = validationResult (req);
+
       if (!resultValidation.isEmpty()) {
         return res.render (path.resolve (__dirname, "../views/users/register.ejs"), {
           titulo: 'Bhoomi - Registro',
           errors: resultValidation.mapped(),
           old: req.body
         });
-      }
-      let userInDB = User.findByField ("email", req.body.email);
-      if (userInDB) {
-        return res.render(path.resolve (__dirname, "../views/users/register.ejs"), {
-          titulo: 'Bhoomi - Registro',
-          errors: {
-              email:{
-                  msg: 'Este email ya esta registrado'
-              }
-          },
-          old:req.body
-      });
-    };
-      let userToCreate = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        date: req.body.date,
-        address: req.body.address,
-        phone: req.body.phone,
-        avatar:  req.file ? req.file.filename : '',
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        category: "user"
-      }
-      let userCreated = User.create(userToCreate);
-      //Database crear usuario
-      db.User.create(userCreated)
-      .then(userCreated=>{
-        res.send(userCreated);
-      })
-      return res.redirect ("/usuarios/ingresar")
-    }, 
-      /* EJEMPLO DE DANI EN CLASE:
-      else {
-        let user = {
+      } else {
+        db.User.create ({
           first_name: req.body.first_name,
           last_name: req.body.last_name,
           date: req.body.date,
-          address: req.body.address,
           phone: req.body.phone,
           avatar:  req.file ? req.file.filename : '',
           email: req.body.email,
           password: bcrypt.hashSync(req.body.password, 10),
-          category: "user"
-        }
-        let jsonUsers = fs.readFileSync(path.resolve(__dirname, '../data/users.json'), {
-          encoding: 'utf-8'
+          category: 2
+        })
+        .then (() => {
+          return res.redirect ("/usuarios/ingresar")
+        })
+        .catch ((error) => {
+          return res.send (error);
+        })
+      };
+    })
+    .catch ((error) => {
+      return res.send (error)
+    })
+    },
+    login : (req,res) => {
+      return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {titulo: 'Bhoomi - Ingresá a tu cuenta'});
+    },
+    save: (req,res) => {
+      db.User.findAll()
+      .then ((users) => {
+        let errors = validationResult(req);
+        let userLogged;
+
+        userLogged = users.filter (function (user) {
+          return user.email == req.body.email &&
+          bcrypt.compareSync (req.body.password, user.password)
         });
-        let users;
-        if (jsonUsers == "") {
-          users = [];
+
+        if (userLogged == "") {
+          return res.render (path.resolve (__dirname, "../views/users/login.ejs"), 
+          {
+            titulo: 'Bhoomi - Ingresá a tu cuenta',
+            errors: errors.mapped(),
+            old: req.body
+          });
         } else {
-          users = JSON.parse(jsonUsers);
-        };
-        users.push(user);
-        usersJSON = JSON.stringify(users, null, 2);
-        fs.writeFileSync(path.resolve(__dirname, '../data/users.json'), usersJSON);
-        res.redirect('/ingresar');
-      } */
-
-    save: (req,res) =>{
-      let errors = validationResult(req);
-      if (!errors.isEmpty()) {
-        return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
-          titulo: 'Bhoomi - Ingresá a tu cuenta',
-          errors: errors.mapped(),
-          old: req.body
-        });
-      }
-        let userToLogin = User.findByField ('email', req.body.email);
-        if (userToLogin) {
-          let hashPassword = bcrypt.compareSync (req.body.password, userToLogin.password)
-          if (hashPassword) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
-            if (req.body.remember) {
-              res.cookie ('userEmail', req.body.email, { maxAge: 1000 * 60 * 60 * 24})
-            }
-            return res.redirect ("/")
+          req.session.user = userLogged[0];
           }
-        }
-        return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
-          titulo: 'Bhoomi - Ingresá a tu cuenta',
-          errors: {
-            email: {
-              msg: "Las credenciales son erróneas"
-            }
+          if (req.body.remember) {
+            res.cookie ('email', userLogged[0].email, {
+              maxAge: 1000 * 60 * 60 * 24
+              })
           }
-        });
-      },
-
-    profile: (req, res) => {
+          return res.redirect ("/")
+          })
+        },
+   profile: (req, res) => {
       return res.render (path.resolve (__dirname, "../views/users/profile.ejs"), {
         titulo: 'Bhoomi - Perfil de Usuario',
         user: req.session.userLogged
       });
   },
-  
-  //Editar Perfil
   editprofile: (req, res) => {
-    let profile = db.User.findByPk(req.session.userLogged.id,{include:["role","addresses"]});
-
-    
-        console.log(req.session.userLogged);
+    let profile = db.User.findByPk(req.session.userLogged.id,{include:["role"]});
+        //console.log(req.session.userLogged);
         Promise.all([profile])
         .then(function([users]) {
             return res.render(path.resolve(__dirname, '../views/users/editProfile.ejs') ,{

@@ -15,14 +15,14 @@ module.exports = function (sequelize, dataTypes) {
         image: {
             type: dataTypes.STRING
         },
-        category_id: {
-            type: dataTypes.INTEGER
-        },
         quantity: {
-            type: dataTypes.NUMERIC
+            type: dataTypes.STRING
         },
         price: {
             type: dataTypes.FLOAT
+        },
+        categoryId: {
+            type: dataTypes.INTEGER
         }
     };
     let config = {
@@ -34,7 +34,7 @@ module.exports = function (sequelize, dataTypes) {
     product.associate = function (models) {
         product.belongsTo (models.Category, {
             as: "category",
-            foreignKey: "category_id"
+            foreignKey: "categoryId"
         })
     };
 

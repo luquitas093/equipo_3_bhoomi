@@ -2,17 +2,20 @@ const express = require ("express");
 const path = require ("path");
 const fs= require('fs');
 const { name } = require("ejs");
+
+//Requerimos la Base de Datos
 let db = require ("../../database/models")
 
 module.exports = {
     admin: (req,res) => {
         db.Product.findAll()
-        .then (function(products) {
+        .then (products => {
             return res.render(path.resolve(__dirname, '../views/admin/admin.ejs'), {
                 titulo: 'Bhoomi - Administrador',
                 products: products
             });
-        });
+        })
+        .catch(error => res.send (error))
     },
     create: (req,res)=> {
         db.Category.findAll()
@@ -27,7 +30,7 @@ module.exports = {
         db.Product.create({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            image: req.file ? req.file.filename : '',
             category_id: req.body.category,
             quantity: req.body.quantity,
             price: req.body.price,
@@ -63,7 +66,7 @@ module.exports = {
         db.Product.update({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename,
+            image: req.file ? req.file.filename : req.body.oldImagen,
             category_id: req.body.category,
             quantity: req.body.quantity,
             price: req.body.price,
@@ -82,17 +85,14 @@ module.exports = {
         })
         res.redirect('/administrador');
     },
-
-    //Buscar Producto
-    findProduct: (req,res)=>{
-        const id=req.params.id;
-        db.Product.findByPk(id)
-        .then(data=>{
-            res.send(data)
-
-        });
-            
-
+    search: ( req, res) =>{
+        db.Product.findAll({
+            where:{
+                name: {[Op.like]: `%${req.query.buscar}%`}
+            }
+        })
+        .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'index'),{platos: resultado});})
+        .catch(error => res.send(error))
     }
 }
 

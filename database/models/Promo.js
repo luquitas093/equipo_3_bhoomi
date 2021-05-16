@@ -10,7 +10,7 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         value: {
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         }
     };
     let config = {

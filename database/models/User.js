@@ -6,20 +6,17 @@ module.exports = function (sequelize, dataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        first_name: {
+        firstName: {
             type: dataTypes.STRING
         },
-        last_name: {
+        lastName: {
             type: dataTypes.STRING
         },
         date: {
             type: dataTypes.DATE
         },
-        address_id: {
-            type: dataTypes.INTEGER
-        },
         phone: {
-            type: dataTypes.NUMERIC
+            type: dataTypes.STRING
         },
         avatar: {
             type: dataTypes.STRING
@@ -27,10 +24,13 @@ module.exports = function (sequelize, dataTypes) {
         email: {
             type: dataTypes.STRING
         },
-        password_hash: {
+        passwordHash: {
             type: dataTypes.STRING
         },
-        role_id: {
+        addressId: {
+            type: dataTypes.INTEGER
+        },
+        roleId: {
             type: dataTypes.INTEGER
         },
     };
@@ -43,11 +43,11 @@ module.exports = function (sequelize, dataTypes) {
     user.associate = function (models) {
         user.hasMany (models.Address, {
             as: "addresses",
-            foreignKey: "address_id"
+            foreignKey: "addressId"
         });
         user.belongsTo (models.Role, {
             as: "role",
-            foreignKey: "role_id"
+            foreignKey: "roleId"
         });
     };
 

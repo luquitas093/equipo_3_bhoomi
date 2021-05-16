@@ -19,7 +19,7 @@ module.exports = function (sequelize, dataTypes) {
     role.associate = function (models) {
         role.hasMany (models.User, {
             as: "users",
-            foreignKey: "role_id"
+            foreignKey: "roleId"
         });
     };
 

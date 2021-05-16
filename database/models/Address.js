@@ -10,13 +10,13 @@ module.exports = function (sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         number: {
-            type: dataTypes.NUMERIC
+            type: dataTypes.STRING
         },
         floor: {
             type: dataTypes.STRING
         },
         cp:  {
-            type: dataTypes.NUMERIC
+            type: dataTypes.STRING
         },
         city: {
             type: dataTypes.STRING
@@ -24,8 +24,8 @@ module.exports = function (sequelize, dataTypes) {
         province: {
             type: dataTypes.STRING
         },
-        country_id: {
-            type: dataTypes.INTEGER
+        country: {
+            type: dataTypes.STRING
         },
     };
     let config = {
@@ -35,13 +35,9 @@ module.exports = function (sequelize, dataTypes) {
     let address = sequelize.define (alias, cols, config);
 
     address.associate = function (models) {
-        address.belongsTo (models.Country, {
-            as: "country",
-            foreignKey: "country_id"
-        });
         address.belongsTo (models.User, {
             as: "users",
-            foreignKey: "address_id"
+            foreignKey: "addressId"
         })
     };
 
