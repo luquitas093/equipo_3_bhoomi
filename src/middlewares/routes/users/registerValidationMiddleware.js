@@ -4,10 +4,12 @@ const path = require('path');
 const registerValidation = [
     body('first_name')
                       .notEmpty().withMessage('El campo nombre es obligatorio').bail()
-                      .isAlpha().withMessage ('Por favor, ingrese sólo letras'),
+                      .isAlpha().withMessage ('Por favor, ingrese sólo letras').bail()
+                      .isLength({min: 2}).withMessage ('Por favor, ingrese un nombre de más de dos letras'),
     body('last_name')
                      .notEmpty().withMessage('El campo apellido es obligatorio').bail()
-                     .isAlpha().withMessage ('Por favor, ingrese sólo letras'),
+                     .isAlpha().withMessage ('Por favor, ingrese sólo letras').bail()
+                     .isLength({min: 2}).withMessage ('Por favor, ingrese un apellido de más de dos letras'),
     body('date').notEmpty().withMessage('La fecha de nacimiento es obligatoria'),
     body('phone')
                  .notEmpty().withMessage('El campo teléfono es obligatorio').bail()
@@ -15,14 +17,14 @@ const registerValidation = [
                  .isLength({min: 10, max: 13 }).withMessage('Ingrese el prefijo sin el 0 más su número teléfonico'),
     body('avatar').custom((value, {req}) => {
      let file = req.file;
-     let acceptedExtensions = [".jpg", ".jpeg"];
+     let acceptedExtensions = [".jpg", ".jpeg", ".png", ".gif"];
 
      if(!file){
        throw new Error ("Tenés que subir una imagen");
      } else {
       let fileExtension = path.extname(file.originalname);
       if(!acceptedExtensions.includes(fileExtension)) {
-        throw new Error ("Las extensiones permitidas son .jpg y .jpeg")
+        throw new Error ("Las extensiones permitidas son .jpg, .jpeg, .png y .gif")
       }
     }
      return true;

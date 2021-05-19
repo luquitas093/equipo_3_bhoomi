@@ -4,10 +4,9 @@ const fs= require('fs');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
 const { name } = require("ejs");
-let db = require ("../../database/models")
+const db = require ("../../database/models")
 
-// Requerir el modelo de users
-const User = require ("../models/User.js")
+const User = db.User;
 
 //Validacion con Express-Validator
 const { validationResult } = require('express-validator');
@@ -45,14 +44,14 @@ module.exports = {
         });
       } else {
         db.User.create ({
-          first_name: req.body.first_name,
-          last_name: req.body.last_name,
+          firstName: req.body.first_name,
+          lastName: req.body.last_name,
           date: req.body.date,
           phone: req.body.phone,
           avatar:  req.file ? req.file.filename : '',
           email: req.body.email,
-          password: bcrypt.hashSync(req.body.password, 10),
-          category: 2
+          passwordHash: bcrypt.hashSync(req.body.password, 10),
+          roleId: 2
         })
         .then (() => {
           return res.redirect ("/usuarios/ingresar")
@@ -69,43 +68,68 @@ module.exports = {
     login : (req,res) => {
       return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {titulo: 'Bhoomi - Ingresá a tu cuenta'});
     },
-    save: (req,res) => {
-      db.User.findAll()
-      .then ((users) => {
+    save: async (req,res) => {
+
         let errors = validationResult(req);
-        let userLogged;
 
-        userLogged = users.filter (function (user) {
-          return user.email == req.body.email &&
-          bcrypt.compareSync (req.body.password, user.password)
-        });
-
-        if (userLogged == "") {
+        if (!errors.isEmpty()) {
           return res.render (path.resolve (__dirname, "../views/users/login.ejs"), 
           {
             titulo: 'Bhoomi - Ingresá a tu cuenta',
             errors: errors.mapped(),
             old: req.body
           });
-        } else {
-          req.session.user = userLogged[0];
-          }
-          if (req.body.remember) {
-            res.cookie ('email', userLogged[0].email, {
-              maxAge: 1000 * 60 * 60 * 24
-              })
-          }
-          return res.redirect ("/")
+        }
+        
+        let userLogged;
+        try {
+          userLogged = await db.User.findOne ({
+            where : {
+              email : req.body.email
+            }
           })
-        },
-   profile: (req, res) => {
+        } catch (error) {
+          console.log ("email no validado", error)
+        }
+
+        if (userLogged) {
+        let password = bcrypt.compareSync (req.body.password, userLogged.passwordHash)
+
+        if (password) {
+          console.log ("Sesión de: " + userLogged)
+          delete userLogged.passwordHash
+          req.session.userLogged = userLogged
+        }
+        
+        if (req.body.remember) {
+          res.cookie ('email', userLogged.email, {
+            maxAge: 1000 * 60 * 60 * 24
+            })
+          };
+          return res.redirect ("/")
+        } else {
+          return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+            errors: {
+              password: {
+                msg: "Credenciales inválidas"
+              }
+            }
+          })
+        }
+      },
+      logout: (req, res) => {
+        req.session.destroy();
+        res.clearCookie ('email', null, {maxAge: -1});
+        return res.redirect ("/");
+      },
+      profile: (req, res) => {
       return res.render (path.resolve (__dirname, "../views/users/profile.ejs"), {
         titulo: 'Bhoomi - Perfil de Usuario',
         user: req.session.userLogged
       });
-  },
-  editprofile: (req, res) => {
-    let profile = db.User.findByPk(req.session.userLogged.id,{include:["role"]});
+      },
+      editprofile: (req, res) => {
+        let profile = db.User.findByPk(req.session.userLogged.id,{include:["role"]});
         //console.log(req.session.userLogged);
         Promise.all([profile])
         .then(function([users]) {
@@ -115,8 +139,6 @@ module.exports = {
                 profile: users                
             })
         })
-
- 
   },
 
   editprocess: (req,res)=>{
@@ -136,16 +158,6 @@ module.exports = {
       }
     });
     res.redirect("/profile/"+req.params.id);
-
-    
-    
-
-  },
-
-  logout: (req, res) => {
-    res.clearCookie ('userEmail');
-    req.session.destroy();
-    return res.redirect ("/");
   },
   //Ver detalle Usuario
   detail: (req,res)=>{
@@ -160,19 +172,3 @@ module.exports = {
 
   }
 }
-
-/* EJEMPLO DE DANI EN CLASE:
-      const errors = validationResult(req);
-      if(errors.isEmpty()){
-        let jsonUsers =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
-        let loggedUser = jsonUsers.find(user => user.email == req.body.email)
-        delete loggedUser.password;
-        req.session.user = loggedUser;
-        if(req.body.remember){
-          res.cookie('email',loggedUser.email,{maxAge: 1000 * 60 * 60 * 24})
-        }
-        return res.redirect('/');
-      }else{
-        res.render(path.resolve(__dirname, '../views/users/login.ejs'),{errors:errors.mapped(),old:req.body});        
-      }
-    }, */

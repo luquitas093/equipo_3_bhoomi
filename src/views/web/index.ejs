@@ -42,7 +42,7 @@
             <section class="best-products">
                 <% for(let i= 0; i < products.length; i++){ %>
                 <article class="product-article">
-                    <a href="/productos/detalleproducto/<%= products[i].id%>"> <img src="img/products/<%= products[i].imagen%>" alt=<%= products[i].name%>></a>
+                    <a href="/productos/detalleproducto/<%= products[i].id%>"> <img src="img/products/<%= products[i].image%>" alt=<%= products[i].name%>></a>
                     <div class="product-description">
                         <a href="/productos/detalleproducto/<%= products[i].id%>" class="product-name"><%= products[i].name%></a>
                         <p class="product-price">$<%= products[i].price%></p>

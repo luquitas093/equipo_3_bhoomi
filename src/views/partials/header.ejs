@@ -12,7 +12,7 @@
             <i class="fas fa-times"></i>
         </a>
         <!-- LINKS A PAGINAS -->
-        <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
+        <% if (locals.isLogged && locals.userLogged.roleId == 1) { %>
         <ul class="hidden-menu-list">
             <li class="hidden-menu-list-item">
                 <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
@@ -36,10 +36,10 @@
             </li>
             <% } %>
             <li class="hidden-menu-list-item-user">
-                <% if (locals.isLogged) { %>
+                <% if (locals.isLogged && locals.userLogged) { %>
                     <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>
                     <a href="/usuarios/perfil" class="hidden-menu-list-item-anchor-user">¡Hola!
-                        <%= locals.userLogged.first_name %></a>
+                        <%= locals.userLogged.firstName %>
                     <a href="/usuarios/cerrarsesion" class="hidden-menu-list-item-anchor-user">Cerrar Sesión</a> 
                 <% } else { %>
                     <figure class="icon-user"><i class="fas fa-user-circle"></i></figure>

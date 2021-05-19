@@ -22,12 +22,20 @@
                 <div class="stylediv">
                     <strong><label for="name">Modificar Nombre</label></strong>
                     <input type="text" id="name" name="name" placeholder="Ingresar nuevo nombre" class="camp-edit"required value = "<%= product.name%>">
-
+                    <% if(locals.errors && errors.name){%>
+                        <span class="error">
+                          <%= errors.name.msg %>
+                        </span>
+                     <%}%>
                 </div>
                 <div class="stylediv">
                     <strong><label for="description"> Modificar Descripción</label></strong>
                     <textarea name="description" class="camp-edit" required value = "<%= product.description%>"> </textarea>
-                    
+                    <% if(locals.errors && errors.description){%>
+                        <span class="error">
+                          <%= errors.description.msg %>
+                        </span>
+                     <%}%>
                 </div>
                 <div class="stylediv">
                     <strong><label for="imagen">Agregar y/o Modificar Imagenes</label></strong>
@@ -36,7 +44,11 @@
                     </figure>
                     <input type="hidden"  name="oldImagen"  value="<%= product.image%>">
                     <input class="camp-edit" type="file" id="imagen" name="imagen" accept=".jpg" value = " ">
-                     
+                    <% if(locals.errors && errors.imagen){%>
+                        <span class="error">
+                          <%= errors.imagen.msg %>
+                        </span>
+                     <%}%>
                 </div>
              
                 <div class="stylediv">
@@ -53,19 +65,30 @@
                                 </option>
                             <% } %>
                         <% } %>
-                    </select>    
-
+                    </select>
+                    <% if(locals.errors && errors.category){%>
+                        <span class="error">
+                          <%= errors.category.msg %>
+                        </span>
+                     <%}%>
                 </div>
 
                 <div class="stylediv">
                     <strong><label for="quantity">Modificar Stock</label></strong>
                     <input type="number" id="quantity" name="quantity" placeholder="Ingrese nuevo Stock" class="camp-edit" required value = "<%= product.quantity%>">
-
+                    <% if(locals.errors && errors.quantity){%>
+                        <span class="error">
+                          <%= errors.quantity.msg %>
+                        </span>
                 </div>
                              
                 <div class="stylediv">
                     <strong><label for="price"> Modificar Precio</label></strong>
                     <input type="number" id="price" name="price" placeholder="$" class="camp-edit" required value = "<%= product.price%>">
+                    <% if(locals.errors && errors.price){%>
+                        <span class="error">
+                          <%= errors.price.msg %>
+                        </span>
                 </div>
 
                 <div class="stylediv center">
@@ -76,7 +99,7 @@
 
 
             </form>
-            
+
         </section>
 
     </main>

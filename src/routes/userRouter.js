@@ -15,13 +15,13 @@ const userController = require ("../controllers/userController.js");
 
 // Requerir Middlewares de Login
 
-const guestMiddleware = require ("../middlewares/guestMiddleware.js");
-const authMiddleware = require ("../middlewares/authMiddleware.js");
+const guestMiddleware = require ("../middlewares/routes/users/guestMiddleware.js");
+const authMiddleware = require ("../middlewares/routes/users/authMiddleware.js");
 
 //Requerir Middlewares de Validacion
 
-const loginValidation = require ("../middlewares/loginValidationMiddleware.js");
-const registerValidation = require ("../middlewares/registerValidationMiddleware")
+const loginValidation = require ("../middlewares/routes/users/loginValidationMiddleware.js");
+const registerValidation = require ("../middlewares/routes/users/registerValidationMiddleware")
 
 //Setear el Storage de Multer
 
@@ -38,14 +38,25 @@ var storage = multer.diskStorage({
 
 // Requerir Rutas
 
+//Formulario de Registro
 router.get ("/registro", guestMiddleware, userController.register);
 router.post ("/registro", upload.single ('avatar'), registerValidation, userController.create);
+
+// Formulario de Login
 router.get ('/ingresar', guestMiddleware, userController.login);
 router.post('/ingresar', loginValidation, userController.save);
+
+//Perfil del Usuario
 router.get ('/perfil', authMiddleware, userController.profile);
+
+//Formulario de Edición del Usuario
 router.get ('/perfil/editarperfil', userController.editprofile);
 router.post('/perfil/editarperfil',userController.editprocess);
+
+//Detalle del Usuario
 router.get('/perfil/detail/:id',userController.detail);
+
+//Cerrar Sesión
 router.get('/cerrarsesion', userController.logout);
 
 module.exports = router;

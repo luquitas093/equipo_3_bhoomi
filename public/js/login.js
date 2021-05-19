@@ -1,26 +1,24 @@
 window.addEventListener('load',function(){
+    const form = document.getElementById('form');
     
-    
-    let formulario = document.querySelector('.formulario');
-    
-    formulario.addEventListener('submit',function(evento){
+    form.addEventListener('submit',function(e){
         
-        if(!validaciones(evento)){
-            evento.preventDefault();
+        if(!validations(e)){
+            e.preventDefault();
         }else{
             formulario.submit();
         }    
 
-        function validaciones(evento){
+        function validations(e){
         
           
-          let {email, password } = formulario.elements;
+          let {email, password} = form.elements;
           let errores = [];
           console.log(formulario.elements.email.value);
         
-        let reEmail  = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        let expressionEmail  = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
    
-        if(!reEmail.test(email.value)){
+        if(!expressionEmail.test(email.value)){
             errores.push('El email es inválido...');
             email.classList.add('is-invalid');   
             
@@ -29,8 +27,9 @@ window.addEventListener('load',function(){
             email.classList.remove('is-invalid');
         }
         
-        let rePassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-        if(!rePassword.test(password.value)){
+        let expressionPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+        
+        if(!expressionPassword.test(password.value)){
             errores.push('La contraseña como mínimo debe tener seis caracteres, al menos una letra y un número');
             password.classList.add('is-invalid');   
             

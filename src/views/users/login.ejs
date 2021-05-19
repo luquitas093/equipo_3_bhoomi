@@ -17,7 +17,7 @@
             <h1 class="titulologin">Ingresá</h1>
         </section>
         <section class="login">
-            <form class="formulariologin" action="/usuarios/ingresar" method="POST">
+            <form id="form" class="formulariologin" action="/usuarios/ingresar" method="POST">
                 <div class="estilodivlogin">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Ingrese su mail" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>">

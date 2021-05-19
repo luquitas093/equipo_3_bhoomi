@@ -1,13 +1,15 @@
 const express = require ("express");
 const path = require ("path");
 const fs = require('fs');
-let db = require ("../../database/models");
-
-let products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json' )));
+const db = require ("../../database/models");
+const sequelize = db.sequelize;
+const {Op} = require("sequelize");
 
 module.exports = {
     list: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include : [{association: "category"}]
+        })
         .then (function(products) {
             return res.render(path.resolve(__dirname, '../views/products/productList.ejs'), {
                 titulo: 'Bhoomi - Listado de Productos',
@@ -27,24 +29,3 @@ module.exports = {
         })
     }
 }
-
-// Controladores para archivos data .JSON
-
-/* module.exports = {
-    list : (req,res) => {
-        return res.render (path.resolve (__dirname, "../views/products/productList.ejs"), {products, titulo: 'Bhoomi - Catálogo'});
-    },
-    detail : (req,res) => {
-        let products= JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/products.json'))
-        );
-
-        let myProduct;
-        products.forEach(product => {
-            if (product.id == req.params.id){
-                myProduct = product;
-            }
-        });
-
-        res.render(path.resolve(__dirname,'../views/products/productDetail.ejs'), {myProduct, titulo: "Bhoomi - Detalle del Producto"});
-    },
-} */

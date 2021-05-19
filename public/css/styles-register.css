@@ -15,7 +15,6 @@ body{
 
 .estilodiv{
     padding-bottom: 15px;
-    position: relative;
 }
 
 
@@ -29,17 +28,30 @@ body{
 
 .formatocampo{
     width: 100%;
-    padding: 10px 10px ;
+    padding: 10px 10px;
     border: 3px solid transparent;
+}
+
+.input-i {
+    position: relative;
 }
 
 .fire {
         position: absolute;
         right: 1.5rem;
-        bottom: 1.4rem;
+        bottom: 0.8rem;
         z-index: 100;
         font-size: 1.2rem;
         opacity: 0;
+}
+
+.tree {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 0.8rem;
+    z-index: 100;
+    font-size: 1.2rem;
+    opacity: 0;
 }
 
 .alert-danger .formatocampo{
@@ -51,12 +63,12 @@ body{
     
 }
 
-.alert-danger .estilodiv .fire {
+.alert-danger .fire {
     color: #bb2929;
     opacity: 1;
 }
 
-.is-valid .fire{
+.is-valid .tree{
     color: #9DD274;
     opacity: 1;
 }
