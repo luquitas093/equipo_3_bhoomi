@@ -14,8 +14,9 @@ module.exports = {
             return res.render(path.resolve(__dirname, '../views/products/productList.ejs'), {
                 titulo: 'Bhoomi - Listado de Productos',
                 products: products
-            });
-        });
+            })
+        })
+        .catch(error => res.send(error))
     },
     detail: (req,res) => {
         db.Product.findByPk(req.params.id, {
@@ -27,5 +28,6 @@ module.exports = {
                 product: product
             })
         })
+        .catch(error => res.send(error))
     }
 }

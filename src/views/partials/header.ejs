@@ -12,7 +12,7 @@
             <i class="fas fa-times"></i>
         </a>
         <!-- LINKS A PAGINAS -->
-        <% if (locals.isLogged && locals.userLogged.roleId == 1) { %>
+        <% if (locals.isLogged && locals.userLogged.roleId===1) { %>
         <ul class="hidden-menu-list">
             <li class="hidden-menu-list-item">
                 <a href="/" class="hidden-menu-list-item-anchor">Inicio</a>
@@ -62,7 +62,7 @@
         </a>
 
         <!-- BARRA DE BUSQUEDA OCULTA-->
-        <form action="#" id="search" autocomplete="off" method="GET">
+        <form action="/buscar" id="search" autocomplete="off" method="GET">
             <label class="search" for="keyword">
                 <input class="search-input" type="text" name="keyword" id="keyword" placeholder="Buscar...">
                 <a href="#btn-search" class="search-button">

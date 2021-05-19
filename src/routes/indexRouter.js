@@ -8,9 +8,9 @@ const indexController = require ("../controllers/indexController.js")
 router.get ("/", indexController.index)
 
 //Busqueda
-router.get ("/buscar")
+router.get ("/buscar", indexController.search)
 
 //404
-router.get ("/404")
+router.get ("/404", indexController.error404)
 
 module.exports = router;

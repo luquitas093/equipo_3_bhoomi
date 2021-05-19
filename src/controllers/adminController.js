@@ -28,39 +28,46 @@ module.exports = {
                 titulo: 'Bhoomi - Crear Producto',
                 categories: categories
             });
-        });
+        })
+        .catch(error => res.send (error))
     },
     save: (req,res)=> {
         let resultValidation = validationResult(req);
 
-        if(resultValidation.isEmpty()) {
-            db.Product.create({
+        if(!resultValidation.isEmpty()) {
+            return res.render (path.resolve(__dirname, '../views/admin/newProduct.ejs'), {
+                titulo: 'Bhoomi - Crear Producto',
+                old: req.body,
+                errors: errors.mapped()
+                })
+            }
+
+            let product = {
                 name: req.body.name,
                 description: req.body.description,
                 image: req.file ? req.file.filename : '',
                 quantity: req.body.quantity,
                 price: req.body.price,
                 categoryId: req.body.category,
-            })
-                res.redirect ('/administrador')
-            } else {
-                return res.render (path.resolve(__dirname, '../views/admin/newProduct.ejs'), {
-                    titulo: 'Bhoomi - Crear Producto',
-                    old: req.body,
-                    errors: errors.mapped()
-                    })
             }
+
+            db.Product.create (product)
+            .then ((newProduct) => {
+                res.redirect ('/administrador')
+            })
+            .catch(error => res.send (error));
     },
     show: (req,res)=>{
         db.Product.findByPk(req.params.id, {
             include: [{association: "category"}]
         })
-        .then (function(product) {
+        .then ((product) => {
             return res.render(path.resolve(__dirname,'../views/admin/productDetail.ejs'), {
                 titulo: 'Bhoomi - Detalle Producto',
                 product: product
             })
         })
+        .catch(error => res.send (error))
     },
     edit: (req,res)=>{
         let productOrder = db.Product.findByPk(req.params.id);
@@ -74,21 +81,37 @@ module.exports = {
                 categories: categories
             })
         })
+        .catch(error => res.send (error))
     },
     update: (req,res) => {
 
         let resultValidation = validationResult(req);
 
-        if (resultValidation.isEmpty()) {
-            db.Product.update({
-                name: req.body.name,
-                description: req.body.description,
-                image: req.file ? req.file.filename : req.body.oldImagen,
-                quantity: req.body.quantity,
-                price: req.body.price,
-                categoryId: req.body.category,
-            }, 
-            {
+        if (!resultValidation.isEmpty()) {
+            let productOrder = db.Product.findByPk(req.params.id);
+            let categoryOrder = db.Category.findAll();
+    
+            Promise.all([productOrder, categoryOrder])
+            .then(function([product, categories]) {
+                return res.render(path.resolve(__dirname, '../views/admin/editProduct.ejs'), {
+                    titulo: "Bhoomi - Editar Producto",
+                    product: product,
+                    categories: categories
+                })
+            })
+            .catch(error => res.send (error))
+        }
+
+        let product = {
+            name: req.body.name,
+            description: req.body.description,
+            image: req.file ? req.file.filename : '',
+            quantity: req.body.quantity,
+            price: req.body.price,
+            categoryId: req.body.category,
+        }
+
+        db.Product.update(product, {
                 where: {
                     id: req.params.id
                 }
@@ -96,21 +119,7 @@ module.exports = {
             .then (editProduct => {
                 res.redirect ('/administrador');
             })
-        } else {
-            let productOrder = db.Product.findByPk(req.params.id);
-            let categoryOrder = db.Category.findAll();
-            
-            Promise.all([productOrder, categoryOrder])
-            .then(function([product, categories]) {
-                return res.render(path.resolve(__dirname, '../views/admin/editProduct.ejs'), {
-                    titulo: "Bhoomi - Editar Producto",
-                    product: product,
-                    categories: categories,
-                    old: req.body,
-                    errors: errors.mapped()
-                    })
-            })
-        }
+            .catch(error => res.send (error))
     },
     destroy: (req,res) =>{
         db.Product.destroy({
@@ -118,6 +127,10 @@ module.exports = {
                 id: req.params.id
             }
         })
-        res.redirect('/administrador');
+        .then (destroyProduct => {
+            res.redirect('/administrador');
+        })
+        .catch(error => res.send (error))
+        
     }
 }

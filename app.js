@@ -58,7 +58,7 @@ const userRoutes = require ("./src/routes/userRouter.js");
 app.use ("/usuarios", userRoutes);
 
 app.use (function (req, res) {
-    res.status(404).render((path.resolve (__dirname, "../views/web/404.ejs")))
+    res.status(404).render("/404")
 })
 
 //Levantar el Servidor
