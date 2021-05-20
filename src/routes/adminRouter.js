@@ -31,14 +31,14 @@ router.get ("/", roleMiddleware, adminController.admin);
 
 //Crear Producto
 router.get('/crearproducto', roleMiddleware, adminController.create);
-router.post('/crearproducto', roleMiddleware, upload.single('imagen'), newProductValidation, adminController.save);
+router.post('/crearproducto', upload.single('imagen'), newProductValidation, adminController.save);
 
 //Detalle de los Productos
 router.get('/detalleproducto/:id', roleMiddleware, adminController.show);
 
 //Editar Producto
 router.get('/editarproducto/:id', roleMiddleware, adminController.edit);
-router.put('/editarproducto/:id', roleMiddleware, upload.single('imagen'), editProductValidation, adminController.update);
+router.put('/editarproducto/:id', upload.single('imagen'), editProductValidation, adminController.update);
 
 //Borrar Producto
 router.get('/borrarproducto/:id', roleMiddleware, adminController.destroy);

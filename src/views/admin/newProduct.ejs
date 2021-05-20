@@ -25,6 +25,7 @@
                         <span class="error">
                           <%= errors.name.msg %>
                         </span>
+                        <% } %>
                 </div>
                 <div class="stylediv">
                     <strong><label for="description">Descripción del Producto</label></strong>
@@ -33,6 +34,7 @@
                         <span class="error">
                           <%= errors.description.msg %>
                         </span>
+                        <% } %>
                 </div>
                 <div class="stylediv">
                     <strong><label for="imagen">Imagen del Producto</label></strong>
@@ -41,6 +43,7 @@
                         <span class="error">
                           <%= errors.imagen.msg %>
                         </span>
+                        <% } %>
                 </div>
              
                 <div class="stylediv">
@@ -56,7 +59,8 @@
                     <% if(locals.errors && errors.category){%>
                         <span class="error">
                           <%= errors.category.msg %>
-                        </span>   
+                        </span>
+                        <% } %> 
                 </div>
 
                 <div class="stylediv">
@@ -65,7 +69,8 @@
                     <% if(locals.errors && errors.quantity){%>
                         <span class="error">
                           <%= errors.quantity.msg %>
-                        </span> 
+                        </span>
+                        <% } %>
                 </div>
                              
                 <div class="stylediv">
@@ -74,13 +79,13 @@
                     <% if(locals.errors && errors.price){%>
                         <span class="error">
                           <%= errors.price.msg %>
-                        </span> 
+                        </span>
+                        <% } %>
                 </div>
 
                 <div class="stylediv center">
                     <input type="reset" value="Borrar" class="button">
                     <input type="submit" value="Crear Producto" class="button"> 
-
                 </div>
 
 

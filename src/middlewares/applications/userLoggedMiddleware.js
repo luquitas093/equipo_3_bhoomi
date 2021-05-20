@@ -5,27 +5,28 @@ const db = require('../../../database/models');
 
 function userLoggedMiddleware (req, res, next) {
 
-res.locals.isLogged = false;
+res.locals.userLogged = false;
 
-let emailInCookie = req.cookies.email
-
-db.User.findOne ({
-    where : {
-        email : emailInCookie
+if (req.session.userLogged) {
+    res.locals.userLogged = req.session.userLogged
+    return next();
+    } else if (req.cookies.email) {
+        db.User.findOne({
+            where: {
+                email: req.cookies.email
+                }
+            })
+            .then(user => {
+                req.session.userLogged = user;
+                res.locals.userLogged = user;
+                return next();
+            })
+            .catch (error => {
+                res.send(error)
+            })
+        } else {
+            return next()
+        }
     }
-})
-.then (user => {
-        req.session.userLogged = user;
-    })
-    .catch (error => console.log (error))
-
-if (req.session && req.session.userLogged) {
-    res.locals.isLogged = true
-    res.locals.userLogged = req.session.userLogged;
-}
-next();
-}
-
-
 
 module.exports = userLoggedMiddleware;

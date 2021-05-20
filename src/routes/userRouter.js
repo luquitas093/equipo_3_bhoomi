@@ -53,9 +53,6 @@ router.get ('/perfil', authMiddleware, userController.profile);
 router.get ('/perfil/editarperfil', userController.editprofile);
 router.post('/perfil/editarperfil',userController.editprocess);
 
-//Detalle del Usuario
-router.get('/perfil/detail/:id',userController.detail);
-
 //Cerrar Sesión
 router.get('/cerrarsesion', userController.logout);
 

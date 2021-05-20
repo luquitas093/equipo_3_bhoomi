@@ -68,7 +68,7 @@ module.exports = {
     login : (req,res) => {
       return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {titulo: 'Bhoomi - Ingresá a tu cuenta'});
     },
-    save: async (req,res) => {
+    save: (req,res) => {
 
         let errors = validationResult(req);
 
@@ -78,44 +78,44 @@ module.exports = {
             titulo: 'Bhoomi - Ingresá a tu cuenta',
             errors: errors.mapped(),
             old: req.body
+          })
+        }
+
+        db.User.findAll()
+        .then (users => {
+          let userLogged;
+
+          userLogged = users.filter(function (user) {
+            return user.email == req.body.email && 
+            bcrypt.compareSync(req.body.password, user.passwordHash)
           });
-        }
-        
-        let userLogged;
-        try {
-          userLogged = await db.User.findOne ({
-            where : {
-              email : req.body.email
-            }
-          })
-        } catch (error) {
-          console.log ("email no validado", error)
-        }
 
-        if (userLogged) {
-        let password = bcrypt.compareSync (req.body.password, userLogged.passwordHash)
-
-        if (password) {
-          console.log ("Sesión de: " + userLogged)
-          delete userLogged.passwordHash
-          req.session.userLogged = userLogged
-        }
-        
-        if (req.body.remember) {
-          res.cookie ('email', userLogged.email, {
-            maxAge: 1000 * 60 * 60 * 24
-            })
-          };
-          return res.redirect ("/")
-        } else {
-          return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
-            errors: {
-              password: {
-                msg: "Credenciales inválidas"
+          if (userLogged == "") {
+            return res.render (path.resolve (__dirname, "../views/users/login.ejs"), {
+              titulo: 'Bhoomi - Ingresá a tu cuenta',
+              errors: {
+                password: {
+                  msg: "Credenciales inválidas"
+                }
               }
+            })
+          } else {
+            console.log ("Sesión de: " + userLogged)
+            delete userLogged.passwordHash
+            req.session.userLogged = userLogged[0]
+          }
+
+          if (req.body.remember) {
+            res.cookie ('email', userLogged[0].email, {
+              maxAge: 1000 * 60 * 60 * 24
+              })
             }
-          })
-        }
+
+            return res.redirect ("/")
+        })
+        .catch ((error) => {
+          return res.send (error)
+        })
       },
       logout: (req, res) => {
         req.session.destroy();
@@ -139,36 +139,22 @@ module.exports = {
                 profile: users                
             })
         })
-  },
-
-  editprocess: (req,res)=>{
-    db.User.update({
-      first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        date: req.body.date,
-        address: req.body.address,
-        phone: req.body.phone,
-        avatar:  req.file ? req.file.filename : '',
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        category: "user"
-    },{
-      where:{
-        id:req.params.id
-      }
-    });
-    res.redirect("/profile/"+req.params.id);
-  },
-  //Ver detalle Usuario
-  detail: (req,res)=>{
-    db.User.findByPk(req.params.id)
-  .then (function(User) {
-      return res.render(path.resolve(__dirname,'../views/users/detailUser.ejs'), {
-          titulo: 'Bhoomi - Detalle Usuario',
-          users: User,
-          
-      })
-  })
-
-  }
+      },
+      editprocess: (req,res)=>{
+        db.User.update({
+          firstName: req.body.first_name,
+          lastName: req.body.last_name,
+          date: req.body.date,
+          phone: req.body.phone,
+          avatar:  req.file ? req.file.filename : '',
+          email: req.body.email,
+          passwordHash: bcrypt.hashSync(req.body.password, 10),
+          roleId: 2
+        }, {
+          where: {
+            id:req.params.id
+            }
+          });
+          res.redirect("/profile/"+req.params.id);
+      },
 }

@@ -1,7 +1,7 @@
                 <!--MENU PARA MEDIA QUERY-->
                 <section>
                     <ul class="mediaquery-menu-list">
-                        <% if (locals.isLogged && locals.userLogged.category == "admin") { %>
+                        <% if (locals.userLogged && locals.userLogged.roleId === 1) { %>
                         <li class="mediaquery-menu-list-item">
                             <a href="/administrador" class="mediaquery-menu-list-item-anchor">Administrar Productos</a>
                         </li>

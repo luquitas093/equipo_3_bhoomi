@@ -4,7 +4,6 @@ const path = require('path');
 const editProductValidation = [
     body('name')
                       .notEmpty().withMessage('El campo nombre es obligatorio').bail()
-                      .isAlpha().withMessage ('Por favor, ingrese sólo letras').bail()
                       .isLength({min: 5}).withMessage ('Por favor, ingrese un nombre de más de cinco letras'),
     body('description')
                      .isLength({min: 20}).withMessage ('Por favor, ingrese una descripción de al menos 20 caracteres'),
