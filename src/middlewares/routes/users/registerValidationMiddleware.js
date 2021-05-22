@@ -4,16 +4,14 @@ const path = require('path');
 const registerValidation = [
     body('first_name')
                       .notEmpty().withMessage('El campo nombre es obligatorio').bail()
-                      .isAlpha().withMessage ('Por favor, ingrese sólo letras').bail()
                       .isLength({min: 2}).withMessage ('Por favor, ingrese un nombre de más de dos letras'),
     body('last_name')
                      .notEmpty().withMessage('El campo apellido es obligatorio').bail()
-                     .isAlpha().withMessage ('Por favor, ingrese sólo letras').bail()
                      .isLength({min: 2}).withMessage ('Por favor, ingrese un apellido de más de dos letras'),
     body('date').notEmpty().withMessage('La fecha de nacimiento es obligatoria'),
     body('phone')
                  .notEmpty().withMessage('El campo teléfono es obligatorio').bail()
-                 .isNumeric().withMessage('Por favor, ingrese sólo números').bail()
+                 .isNumeric().withMessage('Por favor, ingrese sólo números, sin guiones').bail()
                  .isLength({min: 10, max: 13 }).withMessage('Ingrese el prefijo sin el 0 más su número teléfonico'),
     body('avatar').custom((value, {req}) => {
      let file = req.file;
@@ -30,7 +28,7 @@ const registerValidation = [
      return true;
    }),
     body('email')
-                .notEmpty().withMessage('El campo E-Mail es obligatorio').bail()
+                .notEmpty().withMessage('El campo email es obligatorio').bail()
                 .isEmail().withMessage('Agregar un email válido'),
     body('password').isLength({min: 8 }).withMessage('La contraseña tiene que tener un mínimo de 8 caracteres'),
     body('password2').isLength({min: 8 }).withMessage('La contraseña tiene que tener un mínimo de 8 caracteres'),

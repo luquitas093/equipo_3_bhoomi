@@ -100,7 +100,6 @@ module.exports = {
               }
             })
           } else {
-            console.log ("Sesión de: " + userLogged)
             delete userLogged.passwordHash
             req.session.userLogged = userLogged[0]
           }

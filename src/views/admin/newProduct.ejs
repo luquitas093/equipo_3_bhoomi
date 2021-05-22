@@ -22,28 +22,34 @@
                     <strong><label for="name">Nombre del producto</label></strong>
                     <input type="text" id="name" name="name" placeholder="Nombre del Producto" class="camp">
                     <% if(locals.errors && errors.name){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.name.msg %>
-                        </span>
+                        </p>
                         <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
                 <div class="stylediv">
                     <strong><label for="description">Descripción del Producto</label></strong>
                     <textarea name="description" class="camp"> </textarea>
                     <% if(locals.errors && errors.description){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.description.msg %>
-                        </span>
+                        </p>
                         <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
                 <div class="stylediv">
                     <strong><label for="imagen">Imagen del Producto</label></strong>
                     <input class="camp" type="file" id="imagen" name="imagen" accept=".jpg">
                     <% if(locals.errors && errors.imagen){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.imagen.msg %>
-                        </span>
+                        </p>
                         <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
              
                 <div class="stylediv">
@@ -57,30 +63,36 @@
                         <% } %>
                     </select> 
                     <% if(locals.errors && errors.category){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.category.msg %>
-                        </span>
-                        <% } %> 
+                        </p>
+                        <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
 
                 <div class="stylediv">
                     <strong><label for="quantity">Stock</label></strong>
                     <input type="number" id="quantity" name="quantity" placeholder="Cantidad en Stock" class="camp">
                     <% if(locals.errors && errors.quantity){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.quantity.msg %>
-                        </span>
+                        </p>
                         <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
                              
                 <div class="stylediv">
                     <strong><label for="price">Precio</label></strong>
                     <input type="number" id="price" name="price" placeholder="$" class="camp">
                     <% if(locals.errors && errors.price){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.price.msg %>
-                        </span>
+                        </p>
                         <% } %>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
 
                 <div class="stylediv center">

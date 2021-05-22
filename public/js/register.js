@@ -1,22 +1,19 @@
+window.addEventListener ("load", function() {
 const form = document.getElementById("form");
 const inputs = document.querySelectorAll("#form input");
-const terms = document.getElementById("terms");
 
 const expressions = {
-	firstname: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
-	lastname: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
-    date: /^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$/,
-	password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$/, // 8 a 12 digitos.
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	phone: /^\d{10,16}$/ // 10 a 16 numeros.
+	first_name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
+	last_name: /^[a-zA-ZÀ-ÿ\s]{2,40}$/, // Letras y espacios, pueden llevar acentos.
+    phone: /^\d{10,16}$/, // 10 a 16 numeros.
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$/, // 8 a 12 digitos.	
 }
 
 const labels = {
     first_name: false,
     last_name: false,
-    date: false,
     phone: false,
-    avatar: false,
     email: false,
     password: false
 }
@@ -24,18 +21,14 @@ const labels = {
 const validateForm = (e) => {
     switch (e.target.name) {
         case "first_name" :
-            validateLabel(expressions.firstname, e.target, "firstname")
+            validateLabel(expressions.first_name, e.target, "first_name")
         break;
         case "last_name" :
-            validateLabel(expressions.lastname, e.target, "lastname")
+            validateLabel(expressions.last_name, e.target, "last_name")
         break;
-        case "date" :
-            validateLabel(expressions.date, e.target, "date")
         case "phone" :
             validateLabel(expressions.phone, e.target, "phone")
         break;
-        case "avatar" :
-            validateAvatar()
         case "email" :
             validateLabel(expressions.email, e.target, "email")
         break;
@@ -62,18 +55,6 @@ const validateLabel = (expression, input, label) => {
     }
 }
 
-const validateAvatar = () => {
-    if (avatar.value == "") {
-        document.getElementById(`group-${label}`).classList.add("alert-danger")
-        document.getElementById(`group-${label}`).classList.remove("is-valid")
-        labels["avatar"] = false
-    } else {
-        document.getElementById(`group-${label}`).classList.add("is-valid")
-        document.getElementById(`group-${label}`).classList.remove("alert-danger")
-        labels["avatar"] = true
-    }
-}
-
 const validatePassword2 = () => {
     const inputPassword = document.getElementById("password")
     const inputPassword2 = document.getElementById("password2")
@@ -95,29 +76,26 @@ inputs.forEach ((input) => {
 })
 
 form.addEventListener('submit', (e) => {
+    const terms = document.getElementById("terms")
 
     if (labels.first_name && labels.last_name && labels.phone && labels.email && labels.password && terms.checked) {
-
-        inputs.forEach ((input) => {
-            input.classList.remove ("is-valid")
-        })
-
-        Swal.fire({
+        form.reset();
+        Swal.fire ({
             position: 'center',
             icon: 'success',
             title: 'Su Usuario se ha creado Correctamente',
             showConfirmButton: false,
-            timer: 2500
+            timer: 3000
           })
-    } else {
-        e.preventDefault();
-        
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Ingrese los datos correctamente',
-            showConfirmButton: true,
-            timer: 2500
+        } else {
+            e.preventDefault()
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Ingrese los datos correctamente',
+                showConfirmButton: true,
+                timer: 2500
           })
-    }
+        }
+    })
 })

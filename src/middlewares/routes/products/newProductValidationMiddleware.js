@@ -24,10 +24,12 @@ const newProductValidation = [
    body('category').notEmpty().withMessage('Elija una categoría'),
    body('quantity')
                 .notEmpty().withMessage('El campo cantidad es obligatorio').bail()
-                .isNumeric().withMessage('Por favor, ingrese sólo números').bail(),
+                .isNumeric().withMessage('Por favor, ingrese sólo números').bail()
+                .isFloat ({min: 1}).withMessage('El stock no puede ser igual a cero'),
    body('price')
                 .notEmpty().withMessage('El campo precio es obligatorio').bail()
-                .isNumeric().withMessage('Por favor, ingrese sólo números').bail(),
+                .isNumeric().withMessage('Por favor, ingrese sólo números').bail()
+                .isFloat ({min: 1}).withMessage('El precio no puede ser igual a cero'),
   ]
 
   module.exports = newProductValidation;

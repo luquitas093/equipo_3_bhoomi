@@ -23,19 +23,23 @@
                     <strong><label for="name">Modificar Nombre</label></strong>
                     <input type="text" id="name" name="name" placeholder="Ingresar nuevo nombre" class="camp-edit" value = "<%= product.name%>">
                     <% if(locals.errors && errors.name){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.name.msg %>
-                        </span>
+                        </p>
                      <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
                 </div>
                 <div class="stylediv">
                     <strong><label for="description"> Modificar Descripción</label></strong>
                     <textarea name="description" class="camp-edit" value = "<%= product.description%>"> </textarea>
                     <% if(locals.errors && errors.description){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.description.msg %>
-                        </span>
+                        </p>
                      <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
                 </div>
                 <div class="stylediv">
                     <strong><label for="imagen">Agregar y/o Modificar Imagenes</label></strong>
@@ -45,10 +49,12 @@
                     <input type="hidden"  name="oldImagen"  value="<%= product.image%>">
                     <input class="camp-edit" type="file" id="imagen" name="imagen" accept=".jpg" value = " ">
                     <% if(locals.errors && errors.imagen){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.imagen.msg %>
-                        </span>
+                        </p>
                      <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
                 </div>
              
                 <div class="stylediv">
@@ -67,30 +73,36 @@
                         <% } %>
                     </select>
                     <% if(locals.errors && errors.category){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.category.msg %>
-                        </span>
+                        </p>
                      <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
                 </div>
 
                 <div class="stylediv">
                     <strong><label for="quantity">Modificar Stock</label></strong>
                     <input type="number" id="quantity" name="quantity" placeholder="Ingrese nuevo Stock" class="camp-edit" value = "<%= product.quantity%>">
                     <% if(locals.errors && errors.quantity){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.quantity.msg %>
-                        </span>
+                        </p>
                         <%}%>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
                              
                 <div class="stylediv">
                     <strong><label for="price"> Modificar Precio</label></strong>
                     <input type="number" id="price" name="price" placeholder="$" class="camp-edit" value = "<%= product.price%>">
                     <% if(locals.errors && errors.price){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.price.msg %>
-                        </span>
+                        </p>
                         <%}%>
+                        <i class="fire fas fa-fire"></i>
+                        <i class="tree fas fa-tree"></i>
                 </div>
 
                 <div class="stylediv center">

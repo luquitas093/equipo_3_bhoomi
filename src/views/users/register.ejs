@@ -26,9 +26,9 @@
                     <div class = "input-i">
                     <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>" class="formatocampo">
                     <% if(locals.errors && errors.first_name){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.first_name.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
@@ -40,9 +40,9 @@
                     <div class = "input-i">
                     <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
                     <% if(locals.errors && errors.last_name){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.last_name.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
@@ -53,9 +53,9 @@
                     <label for="date">Fecha de Nacimiento</label>
                     <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>">
                     <% if(locals.errors && errors.date){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.date.msg %>
-                        </span>
+                        </p>
                      <%}%>
                 </div>
 
@@ -64,23 +64,22 @@
                     <div class = "input-i">
                     <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value="<%= typeof old != 'undefined' ? old.phone : '' %>">
                     <% if(locals.errors && errors.phone){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.phone.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
                     </div>
-                    p
                 </div>
 
                 <div class="estilodiv" id= "avatar">
                     <label for="avatar">Foto de Usuario</label>
                     <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
                     <% if(locals.errors && errors.avatar){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.avatar.msg %>
-                        </span>
+                        </p>
                      <%}%>
                 </div>
 
@@ -89,9 +88,9 @@
                     <div class = "input-i">
                     <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value="<%= typeof old != 'undefined' ? old.email : '' %>">
                     <% if(locals.errors && errors.email){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.email.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
@@ -103,9 +102,9 @@
                     <div class = "input-i">
                     <input type="password" id="password" name="password" class="formatocampo">
                     <% if(locals.errors && errors.password){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.password.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
@@ -117,9 +116,9 @@
                     <div class = "input-i">
                     <input type="password" id="password2" name="password2" class="formatocampo">
                     <% if(locals.errors && errors.password2){%>
-                        <span class="error">
+                        <p class="error">
                           <%= errors.password2.msg %>
-                        </span>
+                        </p>
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
