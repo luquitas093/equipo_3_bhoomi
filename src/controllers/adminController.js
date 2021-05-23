@@ -21,7 +21,7 @@ module.exports = {
         })
         .catch(error => res.send (error))
     },
-    create: (req,res)=> {
+    create: (req,res) => {
         db.Category.findAll()
         .then (function(categories){
             return res.render(path.resolve(__dirname, '../views/admin/newProduct.ejs'), {

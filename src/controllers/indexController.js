@@ -27,7 +27,10 @@ module.exports = {
             include: [ {association: 'category'} ]
         })
         .then(results => {
-            return res.render (path.resolve (__dirname, "../views/web/index.ejs"), {results, titulo: 'Bhoomi - Cosmetica Natural'})
+            return res.render (path.resolve (__dirname, "../views/products/productList.ejs"), {
+                titulo: 'Bhoomi - Resultados de Búsqueda',
+                products: results
+            })
         })
         .catch(error => res.send(error))
     }

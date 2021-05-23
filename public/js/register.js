@@ -1,4 +1,3 @@
-window.addEventListener ("load", function() {
 const form = document.getElementById("form");
 const inputs = document.querySelectorAll("#form input");
 
@@ -37,6 +36,7 @@ const validateForm = (e) => {
             validatePassword2()
         break;
         case "password2" :
+            validateLabel(expressions.password, e.target, "password2")
             validatePassword2()
         break;
     }
@@ -76,26 +76,10 @@ inputs.forEach ((input) => {
 })
 
 form.addEventListener('submit', (e) => {
-    const terms = document.getElementById("terms")
 
-    if (labels.first_name && labels.last_name && labels.phone && labels.email && labels.password && terms.checked) {
-        form.reset();
-        Swal.fire ({
-            position: 'center',
-            icon: 'success',
-            title: 'Su Usuario se ha creado Correctamente',
-            showConfirmButton: false,
-            timer: 3000
-          })
+    if (labels.first_name == true && labels.last_name == true && labels.phone == true && labels.email == true && labels.password == true && terms.checked) {
+          form.submit();
         } else {
             e.preventDefault()
-            Swal.fire({
-                position: 'center',
-                icon: 'error',
-                title: 'Ingrese los datos correctamente',
-                showConfirmButton: true,
-                timer: 2500
-          })
         }
     })
-})

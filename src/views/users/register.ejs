@@ -5,9 +5,6 @@
     <link rel="stylesheet" href="/css/styles-register.css">
 
 <body>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <%- include("../partials/header.ejs")%>
 
     <!-- FORMULARIO REGISTRO -->
@@ -21,7 +18,7 @@
         <section class="registro">
             <form id="form" class="formularioregistro" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
 
-                <div class="estilodiv" id= "group-firstname">
+                <div class="estilodiv" id= "group-first_name">
                     <label for="first_name">Nombre</label>
                     <div class = "input-i">
                     <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value="<%= typeof old != 'undefined' ? old.first_name : '' %>" class="formatocampo">
@@ -35,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="estilodiv" id= "group-lastname">
+                <div class="estilodiv" id= "group-last_name">
                     <label for="last_name">Apellido</label>
                     <div class = "input-i">
                     <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value="<%= typeof old != 'undefined' ? old.last_name : '' %>">
@@ -51,7 +48,7 @@
 
                 <div class="estilodiv" id= "date">
                     <label for="date">Fecha de Nacimiento</label>
-                    <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>">
+                    <input type="date" id="date" name="date" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>">
                     <% if(locals.errors && errors.date){%>
                         <p class="error">
                           <%= errors.date.msg %>

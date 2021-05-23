@@ -29,5 +29,20 @@ module.exports = {
             })
         })
         .catch(error => res.send(error))
-    }
+    },
+    categories: (req, res) => {
+       const categories = db.Category.findAll();
+       const products = db.Product.findAll({
+           where: {categoryId : req.params.id},
+           include: [{association: 'category'}]
+       })
+       Promise.all([products,categories])
+       .then(([products,categories]) => {
+        return res.render(path.resolve(__dirname, '../views/products/productList.ejs'), {
+            titulo: 'Bhoomi - Listado de Productos',
+            products: products,
+            categories: categories
+       })   
+    })
+    },
 }

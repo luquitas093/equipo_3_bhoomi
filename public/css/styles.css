@@ -27,7 +27,6 @@ a {
 	position: fixed;
 	top: 0vh;
 	left: 0vw;
-	position: absolute;
 }
 
 /*MENU HAMBURGUESA*/
@@ -642,7 +641,6 @@ article img {
 		width: 100%;
 		height: 8vh;
 		margin: auto;
-		position: absolute;
 	}
 
 	.mediaquery-menu-list li {
