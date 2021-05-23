@@ -17,9 +17,10 @@
             <h1 class="encabezado">¿Qué vas a vender?</h1>
         </section>
         <section class="newProduct">
-            <form class="formularioproducto" action="/administrador/crearproducto" method="POST" enctype="multipart/form-data">
-                <div class="stylediv">
+            <form id="form" class="formularioproducto" action="/administrador/crearproducto" method="POST" enctype="multipart/form-data">
+                <div class="stylediv" id= "group-name">
                     <strong><label for="name">Nombre del producto</label></strong>
+                    <div class = "input-i">
                     <input type="text" id="name" name="name" placeholder="Nombre del Producto" class="camp">
                     <% if(locals.errors && errors.name){%>
                         <p class="error">
@@ -28,9 +29,11 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        </div>
                 </div>
-                <div class="stylediv">
+                <div class="stylediv" id= "group-description">
                     <strong><label for="description">Descripción del Producto</label></strong>
+                    <div class = "input-i">
                     <textarea name="description" class="camp"> </textarea>
                     <% if(locals.errors && errors.description){%>
                         <p class="error">
@@ -39,8 +42,9 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        </div>
                 </div>
-                <div class="stylediv">
+                <div class="stylediv"id= "group-imagen">
                     <strong><label for="imagen">Imagen del Producto</label></strong>
                     <input class="camp" type="file" id="imagen" name="imagen" accept=".jpg">
                     <% if(locals.errors && errors.imagen){%>
@@ -52,8 +56,9 @@
                         <i class="tree fas fa-tree"></i>
                 </div>
              
-                <div class="stylediv">
+                <div class="stylediv" id= "group-category">
                     <strong><label for="category">Categoría</label></strong>
+                    <div class = "input-i">
                     <select name="category">
                         <option value="#" selected disabled>Seleccione una opcion...</option>
                         <% for (let i = 0; i < categories.length; i++) { %>
@@ -69,10 +74,12 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        </div>
                 </div>
 
-                <div class="stylediv">
+                <div class="stylediv" id= "group-quantity">
                     <strong><label for="quantity">Stock</label></strong>
+                    <div class = "input-i">
                     <input type="number" id="quantity" name="quantity" placeholder="Cantidad en Stock" class="camp">
                     <% if(locals.errors && errors.quantity){%>
                         <p class="error">
@@ -81,10 +88,12 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        </div>
                 </div>
                              
-                <div class="stylediv">
+                <div class="stylediv" id= "group-price">
                     <strong><label for="price">Precio</label></strong>
+                    <div class = "input-i">
                     <input type="number" id="price" name="price" placeholder="$" class="camp">
                     <% if(locals.errors && errors.price){%>
                         <p class="error">
@@ -93,6 +102,7 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                    </div>
                 </div>
 
                 <div class="stylediv center">
@@ -108,6 +118,7 @@
     </main>
 
     <%- include("../partials/footer.ejs")%>
+    <script src="js/newProduct.js"></script>
     
 </body>
 
