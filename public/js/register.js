@@ -75,11 +75,12 @@ inputs.forEach ((input) => {
     input.addEventListener('blur', validateForm)
 })
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', function(e) {
+    const terms = document.getElementById("terms")
 
-    if (labels.first_name == true && labels.last_name == true && labels.phone == true && labels.email == true && labels.password == true && terms.checked) {
-          form.submit();
+    if (labels.first_name === true && labels.last_name === true && labels.phone === true && labels.email === true && labels.password === true) {
+        form.submit()
         } else {
             e.preventDefault()
         }
-    })
+})

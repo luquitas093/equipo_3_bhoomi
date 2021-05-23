@@ -66,11 +66,11 @@ body{
     opacity: 0;
 }
 
-.alert-danger .formatocampo{
+.alert-danger .camp{
     border: 2px solid #bb2929;
 }
 
-.alert-danger .formatocampo label{
+.alert-danger .camp label{
     color: #bb2929
     
 }
@@ -78,6 +78,15 @@ body{
 .alert-danger .fire {
     color: #bb2929;
     opacity: 1;
+}
+
+.is-valid .camp {
+    border: 2px solid #9DD274;
+}
+
+.is-valid .camp label{
+    color: #9DD274
+    
 }
 
 .is-valid .tree{

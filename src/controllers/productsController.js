@@ -34,7 +34,7 @@ module.exports = {
        const categories = db.Category.findAll();
        const products = db.Product.findAll({
            where: {categoryId : req.params.id},
-           include: [{association: 'category'}]
+           include: [{association: "category"}]
        })
        Promise.all([products,categories])
        .then(([products,categories]) => {

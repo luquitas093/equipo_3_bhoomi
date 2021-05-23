@@ -67,6 +67,15 @@ body{
     opacity: 1;
 }
 
+.is-valid .formatocampo {
+    border: 2px solid #9DD274;
+}
+
+.is-valid .formatocampo label{
+    color: #9DD274
+    
+}
+
 .is-valid .tree{
     color: #9DD274;
     opacity: 1;
