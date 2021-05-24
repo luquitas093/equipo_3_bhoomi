@@ -14,6 +14,21 @@ a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.title-best-products {
+	width: 90%;
+	margin: auto;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.title-best-products h3 {
+	width: 100%;
+	padding: 0.8rem;
+	text-align: center;
+	color: #35120B;
+	border: 2px dotted #35120B
+}
+
 /* CONTENEDOR DEL MENU, EL LOGO, LA BUSQUEDA Y EL CARRITO */
 
 .main-header {
