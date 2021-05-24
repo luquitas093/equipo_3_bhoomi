@@ -16,7 +16,6 @@ app.use (express.static (publicPath));
 // Configuracion template engine - EJS
 
 app.set("view engine", "ejs");
-app.set("views", "src/views");
 
 // Configuración Metodo POST
 
@@ -38,7 +37,7 @@ app.use(session({
 app.use(cookies());
 
 //Middleware de Logueo
-const userLoggedMiddleware = require('./src/middlewares/applications/userLoggedMiddleware.js');
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 app.use(userLoggedMiddleware);
 
 // Llamado a las Rutas
@@ -58,10 +57,16 @@ app.use ("/carrito", cartRoutes);
 const userRoutes = require ("./src/routes/userRouter.js");
 app.use ("/usuarios", userRoutes);
 
-app.use(function (req, res, next) {
-    //console.log(res.status() + "-----------------------")
-    res.status(404).render("error")
-});
+//Rutas API
+
+const apiUserRoutes=require("./src/routes/api/apiUserRouter.js");
+app.use("/users", apiUserRoutes);
+
+const apiCategoriesRoutes=require("./src/routes/api/apiCategoriesRouter.js");
+app.use("/categories", apiCategoriesRoutes);
+
+const apiProductRoutes=require("./src/routes/api/apiProductRouter.js");
+app.use("/products", apiProductRoutes);
 
 //Levantar el Servidor
 
