@@ -10,11 +10,46 @@ body {
     padding-top: 10vh;
 }
 
-.total-profile {
+/*NOMBRE DE USUARIO*/
+
+.user-profilename {
     text-align: center;
-    margin: auto;
+    padding: 1rem;
+    font-style: italic;
+    display: block;
+    color: #35120B;
+    width: 100%;
+    border-bottom: 0.5px dotted #35120B
+}
+
+.total {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.total-box {
     width: 100%;
     padding: 1rem;
+    border-bottom: 0.5px dotted #35120B 
+}
+
+.title-total-box {
+    text-align: center;
+    padding: 0.5rem;
+    color: #35120B;
+}
+
+.title-total-box i {
+    margin-right: 0.5rem;
+    color: #35120B;
+}
+
+.user-avatar {
+    text-align: center;
+    padding: 0.3rem;
 }
 
 .user-avatar img {
@@ -22,18 +57,11 @@ body {
     height: auto;
     margin: auto;
 }
-/*NOMBRE DE USUARIO*/
-
-.user-profilename {
-    padding: 1rem;
-    font-style: italic;
-    display: block;
-    color: #35120B;
-}
 
 /*TEXTOS CON INFORMACIÓN DEL PERFIL DEL USUARIO*/
 
 .profile-text {
+    max-width: 100%;
     padding: 0.5rem;
     font-size: 0.8rem;
     font-style: italic;
@@ -41,15 +69,28 @@ body {
     color: #35120B;
 }
 
+.profile-text a {
+        text-decoration: underline;
+        font-size: 0.8rem;
+        font-style: italic;
+        display: block;
+        color: #35120B;
+}
+
 /*BOTONES*/
 
 .buttons {
+    display: flex;
     height: auto;
     margin: auto;
     text-align: center;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
+    padding: 1.2rem;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons form {
+    margin-left: 0.7rem;
 }
 
 .button-profile {
@@ -71,8 +112,17 @@ body {
 /*MEDIA QUERY*/
 
 @media (min-width: 481px) {
-    .total-profile {
-        padding-top: 8vh;
+    .user-profilename {
+        padding-top: 10vh;
+    }
+    .total {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .total-box {
+        width: 45%;
+        height: auto;
     }
 }
 
@@ -90,6 +140,10 @@ body {
     }
 
     .profile-text {
+        font-size: 1rem;
+    }
+
+    .profile-text a {
         font-size: 1rem;
     }
 

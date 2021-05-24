@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include("../partials/head.ejs")%>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/styles-register.css">
 
 <body>
@@ -17,54 +18,111 @@
             <h1 class="encabezado"> Editar Perfil</h1>
         </section>
         <section class="registro">
-            <form class="formularioregistro" action="/usuarios/perfil/editarperfil" method="POST" enctype="multipart/form-data">
+            <form id="form" class="formularioregistro" action="/usuarios/perfil/editarperfil?_method=PUT" method="POST" enctype="multipart/form-data">
 
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-first_name">
                     <label for="first_name">Nombre</label>
-                    <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value = " " class="formatocampo" required>
+                    <div class = "input-i">
+                    <input type="text" id="first_name" name="first_name" placeholder="Indique su nombre" value = "<%=locals.userLogged.firstName%>" class="formatocampo">
+                    <% if(locals.errors && errors.first_name){%>
+                        <p class="error">
+                          <%= errors.first_name.msg %>
+                        </p>
+                     <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo nombre es obligatorio y debe tener al menos dos letras</p>
+                    </div>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-last_name">
                     <label for="last_name">Apellido</label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value = " " required>
+                    <div class = "input-i">                    
+                    <input type="text" id="last_name" name="last_name" placeholder="Indique su apellido" class="formatocampo" value = "<%=locals.userLogged.lastName%>">
+                    <% if(locals.errors && errors.last_name){%>
+                        <p class="error">
+                          <%= errors.last_name.msg %>
+                        </p>
+                     <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo apellido es obligatorio y debe tener al menos dos letras</p>
+                     </div>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-date">
                     <label for="date">Fecha de Nacimiento</label>
-                    <input type="date" id="date" name="date" value="2021/01/19" min="2003/01/19" class="formatocampo" value = " " required>
+                    <div class = "input-i">
+                    <input type="date" id="date" name="date" class="formatocampo" value = "<%=locals.userLogged.date%>">
+                    <% if(locals.errors && errors.date){%>
+                        <p class="error">
+                          <%= errors.date.msg %>
+                        </p>
+                     <%}%>
+                     <p class= "danger-error">La fecha de nacimiento es obligatoria</p>
+                    </div>
                 </div>
 
-                <div class="estilodiv">
-                    <label for="address">Domicilio</label>
-                    <input type="text" id="address" name="address" placeholder="Indique su domicilio" class="formatocampo" value = " " required>
-                </div>
-
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-phone">
                     <label for="phone">Teléfono</label>
-                    <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value = " " required>
+                    <div class = "input-i">
+                    <input type="number" id="phone" name="phone" placeholder="Indique su N° de teléfono" class="formatocampo" value = "<%=locals.userLogged.phone%>">
+                    <% if(locals.errors && errors.phone){%>
+                        <p class="error">
+                          <%= errors.phone.msg %>
+                        </p>
+                     <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">Ingresa tu número con el prefijo adelante sin el cero</p>
+                    </div>
                 </div>
-                <div class="estilodiv">
+
+                <div class="estilodiv" id="group-avatar">
                     <label for="avatar">Foto de Usuario</label>
+                    <div class = "input-i">
                     <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
-                </div>
-                <div class="estilodiv">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: tunombre@email.com" class="formatocampo" value = " " required>
+                    <% if(locals.errors && errors.avatar){%>
+                        <p class="error">
+                          <%= errors.avatar.msg %>
+                        </p>
+                     <%}%>
+                     <p class= "danger-error">Por favor, ingrese un avatar en formato .jpg, .jpeg, .png o .gif</p>
+                    </div>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-password">
                     <label for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" class="formatocampo" required>
+                    <div class = "input-i">
+                      <input type="password" id="password" name="password" class="formatocampo">
+                      <% if(locals.errors && errors.password){%>
+                          <p class="error">
+                            <%= errors.password.msg %>
+                          </p>
+                       <%}%>
+                       <i class="fire fas fa-fire"></i>
+                       <i class="tree fas fa-tree"></i>
+                       <p class= "danger-error">El campo contraseña es obligatorio y debe tener más de 8 caracteres</p>
+                    </div>
                 </div>
 
-                <div class="estilodiv">
+                <div class="estilodiv" id="group-password2">
                     <label for="password2">Confirmar contraseña</label>
-                    <input type="password" id="password2" name="password2" class="formatocampo" required>
+                    <div class = "input-i">
+                    <input type="password" id="password2" name="password2" class="formatocampo">
+                    <% if(locals.errors && errors.password2){%>
+                        <p class="error">
+                          <%= errors.password2.msg %>
+                        </p>
+                     <%}%>
+                     <i class="fire fas fa-fire"></i>
+                     <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">¡Ey! Dedos Mágicos, las contraseñas ingresadas tienen que coincidir</p>
+                     </div>
                 </div>
-
 
                 <div class="estilodiv center">
-                    <input type="reset" value="Borrar" class="button">
+                    <input type="reset" id="reset" value="Borrar" class="button">
                     <input type="submit" value="Actualizar" class="button">
 
                 </div>
@@ -75,6 +133,7 @@
     </main>
 
     <%- include("../partials/footer.ejs")%>
+    <script src="/js/editProfile.js"></script>
     
 </body>
 

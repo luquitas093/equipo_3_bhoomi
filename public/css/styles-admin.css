@@ -57,6 +57,14 @@ main {
     font-size: 0.8rem;
 }
 
+button {
+    background-color: #F5E7D9 ;
+    color: #35120B;
+    border-color: #35120B;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
 @media (min-width: 481px) {
     .admin-products {
         padding-top: 10vh;

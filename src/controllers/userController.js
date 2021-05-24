@@ -128,32 +128,45 @@ module.exports = {
       });
       },
       editprofile: (req, res) => {
-        let profile = db.User.findByPk(req.session.userLogged.id,{include:["role"]});
-        //console.log(req.session.userLogged);
-        Promise.all([profile])
-        .then(function([users]) {
-            return res.render(path.resolve(__dirname, '../views/users/editProfile.ejs') ,{
-                titulo: "Bhoomi - Editar Perfil",
-                user: req.session.userLogged,
-                profile: users                
-            })
+        return res.render (path.resolve (__dirname, "../views/users/editProfile.ejs"), {
+          titulo: 'Bhoomi - Editar Perfil',
         })
       },
-      editprocess: (req,res)=>{
-        db.User.update({
-          firstName: req.body.first_name,
-          lastName: req.body.last_name,
-          date: req.body.date,
-          phone: req.body.phone,
-          avatar:  req.file ? req.file.filename : '',
-          email: req.body.email,
-          passwordHash: bcrypt.hashSync(req.body.password, 10),
-          roleId: 2
-        }, {
-          where: {
-            id:req.params.id
+      editprocess: (req,res)=> {
+
+        let resultValidation = validationResult (req);
+  
+        if (!resultValidation.isEmpty()) {
+            return res.render (path.resolve (__dirname, "../views/users/editProfile.ejs"), {
+              titulo: 'Bhoomi - Editar Perfil',
+              errors: resultValidation.mapped(),
+              old: req.body
+              })
+        } else {
+          db.User.update ({
+            ...req.body,
+          }, {
+            where : {
+              id : req.session.userLogged.id
+              }
+            })
+          .then ( userEdit => {
+            return res.redirect ("/usuarios/perfil")
+          })
+          .catch ((error) => {
+            return res.send (error);
+          })
+        }
+    },
+    delete: (req,res) => {
+      db.User.destroy(
+          {where: {
+            email: req.session.userLogged.email
             }
-          });
-          res.redirect("/profile/"+req.params.id);
-      },
+          }
+      )
+      req.session.destroy();
+      res.clearCookie('email');
+      res.redirect ("/")
+  }
 }

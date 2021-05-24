@@ -138,5 +138,39 @@ module.exports = {
         })
         .catch(error => res.send (error))
         
+    },
+    users: (req,res) => {
+        db.User.findAll({
+            include: [{association: "role"}]
+        })
+        .then (users => {
+            return res.render(path.resolve(__dirname, '../views/admin/adminUsers.ejs'), {
+                titulo: 'Bhoomi - Administrador',
+                users: users,
+            });
+        })
+        .catch(error => res.send (error))
+    },
+    viewprofile : (req, res) => {
+        let profile = db.User.findByPk(req.params.id,{include:["role"]});
+        Promise.all([profile])
+        .then(function([users]) {
+            //return res.send (users)
+            return res.render(path.resolve(__dirname, '../views/users/profile.ejs') ,{
+                titulo: "Bhoomi - Ver Perfil",
+                user: users,
+            })
+        })
+    },
+    banner: (req, res) => {
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then (bannerUser => {
+            res.redirect('/administrador/usuarios');
+        })
+        .catch(error => res.send (error))
     }
 }

@@ -93,10 +93,9 @@
             <select>
                 <label>Elegí con que combinarlo</label>
                 <option value="#" selected disabled>Para Combinar...</option>
-                <option name="acondicionador1">Acondicionador para cabello reseco</option>
-                <option name="jabón1">Jabón corporal de rosa mosqueta</option>
-                <option name="exfoliante1">Exfoliante facial de café y azúcar</option>
-                <option name="balsamo-labial1">Bálsamo labial de cacao</option>
+                <% for(let i= 0; i < 4; i++){ %>
+                <option name="<%= products[i].id%>"><%= products[i].name%></option>
+                <% } %>
             </select>
         </section>
 

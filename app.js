@@ -16,6 +16,7 @@ app.use (express.static (publicPath));
 // Configuracion template engine - EJS
 
 app.set("view engine", "ejs");
+app.set("views", "src/views");
 
 // Configuración Metodo POST
 
@@ -37,7 +38,7 @@ app.use(session({
 app.use(cookies());
 
 //Middleware de Logueo
-const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./src/middlewares/applications/userLoggedMiddleware.js');
 app.use(userLoggedMiddleware);
 
 // Llamado a las Rutas
@@ -56,6 +57,11 @@ app.use ("/carrito", cartRoutes);
 
 const userRoutes = require ("./src/routes/userRouter.js");
 app.use ("/usuarios", userRoutes);
+
+app.use(function (req, res, next) {
+    //console.log(res.status() + "-----------------------")
+    res.status(404).render("error")
+});
 
 //Rutas API
 

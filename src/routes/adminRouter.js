@@ -9,7 +9,8 @@ const adminController = require(path.resolve(__dirname,"../controllers/adminCont
 
 const newProductValidation = require ("../middlewares/routes/products/newProductValidationMiddleware.js")
 const editProductValidation = require ("../middlewares/routes/products/editProductValidationMiddleware.js")
-const roleMiddleware = require ("../middlewares/routes/users/roleMiddleware.js")
+const roleMiddleware = require ("../middlewares/routes/users/roleMiddleware.js");
+const { route } = require("./productsRouter.js");
 
 //Setear el Storage de Multer
 
@@ -42,5 +43,14 @@ router.put('/editarproducto/:id', upload.single('imagen'), editProductValidation
 
 //Borrar Producto
 router.get('/borrarproducto/:id', roleMiddleware, adminController.destroy);
+
+//Pantalla del Administrador - Panel de Usuario
+router.get ('/usuarios', roleMiddleware, adminController.users)
+
+// Ver perfil de Usuario
+router.get ('/usuarios/perfil/:id', roleMiddleware, adminController.viewprofile)
+
+//Borrar Producto
+router.post('/usuarios/bannearusuario/:id', roleMiddleware, adminController.banner);
 
 module.exports = router;

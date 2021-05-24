@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-admin.css">
+
+<body>
+
+    <%- include("../partials/header.ejs")%>
+
+    <!-- TABLERO ADMINISTRADOR -->
+    <main class = "main-admin">
+
+        <%- include("../partials/menuMediaQuery.ejs")%>
+
+         <section class = "admin-products">
+           <h1 class = "encabezado-admin">Administrador de Usuarios</h1>
+          <table class = "table-products">
+              <thead>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Ver</th>
+                  <th>Rol</th>
+                  <th>Bannear</th>
+              </thead>
+              <tbody>
+                  <% for (let i = 0; i < users.length; i++) { %>
+                <tr>
+                    <td><%=users[i].id%></td>
+                    <td><%=users[i].firstName%></td>
+                    <td><%=users[i].lastName%></td>
+                    <td><a href="/administrador/usuarios/perfil/<%= users[i].id%> "><i class="fas fa-eye"></i></a></td>
+                    <td><%=users[i].roleId%></td>
+                    <td><form action="/usuarios/bannearusuario/<%= users[i].id%>" method="POST"><button><i class="fas fa-user-slash"></i></button></i></i></form></td>
+                </tr>
+                <% } %>
+              </tbody>
+          </table>
+    </main>
+
+    <%- include("../partials/footer.ejs")%>
+    
+</body>
+
+</html>

@@ -21,7 +21,8 @@ const authMiddleware = require ("../middlewares/routes/users/authMiddleware.js")
 //Requerir Middlewares de Validacion
 
 const loginValidation = require ("../middlewares/routes/users/loginValidationMiddleware.js");
-const registerValidation = require ("../middlewares/routes/users/registerValidationMiddleware")
+const registerValidation = require ("../middlewares/routes/users/registerValidationMiddleware.js")
+const editProfileValidation = require ("../middlewares/routes/users/editProfileValidationMiddleware.js")
 
 //Setear el Storage de Multer
 
@@ -51,7 +52,8 @@ router.get ('/perfil', authMiddleware, userController.profile);
 
 //Formulario de Edición del Usuario
 router.get ('/perfil/editarperfil', userController.editprofile);
-router.post('/perfil/editarperfil',userController.editprocess);
+router.put('/perfil/editarperfil', upload.single('avatar'), editProfileValidation, userController.editprocess);
+router.post('/perfil/borrarperfil', userController.delete)
 
 //Cerrar Sesión
 router.get('/cerrarsesion', userController.logout);

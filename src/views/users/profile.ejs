@@ -12,21 +12,58 @@
             <main class="main-userprofile">
                 <%- include("../partials/menuMediaQuery.ejs")%>
 
-                <section class="total-profile">
-                    <h3 class= "user-profilename">¡Bienvenido! <%= user.firstName%> <%= user.lastName%></h3> <!--Ávatar del usuario-->
-                    <figure class="user-avatar">
-                        <img src = "/img/users/<%= user.avatar%>"> <!--Imagen de perfil-->
-                    </figure>
-                    <article class= "details">
-                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Correo: <%= user.email%></h6><!--Correo electrónico usuario-->
-                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Cumpleaños: <%= user.date%></h6><!--Cumpleaños del usuario-->
-                    <h6 class= "profile-text"><i class="fab fa-envira"></i> Teléfono: <%= user.phone%></h6><!--Teléfono de contacto usuario-->
+                <h3 class= "user-profilename">¡Hola! <%= user.firstName%> <%= user.lastName%></h3> <!--Ávatar del usuario-->
+
+                <div class="total">
+                    <section class="total-box">
+                        <h4 class="title-total-box"><i class="fas fa-user"></i>MIS DATOS</h4>
+                        <figure class="user-avatar">
+                            <img src = "/img/users/<%= user.avatar%>"> <!--Imagen de perfil-->
+                        </figure>
+                        <article class= "details">
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Nombre: <%= user.firstName%></h6>
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Apellido: <%= user.lastName%></h6>
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Mail: <%= user.email%></h6><!--Correo electrónico usuario-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Cumpleaños: <%= user.date%></h6><!--Cumpleaños del usuario-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Teléfono: <%= user.phone%></h6><!--Teléfono de contacto usuario-->
+                        </article>
+                        <nav class="buttons">
+                            <a href="/usuarios/perfil/editarperfil"class="button-profile">Editar Perfil</a> <!--Botón editar perfil-->
+                            <form action="/usuarios/perfil/borrarperfil" method="POST">
+                                <button class="button-profile">Eliminar Perfil</i></button>
+                            </form>
+                            </nav>       
+                    </section>
+                    <section class="total-box">
+                        <h4 class="title-total-box"><i class="fas fa-map-marked-alt"></i>MIS DIRECCIONES</h4>
+                        <article class= "details">
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Calle:</h6><!--Correo electrónico usuario-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Número:</h6><!--Cumpleaños del usuario-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Piso/Depto.:</h6>
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> C.P.:</h6><!--Teléfono de contacto usuario-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Ciudad:</h6>
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Provincia:</h6>
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> País:</h6>
                     </article>
-                </section>
-                    <nav class="buttons">
-                    <a href="/#"class="button-profile">HISTORIAL DE COMPRAS</a><!--Botón ir al historial de compras-->
-                    <a href="/usuarios/perfil/editarperfil"class="button-profile">EDITAR PERFIL</a> <!--Botón editar perfil-->
-                    </nav>       
+                        <nav class="buttons">
+                            <a href="/#"class="button-profile">Agregar Dirección</a><!--Botón ir al historial de compras-->
+                            </nav>  
+                    </section>
+                    <section class="total-box">
+                        <h4 class="title-total-box"><i class="fas fa-shopping-basket"></i>MIS COMPRAS</h4>
+                        <article class= "details">
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Orden: </h6><!--Número de Orden de la compra-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Fecha:</h6><!--Fecha de la compra-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Pago:</h6><!--Status de pago-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Entregado:</h6><!--Status de entrega-->
+                        <h6 class= "profile-text"><i class="fab fa-envira"></i> Total:</h6><!--Total de la compra-->
+                        <h6 class= "profile-text"><a href="/carrito">Ver detalle</a></h6><!--Detalle de la compra-->
+                        </article>
+                        <nav class="buttons">
+                            <a href="/#"class="button-profile">Historial de Compras</a><!--Botón ir al historial de compras-->
+                            </nav>  
+                    </section>
+                </div>     
             </main>
 
             <!--************************************************************************************************************
