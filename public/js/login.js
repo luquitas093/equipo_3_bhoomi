@@ -46,6 +46,11 @@ window.addEventListener('load',function(){
             form.submit();
             } else {
                 e.preventDefault()
+                form.reset()
+                document.getElementById("group-email").classList.remove('is-valid')
+                document.getElementById("group-email").classList.remove('alert-danger')
+                document.getElementById("group-password").classList.remove('is-valid')
+                document.getElementById("group-password").classList.remove('alert-danger')
             }
         })
 })

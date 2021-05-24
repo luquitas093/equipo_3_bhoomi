@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include("../partials/head.ejs")%>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/styles-newProduct.css">
 
 <body>
@@ -29,19 +30,19 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">El campo nombre es obligatorio y debe tener más de 5 caracteres</p>
                         </div>
                 </div>
                 <div class="stylediv" id= "group-description">
                     <strong><label for="description">Descripción del Producto</label></strong>
                     <div class = "input-i">
-                    <textarea name="description" class="camp"> </textarea>
+                    <textarea id="description" name="description" class="camp"> </textarea>
                     <% if(locals.errors && errors.description){%>
                         <p class="error">
                           <%= errors.description.msg %>
                         </p>
                         <% } %>
-                        <i class="fire fas fa-fire"></i>
-                        <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">El campo descripción es obligatorio y debe tener más de 20 caracteres</p>
                         </div>
                 </div>
                 <div class="stylediv"id= "group-imagen">
@@ -52,8 +53,7 @@
                           <%= errors.imagen.msg %>
                         </p>
                         <% } %>
-                        <i class="fire fas fa-fire"></i>
-                        <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">Por favor, ingrese un avatar en formato .jpg, .jpeg, .png o .gif</p>
                 </div>
              
                 <div class="stylediv" id= "group-category">
@@ -72,8 +72,7 @@
                           <%= errors.category.msg %>
                         </p>
                         <% } %>
-                        <i class="fire fas fa-fire"></i>
-                        <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">Por favor, seleccione una de las categorías</p>
                         </div>
                 </div>
 
@@ -88,6 +87,7 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">El campo stock es obligatorio y debe ser mayor a 0</p>
                         </div>
                 </div>
                              
@@ -102,11 +102,12 @@
                         <% } %>
                         <i class="fire fas fa-fire"></i>
                         <i class="tree fas fa-tree"></i>
+                        <p class= "danger-error">El campo precio es obligatorio y debe ser mayor a 0</p>
                     </div>
                 </div>
 
                 <div class="stylediv center">
-                    <input type="reset" value="Borrar" class="button">
+                    <input type="reset" id="reset" value="Borrar" class="button">
                     <input type="submit" value="Crear Producto" class="button"> 
                 </div>
 

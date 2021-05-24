@@ -23,13 +23,19 @@ module.exports = {
         .catch(error => res.send(error))
     },
     detail: (req,res) => {
-        db.Product.findByPk(req.params.id, {
+        const products = db.Product.findAll({
             include: [{association: "category"}]
         })
-        .then (function(product) {
+        const product = db.Product.findByPk(req.params.id, {
+            include: [{association: "category"}]
+        })
+        Promise.all ([products, product])
+        .then (function([products, product]) {
             return res.render(path.resolve(__dirname,'../views/products/productDetail.ejs'), {
                 titulo: 'Bhoomi - Detalle Producto',
-                product: product
+                product: product,
+                products: products
+
             })
         })
         .catch(error => res.send(error))

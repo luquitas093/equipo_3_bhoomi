@@ -333,6 +333,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     margin: auto;
+    font-weight: bold;
 }
 
 .related-product{

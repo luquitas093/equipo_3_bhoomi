@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include("../partials/head.ejs")%>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/styles-register.css">
 
 <body>
@@ -29,6 +30,7 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo nombre es obligatorio y debe tener al menos dos letras</p>
                     </div>
                 </div>
 
@@ -43,10 +45,11 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo apellido es obligatorio y debe tener al menos dos letras</p>
                     </div>
                 </div>
 
-                <div class="estilodiv" id= "date">
+                <div class="estilodiv" id= "group-date">
                     <label for="date">Fecha de Nacimiento</label>
                     <input type="date" id="date" name="date" class="formatocampo" value="<%= typeof old != 'undefined' ? old.date : '' %>">
                     <% if(locals.errors && errors.date){%>
@@ -54,6 +57,7 @@
                           <%= errors.date.msg %>
                         </p>
                      <%}%>
+                     <p class= "danger-error">La fecha de nacimiento es obligatoria</p>
                 </div>
 
                 <div class="estilodiv" id= "group-phone">
@@ -67,10 +71,11 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">Ingresa tu número con el prefijo adelante sin el cero</p>
                     </div>
                 </div>
 
-                <div class="estilodiv" id= "avatar">
+                <div class="estilodiv" id= "group-avatar">
                     <label for="avatar">Foto de Usuario</label>
                     <input type="file" id="avatar" name="avatar" accept=".jpg" class="formatocampo">
                     <% if(locals.errors && errors.avatar){%>
@@ -78,6 +83,7 @@
                           <%= errors.avatar.msg %>
                         </p>
                      <%}%>
+                     <p class= "danger-error">Por favor, ingrese un avatar en formato .jpg, .jpeg, .png o .gif</p>
                 </div>
 
                 <div class="estilodiv" id= "group-email">
@@ -91,6 +97,7 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo email es obligatorio. ¡Psst! no te olvides del arroba y del dominio</p>
                     </div>
                 </div>
 
@@ -105,6 +112,7 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">El campo contraseña es obligatorio y debe tener más de 8 caracteres</p>
                     </div>
                 </div>
 
@@ -119,6 +127,7 @@
                      <%}%>
                      <i class="fire fas fa-fire"></i>
                      <i class="tree fas fa-tree"></i>
+                     <p class= "danger-error">¡Ey! Dedos Mágicos, las contraseñas ingresadas tienen que coincidir</p>
                     </div>
                 </div>
 
@@ -134,7 +143,7 @@
                 </div>
 
                 <div class="estilodiv center">
-                    <input type="reset" value="Borrar" class="button">
+                    <input type="reset" id="reset" value="Borrar" class="button">
                     <input type="submit" value="Registrarme" class="button">
 
                 </div>
