@@ -152,7 +152,9 @@ body{
 .error {
     padding-top: 0.5rem;
     font-size: 0.8rem;
-    color: rgb(11, 68, 11)
+    color:#35120B;
+    font-weight: bold;
+    font-style: italic;
 }
 
 @media (min-width: 481px) {

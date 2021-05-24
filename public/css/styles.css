@@ -275,13 +275,14 @@ a {
 /* SECCION CATEGORIAS */
 
 .categories {
-	width: 100%;
+	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-between;
 	list-style: none;
 	padding: 1vh 0.3rem;
+	margin: auto;
 }
 
 .categories-hidden {
@@ -299,6 +300,7 @@ a {
 	padding: 0.8rem;
 	font-size: 0.7rem;
 	margin: auto;
+	text-transform: uppercase;
 }
 
 /* SECCION PRODUCTOS DESTACADOS */

@@ -15,17 +15,18 @@
         <section class="header-filter">
 
             <!--TITULO DEL MAIN-->
-            <h4 class="header-list">Listado de productos</h4>
+            <% for (let i = 0; i < 1; i++) { %>
+            <h4 class="header-list"><%=categories[id-1].name%></h4>
+            <% } %>
 
             <!--ORDENAR Y FILTRO-->
 
-            <form method="GET" action="/productos" class="order-filter" id="filter-order">
+            <form method="GET" action= "/productos/<%=id%>" class="order-filter" id="filter-order">
                 <div class="order">
                     <label>Ordenar por:</label>
                     <select name="order">
                         <option <%= order == "name" ? "selected" : null%> value="name">Nombre</option>
                         <option <%= order == "price" ? "selected" : null%> value="price">Precio</option>
-                        <option <%= order == "categoryId" ? "selected" : null%> value="categoryId">Categoría</option>
                     </select>
                 </div>
             </form>

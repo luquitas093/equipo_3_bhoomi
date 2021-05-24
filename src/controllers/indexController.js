@@ -7,15 +7,18 @@ const { Op } = require("sequelize");
 
 module.exports = {
     index : (req,res) => {
-        db.Product.findAll ({
+        const categories = db.Category.findAll();
+        const products = db.Product.findAll ({
             include: [{association: "category"}]
         })
-        .then (products => {
-            return res.render (path.resolve (__dirname, "../views/web/index.ejs"), {products, titulo: 'Bhoomi - Cosmetica Natural'});
+        Promise.all([products,categories])
+        .then(([products,categories]) => {
+         return res.render(path.resolve(__dirname, '../views/web/index.ejs'), {
+             titulo: 'Bhoomi - Cosmetica Natural',
+             products: products,
+             categories: categories,
+            });
         });
-    },
-    error404 : (req,res) => {
-        return res.render (path.resolve (__dirname, "../views/web/404.ejs"), {titulo: 'Error-404'});
     },
     search : (req,res) => {
         db.Product.findAll({
@@ -24,12 +27,17 @@ module.exports = {
                         [Op.like]: `%${req.query.keyword}%`
                     }
                 },
+                order : [
+                    [req.query.order ? req.query.order : "name", 'ASC']               
+                ],
             include: [ {association: 'category'} ]
         })
         .then(results => {
-            return res.render (path.resolve (__dirname, "../views/products/productList.ejs"), {
-                titulo: 'Bhoomi - Resultados de Búsqueda',
-                products: results
+            return res.render(path.resolve(__dirname, '../views/products/productSearch.ejs'), {
+                titulo: 'Bhoomi - Listado de Productos',
+                products: results,
+                order: req.query.order,
+                url: "?keyword=" + req.query.keyword
             })
         })
         .catch(error => res.send(error))

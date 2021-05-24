@@ -15,20 +15,7 @@
         <section class="header-filter">
 
             <!--TITULO DEL MAIN-->
-            <h4 class="header-list">Listado de productos</h4>
-
-            <!--ORDENAR Y FILTRO-->
-
-            <form method="GET" action="/productos" class="order-filter" id="filter-order">
-                <div class="order">
-                    <label>Ordenar por:</label>
-                    <select name="order">
-                        <option <%= order == "name" ? "selected" : null%> value="name">Nombre</option>
-                        <option <%= order == "price" ? "selected" : null%> value="price">Precio</option>
-                        <option <%= order == "categoryId" ? "selected" : null%> value="categoryId">Categoría</option>
-                    </select>
-                </div>
-            </form>
+            <h4 class="header-list">Resultados de la Búsqueda:</h4>
 
             </section>
 

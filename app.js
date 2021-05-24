@@ -16,6 +16,7 @@ app.use (express.static (publicPath));
 // Configuracion template engine - EJS
 
 app.set("view engine", "ejs");
+app.set("views", "src/views");
 
 // Configuración Metodo POST
 
@@ -57,9 +58,10 @@ app.use ("/carrito", cartRoutes);
 const userRoutes = require ("./src/routes/userRouter.js");
 app.use ("/usuarios", userRoutes);
 
-app.use (function (req, res) {
-    res.status(404).render("/404")
-})
+app.use(function (req, res, next) {
+    //console.log(res.status() + "-----------------------")
+    res.status(404).render("error")
+});
 
 //Levantar el Servidor
 
