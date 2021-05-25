@@ -88,3 +88,7 @@ Maneja una paleta de colores similar a la que estamos interesados en aplicar y v
 ## Heroku
 
 - [*Bhoomi-Heroku*](https://tiendabhoomi.herokuapp.com/ "Tienda Bhoomi en Heroku")
+
+## Dashboard
+
+- [*Bhoomi-Dashboard*](https://github.com/mdemello/Dashboard-Bhoomi)
